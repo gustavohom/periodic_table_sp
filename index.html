@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título ligeiramente ajustado para clareza -->
+    <title>Tabela Periódica de Análise Espacial</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o NOVO CSS abaixo -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Fonte adicional para um toque mais moderno no header/footer -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-index"> <!-- Classe específica para a página inicial -->
+
+    <!-- Header redesenhado - mais limpo -->
+    <header class="page-header">
+        <h1>Tabela Periódica para Análise Espacial</h1>
+        <p>Explore ferramentas e conceitos de Geoprocessamento de forma interativa.</p>
+    </header>
+
+    <!-- Container da tabela - SEM ALTERAÇÕES INTERNAS -->
+    <main class="periodic-table-container">
+        <!-- A TABELA PERIÓDICA ABAIXO ESTÁ EXATAMENTE COMO VOCÊ FORNECEU ORIGINALMENTE -->
+        <div class="periodic-table">
+            <!-- Linha 1 -->
+            <a href="element/vc.html"  class="element element-title group-analysis-conversion is-main-element force-light-text" style="grid-column: 1; grid-row: 1;"><span class="symbol">VC</span><span class="title-name">Vector Conversion</span></a>
+            <div class="empty" style="grid-column: 2 / span 16; grid-row: 1;"></div>
+            <a href="element/#"  class="element element-title group-raster-analysis is-main-element" style="grid-column: 18; grid-row: 1;"><span class="symbol">RA</span><span class="title-name">Raster Analysis</span></a>
+
+            <!-- Linha 2 -->
+            <a href="element/ex.html"  class="element group-analysis-conversion" style="grid-column: 1; grid-row: 2;"><span class="symbol">EX</span><span class="name">Extract</span></a> <!-- CORRIGIDO: grid-row: 2 -->
+            <a href="element/tb.html"  class="element group-table-editing is-main-element" style="grid-column: 2; grid-row: 2;"><span class="symbol">TB</span><span class="name">Tables</span></a>
+            <div class="empty" style="grid-column: 3 / span 10; grid-row: 2;"></div>
+            <a href="element/gr.html"  class="element group-data-management-raster" style="grid-column: 13; grid-row: 2;"><span class="symbol">GR</span><span class="name">Georeference</span></a>
+            <a href="element/mo.html"  class="element group-data-management-raster" style="grid-column: 14; grid-row: 2;"><span class="symbol">MO</span><span class="name">Mosaic</span></a>
+            <a href="element/rc.html"  class="element group-data-management-raster" style="grid-column: 15; grid-row: 2;"><span class="symbol">RC</span><span class="name">Raster Creation</span></a>
+            <a href="element/al.html"  class="element group-data-management-raster" style="grid-column: 16; grid-row: 2;"><span class="symbol">AL</span><span class="name">Auto Correlation</span></a>
+            <a href="element/ma.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 17; grid-row: 2;"><span class="symbol">MA</span><span class="name">Map Algebra</span></a>
+            <a href="element/cn.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 18; grid-row: 2;"><span class="symbol">CN</span><span class="name">Contours</span></a>
+
+            <!-- Linha 3 -->
+            <a href="element/ov.html"  class="element group-analysis-conversion" style="grid-column: 1; grid-row: 3;"><span class="symbol">OV</span><span class="name">Overlay</span></a> <!-- CORRIGIDO: grid-row: 3 -->
+            <a href="element/xy.html"  class="element group-table-editing  force-dark-text" style="grid-column: 2; grid-row: 3;"><span class="symbol">XY</span><span class="name">Coordinates</span></a>
+             <div class="empty" style="grid-column: 3 / span 10; grid-row: 3;"></div>
+             <a href="element/rg.html"  class="element group-data-management-raster" style="grid-column: 13; grid-row: 3;"><span class="symbol">RG</span><span class="name">Generalization</span></a>
+             <a href="element/md.html"  class="element group-data-management-raster" style="grid-column: 14; grid-row: 3;"><span class="symbol">MD</span><span class="name">Multi-dimensional</span></a>
+             <a href="element/rs.html"  class="element group-data-management-raster" style="grid-column: 15; grid-row: 3;"><span class="symbol">RS</span><span class="name">Resample</span></a>
+             <a href="element/zs.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 16; grid-row: 3;"><span class="symbol">ZS</span><span class="name">Zonal Statistics</span></a>
+             <a href="element/cp.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 17; grid-row: 3;"><span class="symbol">CP</span><span class="name">Cost Path</span></a>
+             <a href="element/rp.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 18; grid-row: 3;"><span class="symbol">RP</span><span class="name">Raster Processing</span></a>
+
+            <!-- Linha 4: Col 3 e 4-12 começam aqui -->
+            <a href="element/px.html"  class="element group-analysis-conversion" style="grid-column: 1; grid-row: 4;"><span class="symbol">PX</span><span class="name">Proximity</span></a> <!-- CORRIGIDO: grid-row: 4 -->
+            <a href="element/cg.html"  class="element group-table-editing force-dark-text" style="grid-column: 2; grid-row: 4;"><span class="symbol">CG</span><span class="name">Calculate Geometry</span></a>
+            <a href="element/ed.html"  class="element group-table-editing force-dark-text" style="grid-column: 3; grid-row: 4;"><span class="symbol">ED</span><span class="name">Edit</span></a>
+            <a href="element/3d.html"  class="element group-3d-analysis is-main-element force-light-text" style="grid-column: 4; grid-row: 4;"><span class="symbol">3D</span><span class="name">3D Analysis</span></a>
+            <a href="element/rt.html"  class="element group-network-analysis" style="grid-column: 5; grid-row: 4;"><span class="symbol">RT</span><span class="name">Route</span></a>
+            <a href="element/os.html"  class="element group-network-analysis" style="grid-column: 6; grid-row: 4;"><span class="symbol">OS</span><span class="name">Optimal Site</span></a>
+            <a href="element/dm.html"  class="element group-data-management-vector is-main-element " style="grid-column: 7; grid-row: 4;"><span class="symbol">DM</span><span class="name">Data Management</span></a>
+            <a href="element/pj.html"  class="element group-data-management-vector" style="grid-column: 8; grid-row: 4;"><span class="symbol">PJ</span><span class="name">Projections</span></a>
+            <a href="element/gv.html"  class="element group-data-management-vector" style="grid-column: 9; grid-row: 4;"><span class="symbol">GV</span><span class="name">Generalize Vector</span></a>
+            <a href="element/ad.html"  class="element group-data-management-vector" style="grid-column: 10; grid-row: 4;"><span class="symbol">AD</span><span class="name">Address Geocoding</span></a>
+            <a href="element/tp.html"  class="element group-data-management-vector" style="grid-column: 11; grid-row: 4;"><span class="symbol">TP</span><span class="name">Topology</span></a>
+            <a href="element/bd.html"  class="element group-emerging-tech" style="grid-column: 12; grid-row: 4;"><span class="symbol">BD</span><span class="name">Big Data</span></a>
+            <a href="element/bi.html"  class="element group-remote-sensing" style="grid-column: 13; grid-row: 4;"><span class="symbol">BI</span><span class="name">Band Index</span></a>
+            <a href="element/is.html"  class="element group-remote-sensing" style="grid-column: 14; grid-row: 4;"><span class="symbol">IS</span><span class="name">Stretching</span></a>
+            <a href="element/pa.html"  class="element group-data-management-raster" style="grid-column: 15; grid-row: 4;"><span class="symbol">PA</span><span class="name">Raster Painting</span></a>
+            <a href="element/re.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 16; grid-row: 4;"><span class="symbol">RE</span><span class="name">Regression</span></a>
+            <a href="element/ta.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 17; grid-row: 4;"><span class="symbol">TA</span><span class="name">Terrain Analysis</span></a>
+            <a href="element/mf.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 18; grid-row: 4;"><span class="symbol">MF</span><span class="name">Math</span></a>
+
+            <!-- Linha 5 -->
+            <a href="element/sj.html"  class="element group-analysis-conversion" style="grid-column: 1; grid-row: 5;"><span class="symbol">SJ</span><span class="name">Spatial Join</span></a> <!-- CORRIGIDO: grid-row: 5 -->
+            <a href="element/jt.html"  class="element group-table-editing force-dark-text" style="grid-column: 2; grid-row: 5;"><span class="symbol">JT</span><span class="name">Join Table</span></a>
+            <a href="element/cf.html"  class="element group-table-editing force-dark-text" style="grid-column: 3; grid-row: 5;"><span class="symbol">CF</span><span class="name">Conflation</span></a>
+            <a href="element/ls.html"  class="element group-3d-analysis" style="grid-column: 4; grid-row: 5;"><span class="symbol">LS</span><span class="name">Line of Sight</span></a>
+            <a href="element/dr.html"  class="element group-network-analysis" style="grid-column: 5; grid-row: 5;"><span class="symbol">DR</span><span class="name">Directions</span></a>
+            <a href="element/cv.html"  class="element group-network-analysis" style="grid-column: 6; grid-row: 5;"><span class="symbol">CV</span><span class="name">Coverage</span></a>
+            <a href="element/lr.html"  class="element group-data-management-vector" style="grid-column: 7; grid-row: 5;"><span class="symbol">LR</span><span class="name">Linear Referencing</span></a>
+            <a href="element/sa.html"  class="element group-data-management-vector" style="grid-column: 8; grid-row: 5;"><span class="symbol">SA</span><span class="name">Spatial Adjustment</span></a>
+            <a href="element/ge.html"  class="element group-data-management-vector" style="grid-column: 9; grid-row: 5;"><span class="symbol">GE</span><span class="name">Geoenrich</span></a>
+            <a href="element/sp.html"  class="element group-data-management-vector" style="grid-column: 10; grid-row: 5;"><span class="symbol">SP</span><span class="name">Sampling</span></a>
+            <a href="element/#gt.html"  class="element group-data-management-vector" style="grid-column: 11; grid-row: 5;"><span class="symbol">GT</span><span class="name">Geotagging</span></a>
+            <a href="element/ml.html"  class="element group-emerging-tech" style="grid-column: 12; grid-row: 5;"><span class="symbol">ML</span><span class="name">Machine Learning</span></a>
+            <a href="element/ic.html"  class="element group-remote-sensing" style="grid-column: 13; grid-row: 5;"><span class="symbol">IC</span><span class="name">Image Classification</span></a>
+            <a href="element/cb.html"  class="element group-remote-sensing" style="grid-column: 14; grid-row: 5;"><span class="symbol">CB</span><span class="name">Composite Bands</span></a>
+            <a href="element/ps.html"  class="element group-remote-sensing" style="grid-column: 15; grid-row: 5;"><span class="symbol">PS</span><span class="name">Pan-Sharpening</span></a>
+            <a href="element/su.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 16; grid-row: 5;"><span class="symbol">SU</span><span class="name">Suitability</span></a>
+            <a href="element/con.html"  class="element group-raster-analysis force-dark-text" style="grid-column: 17; grid-row: 5;"><span class="symbol">CON</span><span class="name">Conditional</span></a>
+            <a href="element/in.html"  class="element group-interpolation is-main-element" style="grid-column: 18; grid-row: 5;"><span class="symbol">IN</span><span class="name">Interpolation</span></a>
+
+            <!-- Linha 6 -->
+            <a href="element/pd.html"  class="element group-analysis-conversion" style="grid-column: 1; grid-row: 6;"><span class="symbol">PD</span><span class="name">Plot Diagram</span></a> <!-- CORRIGIDO: grid-row: 6 -->
+            <a href="element/rl.html"  class="element group-table-editing force-dark-text" style="grid-column: 2; grid-row: 6;"><span class="symbol">RL</span><span class="name">Relate</span></a>
+            <a href="element/gi.html"  class="element group-table-editing force-dark-text" style="grid-column: 3; grid-row: 6;"><span class="symbol">GI</span><span class="name">Grid Index</span></a>
+            <a href="element/vo.html"  class="element group-3d-analysis" style="grid-column: 4; grid-row: 6;"><span class="symbol">VO</span><span class="name">Volume</span></a>
+            <a href="element/vw.html"  class="element group-3d-analysis" style="grid-column: 5; grid-row: 6;"><span class="symbol">VW</span><span class="name">Viewshed</span></a>
+            <a href="element/cm.html"  class="element group-network-analysis" style="grid-column: 6; grid-row: 6;"><span class="symbol">CM</span><span class="name">Cost Matrix</span></a>
+            <a href="element/pf.html"  class="element group-data-management-vector" style="grid-column: 7; grid-row: 6;"><span class="symbol">PF</span><span class="name">Parcel Fabric</span></a>
+            <a href="element/at.html"  class="element group-data-management-vector" style="grid-column: 8; grid-row: 6;"><span class="symbol">AT</span><span class="name">Attachments</span></a>
+            <a href="element/fmv.html"  class="element group-data-management-vector" style="grid-column: 9; grid-row: 6;"><span class="symbol">FMV</span><span class="name">Full Motion Video</span></a>
+            <a href="element/co.html"  class="element group-data-management-vector" style="grid-column: 10; grid-row: 6;"><span class="symbol">CO</span><span class="name">Coordinate Geometry</span></a>
+            <a href="element/pc.html"  class="element group-data-management-vector" style="grid-column: 11; grid-row: 6;"><span class="symbol">PC</span><span class="name">Point Cloud</span></a>
+            <a href="element/de.html"  class="element group-emerging-tech" style="grid-column: 12; grid-row: 6;"><span class="symbol">DE</span><span class="name">Data Engineering</span></a>
+            <a href="element/iot.html"  class="element group-emerging-tech" style="grid-column: 13; grid-row: 6;"><span class="symbol">IOT</span><span class="name">Internet of Things</span></a>
+            <a href="element/ac.html"  class="element group-remote-sensing" style="grid-column: 14; grid-row: 6;"><span class="symbol">AC</span><span class="name">Atmospheric Correction</span></a>
+            <a href="element/sg.html"  class="element group-remote-sensing" style="grid-column: 15; grid-row: 6;"><span class="symbol">SG</span><span class="name">Segmentation</span></a>
+            <a href="element/dn.html"  class="element group-remote-sensing" style="grid-column: 16; grid-row: 6;"><span class="symbol">DN</span><span class="name">Data Mining</span></a>
+            <a href="element/me.html"  class="element group-remote-sensing" style="grid-column: 17; grid-row: 6;"><span class="symbol">ME</span><span class="name">Mensuration</span></a>
+            <a href="element/kd.html"  class="element group-interpolation" style="grid-column: 18; grid-row: 6;"><span class="symbol">KD</span><span class="name">Kernel Density</span></a>
+
+            <!-- Linha 7 -->
+            <a href="element/gs.html"  class="element group-analysis-conversion" style="grid-column: 1; grid-row: 7;"><span class="symbol">GS</span><span class="name">Geometry Shape</span></a> <!-- CORRIGIDO: grid-row: 7 -->
+            <a href="element/st.html"  class="element group-table-editing force-dark-text" style="grid-column: 2; grid-row: 7;"><span class="symbol">ST</span><span class="name">Statistics</span></a>
+            <a href="element/ca.html"  class="element group-table-editing force-dark-text" style="grid-column: 3; grid-row: 7;"><span class="symbol">CA</span><span class="name">Cartographic</span></a>
+            <a href="element/sl.html"  class="element group-3d-analysis" style="grid-column: 4; grid-row: 7;"><span class="symbol">SL</span><span class="name">Skyline</span></a>
+            <a href="element/stc.html"  class="element group-3d-analysis" style="grid-column: 5; grid-row: 7;"><span class="symbol">STC</span><span class="name">Space-Time Cubes</span></a>
+            <a href="element/hm.html"  class="element group-network-analysis" style="grid-column: 6; grid-row: 7;"><span class="symbol">HM</span><span class="name">Huff Model</span></a>
+            <a href="element/ws.html"  class="element group-data-management-vector" style="grid-column: 7; grid-row: 7;"><span class="symbol">WS</span><span class="name">Web Services</span></a>
+            <a href="element/tin.html"  class="element group-data-management-vector" style="grid-column: 8; grid-row: 7;"><span class="symbol">TIN</span><span class="name">TIN</span></a>
+            <a href="element/im.html"  class="element group-data-management-vector" style="grid-column: 9; grid-row: 7;"><span class="symbol">IM</span><span class="name">Indoor Mapping</span></a>
+            <a href="element/tm.html"  class="element group-data-management-vector" style="grid-column: 10; grid-row: 7;"><span class="symbol">TM</span><span class="name">Temporal</span></a>
+            <a href="element/rtt.html"  class="element group-data-management-vector" style="grid-column: 11; grid-row: 7;"><span class="symbol">RTT</span><span class="name">Real-time Tracking</span></a>
+            <a href="element/as.html"  class="element group-emerging-tech" style="grid-column: 12; grid-row: 7;"><span class="symbol">AS</span><span class="name">Agent-Based Simulation</span></a>
+            <a href="element/vr.html"  class="element group-emerging-tech" style="grid-column: 13; grid-row: 7;"><span class="symbol">VR</span><span class="name">Virtual Reality</span></a>
+            <a href="element/ar.html"  class="element group-emerging-tech" style="grid-column: 14; grid-row: 7;"><span class="symbol">AR</span><span class="name">Augmented Reality</span></a>
+            <a href="element/ph.html"  class="element group-remote-sensing" style="grid-column: 15; grid-row: 7;"><span class="symbol">PH</span><span class="name">Photo-grammetry</span></a>
+            <a href="element/ob.html"  class="element group-remote-sensing" style="grid-column: 16; grid-row: 7;"><span class="symbol">OB</span><span class="name">Oblique</span></a>
+            <a href="element/rd.html"  class="element group-remote-sensing" style="grid-column: 17; grid-row: 7;"><span class="symbol">RD</span><span class="name">Radar</span></a>
+            <a href="element/kr.html"  class="element group-interpolation" style="grid-column: 18; grid-row: 7;"><span class="symbol">KR</span><span class="name">Kriging</span></a>
+
+            <!-- Linha 8: VAZIA exceto Col 18 -->
+            <div class="empty" style="grid-column: 1 / span 17; grid-row: 8;"></div>
+             <!-- O elemento IDW estava na resposta anterior, mas não no seu original. Removido para manter original. -->
+             <!-- <a href="element/#"  class="element group-interpolation" style="grid-column: 18; grid-row: 8;"><span class="symbol">IDW</span><span class="name">IDW</span></a> -->
+
+             <!-- Linha 9 (Espaçador) -->
+            <div class="empty span-18" style="grid-column: 1 / span 18; grid-row: 9; height: 20px;"></div>
+
+             <!-- Linha 10 -->
+            <div class="empty" style="grid-column: 1 / span 2; grid-row: 10;"></div>
+            <!-- Os elementos N/E e S/E não eram títulos 'is-main-element' no seu original, revertendo -->
+            <a href="element/cnv.html"  class="element group-nature-environment" style="grid-column: 3; grid-row: 10;"><span class="symbol">Cnv</span><span class="name">Conservation</span></a>
+            <a href="element/cl.html"  class="element group-nature-environment" style="grid-column: 4; grid-row: 10;"><span class="symbol">Cl</span><span class="name">Climate</span></a>
+            <a href="element/hy.html"  class="element group-nature-environment" style="grid-column: 5; grid-row: 10;"><span class="symbol">Hy</span><span class="name">Hydrology</span></a>
+            <a href="element/gw.html"  class="element group-nature-environment" style="grid-column: 6; grid-row: 10;"><span class="symbol">Gw</span><span class="name">Groundwater</span></a>
+            <a href="element/by.html"  class="element group-nature-environment" style="grid-column: 7; grid-row: 10;"><span class="symbol">By</span><span class="name">Bathymetry</span></a>
+            <a href="element/oc.html"  class="element group-nature-environment" style="grid-column: 8; grid-row: 10;"><span class="symbol">Oc</span><span class="name">Ocean</span></a>
+            <a href="element/aq.html"  class="element group-nature-environment" style="grid-column: 9; grid-row: 10;"><span class="symbol">Aq</span><span class="name">Aquatics</span></a>
+            <a href="element/na.html"  class="element group-nature-environment" style="grid-column: 10; grid-row: 10;"><span class="symbol">Na</span><span class="name">Nautical</span></a>
+            <a href="element/ag.html"  class="element group-nature-environment" style="grid-column: 11; grid-row: 10;"><span class="symbol">Ag</span><span class="name">Agriculture</span></a>
+            <a href="element/so.html"  class="element group-nature-environment" style="grid-column: 12; grid-row: 10;"><span class="symbol">So</span><span class="name">Soils</span></a>
+            <a href="element/ec.html"  class="element group-nature-environment" style="grid-column: 13; grid-row: 10;"><span class="symbol">Ec</span><span class="name">Ecology</span></a>
+            <a href="element/atm.html"  class="element group-nature-environment" style="grid-column: 14; grid-row: 10;"><span class="symbol">Atm</span><span class="name">Atmosphere</span></a>
+            <a href="element/di.html"  class="element group-nature-environment" style="grid-column: 15; grid-row: 10;"><span class="symbol">Di</span><span class="name">Disaster</span></a>
+            <a href="element/fo.html"  class="element group-nature-environment" style="grid-column: 16; grid-row: 10;"><span class="symbol">Fo</span><span class="name">Forestry</span></a>
+            <div class="empty" style="grid-column: 17 / span 2; grid-row: 10;"></div>
+
+            <!-- Linha 11 -->
+            <div class="empty" style="grid-column: 1 / span 2; grid-row: 11;"></div>
+             <a href="element/ba.html"  class="element group-society-economy" style="grid-column: 3; grid-row: 11;"><span class="symbol">Ba</span><span class="name">Business Analyst</span></a>
+            <a href="element/cnb.html"  class="element group-society-economy" style="grid-column: 4; grid-row: 11;"><span class="symbol">Cnb</span><span class="name">Consumer Behavior</span></a>
+            <a href="element/ter.html"  class="element group-society-economy" style="grid-column: 5; grid-row: 11;"><span class="symbol">Ter</span><span class="name">Territory Redistricting</span></a>
+            <a href="element/gd.html"  class="element group-society-economy" style="grid-column: 6; grid-row: 11;"><span class="symbol">Gd</span><span class="name">Geodesign</span></a>
+            <a href="element/en.html"  class="element group-society-economy" style="grid-column: 7; grid-row: 11;"><span class="symbol">En</span><span class="name">Engineering CAD</span></a>
+            <a href="element/sc.html"  class="element group-society-economy" style="grid-column: 8; grid-row: 11;"><span class="symbol">Sc</span><span class="name">Smart City</span></a>
+            <a href="element/ut.html"  class="element group-society-economy" style="grid-column: 9; grid-row: 11;"><span class="symbol">Ut</span><span class="name">Utilities</span></a>
+            <a href="element/pl.html"  class="element group-society-economy" style="grid-column: 10; grid-row: 11;"><span class="symbol">Pl</span><span class="name">Pipeline</span></a>
+            <a href="element/tr.html"  class="element group-society-economy" style="grid-column: 11; grid-row: 11;"><span class="symbol">Tr</span><span class="name">Transportation</span></a> <!-- Nota: Havia dois Tr, mantido conforme original -->
+            <a href="element/av.html"  class="element group-society-economy" style="grid-column: 12; grid-row: 11;"><span class="symbol">Av</span><span class="name">Aviation</span></a>
+            <a href="element/df.html"  class="element group-society-economy" style="grid-column: 13; grid-row: 11;"><span class="symbol">Df</span><span class="name">Defense</span></a>
+            <a href="element/cr.html"  class="element group-society-economy" style="grid-column: 14; grid-row: 11;"><span class="symbol">Cr</span><span class="name">Crime</span></a>
+            <a href="element/hd.html"  class="element group-society-economy" style="grid-column: 15; grid-row: 11;"><span class="symbol">Hd</span><span class="name">Health Disease</span></a>
+            <a href="element/gov.html"  class="element group-society-economy" style="grid-column: 16; grid-row: 11;"><span class="symbol">Gov</span><span class="name">Government</span></a>
+            <div class="empty" style="grid-column: 17 / span 2; grid-row: 11;"></div>
+
+        </div>
+
+        <!-- Legenda (Exatamente como no seu original) -->
+         <div class="legend">
+            <div class="legend-item"><span class="legend-color group-analysis-conversion is-main-element"></span><span class="legend-color group-analysis-conversion"></span> Analysis/Conversion</div>
+            <div class="legend-item"><span class="legend-color group-table-editing is-main-element"></span><span class="legend-color group-table-editing"></span> Table/Editing</div>
+            <div class="legend-item"><span class="legend-color group-3d-analysis is-main-element"></span><span class="legend-color group-3d-analysis"></span> 3D Analysis</div>
+            <div class="legend-item"><span class="legend-color group-network-analysis"></span> Network Analysis</div>
+            <div class="legend-item"><span class="legend-color group-data-management-vector is-main-element"></span><span class="legend-color group-data-management-vector"></span> Data Management (Vector)</div>
+            <div class="legend-item"><span class="legend-color group-emerging-tech"></span> Emerging Technologies</div>
+            <div class="legend-item"><span class="legend-color group-remote-sensing"></span> Remote Sensing</div>
+            <div class="legend-item"><span class="legend-color group-data-management-raster"></span> Data Management (Raster)</div>
+            <div class="legend-item"><span class="legend-color group-raster-analysis is-main-element"></span><span class="legend-color group-raster-analysis"></span> Raster Analysis</div>
+            <div class="legend-item"><span class="legend-color group-interpolation is-main-element"></span><span class="legend-color group-interpolation"></span> Interpolation</div>
+            <!-- As cores de N/E e S/E na legenda usavam a cor base única no seu original -->
+            <div class="legend-item"><span class="legend-color group-nature-environment"></span> Nature/Environment</div>
+            <div class="legend-item"><span class="legend-color group-society-economy"></span> Society/Economy</div>
+        </div>
+    </main>
+
+    <!-- Footer redesenhado - mais limpo -->
+    <footer class="page-footer">
+        <p>Recriação da <i> Periodic Table for Spatial Analysis </i>| Inspirado em <a href="https://gisgeography.com/spatial-analysis-periodic-table/" target="_blank">GIS Geography</a>
+</p>
+        <p>&copy; 2025 - Adaptação.</p>
+    </footer>
+
+</body>
+</html>
