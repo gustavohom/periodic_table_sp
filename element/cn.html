@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Contours (CN)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+            <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">CN</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Contours / Isolines</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Gera linhas (isolines) que conectam pontos de igual valor em uma superfície raster contínua. Quando a superfície representa elevação (DEM), as linhas são chamadas de curvas de nível (contours). O mesmo princípio pode ser aplicado a outras superfícies, como temperatura (isotermas), pressão (isóbaras) ou concentração de poluentes (isopletas).
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entrada:</strong> Um raster representando uma superfície contínua (ex: DEM, temperatura interpolada).</li>
+                <li><strong>Intervalo de Contorno (Contour Interval):</strong> A diferença de valor entre linhas de contorno adjacentes (ex: curvas de nível a cada 10 metros).</li>
+                <li><strong>Contorno Base (Base Contour):</strong> Um valor opcional a partir do qual os contornos serão gerados (ex: começar do nível do mar, valor 0).</li>
+                <li><strong>Fator Z (Z Factor):</strong> Fator de conversão se as unidades verticais (Z) do raster forem diferentes das unidades horizontais (X, Y).</li>
+                <li><strong>Tipo de Saída:</strong> Geralmente uma camada de polilinhas vetoriais, onde cada linha possui um atributo com o valor de contorno correspondente. Pode haver opções para gerar contornos preenchidos (polígonos).</li>
+                <li><strong>Suavização (Smoothing - Opcional):</strong> Opções para suavizar a aparência das linhas de contorno geradas.</li>
+                <li><strong>Contornos Índice (Index Contours - Opcional):</strong> Permite especificar um intervalo maior para gerar contornos mais espessos ou destacados (ex: curvas mestras a cada 50 metros).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Gerar curvas de nível a cada 20 metros a partir de um Modelo Digital de Elevação (DEM) para representação topográfica. Criar linhas de isóbaras (igual pressão atmosférica) a partir de um raster de dados meteorológicos. Gerar isopletas mostrando áreas com igual concentração de ruído ao redor de um aeroporto. Criar curvas de isodeclividade (linhas de igual declividade) a partir de um raster de declividade. Visualizar a distribuição de temperatura em uma região gerando isotermas a partir de dados interpolados.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ma.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="zs.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

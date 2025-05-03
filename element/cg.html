@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Calculate Geometry (CG)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Tables -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">CG</div> <!-- Categoria: Tables -->
+            <div class="detail-title">
+                <h2>Calculate Geometry Attributes</h2>
+                <div class="category">Tables</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula e popula campos na tabela de atributos com valores derivados das características geométricas das próprias feições (pontos, linhas ou polígonos). Permite armazenar medidas como área, perímetro, comprimento, coordenadas do centroide ou coordenadas X/Y diretamente na tabela para fácil acesso, consulta ou uso em outras análises e rotulagem.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Seleção da Propriedade Geométrica:</strong> O usuário escolhe qual propriedade deseja calcular:
+                    <ul>
+                        <li>Para Polígonos: Área, Perímetro, Coordenada X do Centroide, Coordenada Y do Centroide.</li>
+                        <li>Para Linhas: Comprimento (Length), Coordenada X do Ponto Inicial/Final/Médio, Coordenada Y do Ponto Inicial/Final/Médio.</li>
+                        <li>Para Pontos: Coordenada X, Coordenada Y, Coordenada Z (se disponível).</li>
+                    </ul>
+                </li>
+                <li><strong>Seleção do Campo de Destino:</strong> Especifica em qual campo (coluna) da tabela de atributos o valor calculado será armazenado. O campo deve ter um tipo de dado compatível (geralmente numérico - double/float).</li>
+                <li><strong>Unidades de Medida:</strong> Permite escolher as unidades para o cálculo (ex: metros quadrados, hectares, quilômetros quadrados para área; metros, quilômetros, milhas para comprimento/perímetro). É importante que as unidades sejam consistentes com o sistema de coordenadas da camada.</li>
+                <li><strong>Sistema de Coordenadas para Cálculo:</strong> Permite especificar se o cálculo deve ser feito usando o sistema de coordenadas da camada ou outro sistema (útil para obter áreas geodésicas, por exemplo).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Calcular a área em hectares de cada lote em uma camada de parcelas e armazenar em um campo 'Area_ha'. Calcular o comprimento em quilômetros de cada segmento de rio e salvar em um campo 'Extensao_km'. Adicionar as coordenadas geográficas (latitude e longitude) de cada cidade em campos 'LAT' e 'LON' de uma camada de pontos de cidades. Calcular as coordenadas X e Y do centroide de cada município para usar na rotulagem do mapa.
+            </p>
+            <p>
+                <em>Nota: Esta ferramenta é frequentemente acessada através da interface da tabela de atributos (clicando com o botão direito no cabeçalho do campo) ou como uma ferramenta de geoprocessamento separada (ex: <code>Add Geometry Attributes</code> em ArcGIS Pro).</em>
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="xy.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="jt.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

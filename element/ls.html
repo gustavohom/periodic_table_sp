@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Line of Sight Visibility (LS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-3d-analysis"> <!-- Categoria: 3D Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-3d-analysis">LS</div> <!-- Categoria: 3D Analysis -->
+            <div class="detail-title">
+                <h2>Line of Sight Visibility</h2>
+                <div class="category">3D Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Determina se existe uma linha de visão direta e desobstruída entre dois pontos (um observador e um alvo) sobre uma superfície tridimensional (terreno ou outros obstáculos). A análise identifica quais segmentos da linha reta entre os pontos estão visíveis e quais estão obstruídos, e pode identificar o primeiro ponto de obstrução.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong> Requer a localização do(s) ponto(s) observador(es), a localização do(s) ponto(s) alvo(s), e uma superfície de referência (Raster DEM, TIN, ou LAS dataset).</li>
+                <li><strong>Parâmetros Opcionais:</strong> Altura do observador acima da superfície (Offset A), altura do alvo acima da superfície (Offset B).</li>
+                <li><strong>Saídas Comuns:</strong>
+                    <ul>
+                        <li>Uma camada de linhas onde cada linha representa a linha de visão original, com segmentos codificados ou atributos indicando visibilidade (visível/obstruído).</li>
+                        <li>Uma camada de pontos indicando a localização da primeira obstrução ao longo de cada linha de visão.</li>
+                        <li>Um resultado binário (sim/não) indicando se a linha de visão geral é obstruída ou não.</li>
+                    </ul>
+                </li>
+                <li><strong>Considera Curvatura da Terra e Refração (Opcional):</strong> Configurações avançadas podem levar em conta esses fatores para análises de longa distância.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Verificar se há visibilidade direta entre duas antenas de comunicação propostas. Determinar se um ponto específico em uma trilha tem vista para um pico de montanha. Avaliar se a construção de um novo edifício bloqueará a vista de um apartamento existente para o mar. Planejar rotas de voo de drones que mantenham linha de visão com a estação base. Identificar o ponto exato onde um veículo em uma estrada perde a visibilidade de uma torre de controle.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="3d.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="vo.html" class="nav-button">Próximo &raquo;</a> <!-- VS é o próximo -->
+        </div>
+    </div>
+</body>
+</html>

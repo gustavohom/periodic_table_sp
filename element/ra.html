@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Raster Analysis (RA)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+            <!-- RA é um 'is-main-element' no index, usa cor base e texto claro -->
+            <div class="detail-symbol group-raster-analysis is-main-element">RA</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Raster Analysis</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Conjunto de técnicas e operações realizadas sobre dados em formato raster (grades de células ou pixels). A análise raster é fundamental para modelagem de superfícies, análise de terreno, modelagem hidrológica, análise de adequabilidade, processamento de imagens de sensoriamento remoto e muitas outras aplicações onde os fenômenos variam continuamente no espaço ou são representados por categorias em uma grade.
+            </p>
+
+            <h3>Funções Principais / Tipos de Análise</h3>
+            <ul>
+                <li><strong>Análise de Superfície:</strong> Calcular propriedades derivadas de superfícies de elevação ou outras superfícies contínuas, como declividade, aspecto, curvatura, visibilidade, sombreamento (ver TA, CN, VW, LS).</li>
+                <li><strong>Análise de Densidade:</strong> Calcular a densidade de pontos ou linhas em uma área, criando uma superfície contínua de densidade (ver KD).</li>
+                <li><strong>Interpolação Espacial:</strong> Estimar valores em locais não amostrados com base em pontos de amostra conhecidos, criando uma superfície contínua (ver IN, KR, IDW).</li>
+                <li><strong>Análise de Distância/Proximidade/Custo:</strong> Calcular distâncias euclidianas, distâncias de custo acumulado, caminhos de menor custo, alocação baseada em custo (ver CP).</li>
+                <li><strong>Álgebra de Mapas (Map Algebra):</strong> Realizar operações matemáticas, lógicas e estatísticas em um ou mais rasters, célula por célula ou usando vizinhanças (ver MA, MF, CON).</li>
+                <li><strong>Análise Zonal:</strong> Calcular estatísticas de um raster de valores para zonas definidas por outro raster ou por feições vetoriais (ver ZS).</li>
+                <li><strong>Análise Hidrológica:</strong> Modelar o fluxo de água sobre uma superfície, delimitando bacias hidrográficas, redes de drenagem, etc.</li>
+                <li><strong>Processamento de Imagem:</strong> Aplicar filtros, realces, classificações e outras operações em imagens de satélite ou aéreas (ver Remote Sensing, ML).</li>
+                 <li><strong>Análise de Padrões:</strong> Medir a autocorrelação espacial ou identificar clusters em dados raster (ver AL).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Identificar áreas com declividade acima de 30% para análise de risco de deslizamento. Encontrar o caminho mais rápido para atravessar um terreno considerando a dificuldade (custo) de cada tipo de cobertura do solo. Calcular a densidade de ocorrências de crimes. Estimar a distribuição espacial da precipitação a partir de dados de estações meteorológicas. Modelar a adequabilidade de um local para agricultura combinando camadas raster de solo, declividade e precipitação.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="pa.html" class="nav-button">&laquo; Anterior</a> <!-- Anterior é PA -->
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ma.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

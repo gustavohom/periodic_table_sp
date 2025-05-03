@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Coverage / Service Area (CV)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-network-analysis"> <!-- Categoria: Network Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-network-analysis">CV</div> <!-- Categoria: Network Analysis -->
+            <div class="detail-title">
+                <h2>Service Area / Coverage Analysis</h2>
+                <div class="category">Network Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula a área geográfica que pode ser alcançada a partir de uma ou mais localizações (instalações ou "facilities") dentro de um limite de custo de viagem especificado (tempo ou distância) ao longo de uma rede. A saída é tipicamente um polígono (ou múltiplos polígonos) que representa a área de serviço ou cobertura.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Facilities:</em> Um ou mais pontos representando as origens (ex: hospitais, lojas, paradas de ônibus).</li>
+                        <li><em>Network Dataset:</em> A rede (ex: ruas) usada para calcular o alcance.</li>
+                        <li><em>Impedance Cutoffs (Limites de Custo):</em> Valores que definem o limite de alcance (ex: 5, 10, 15 minutos; 1, 2, 5 km). Múltiplos valores criam áreas de serviço aninhadas.</li>
+                    </ul>
+                </li>
+                <li><strong>Direção da Viagem:</strong> Permite calcular a área alcançável <em>a partir</em> da instalação (ex: área de entrega) ou a área de onde se pode chegar <em>até</em> a instalação dentro do limite (ex: área de captação de clientes).</li>
+                 <li><strong>Tipo de Saída:</strong>
+                    <ul>
+                        <li><em>Polígonos:</em> Cria polígonos generalizados que representam a área de serviço. Pode haver opções para mesclar áreas sobrepostas de múltiplas instalações ou mantê-las separadas.</li>
+                        <li><em>Linhas:</em> Gera as linhas da rede que estão dentro do limite de custo especificado.</li>
+                    </ul>
+                 </li>
+                <li><strong>Restrições e Barreiras:</strong> Pode usar as mesmas restrições (sentido único, evitar pedágios) e barreiras (acidentes) do que a análise de Rota (RT).</li>
+                <li><strong>Precisão vs. Velocidade:</strong> Opções para gerar polígonos mais detalhados (lentos) ou mais generalizados (rápidos).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Mapear a área de cobertura de resposta de 5 minutos para cada estação de bombeiros. Definir zonas de entrega para pizzarias baseadas em 10 minutos de tempo de condução. Analisar a acessibilidade a parques públicos, mostrando áreas a menos de 1 km de distância a pé pela rede de calçadas. Identificar áreas residenciais que estão fora da área de serviço de 15 minutos de qualquer supermercado. Visualizar o alcance de linhas de transporte público a partir de uma estação central.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="os.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cm.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

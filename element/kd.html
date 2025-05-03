@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Kernel Density (KD)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-interpolation"> <!-- Categoria: Interpolation (embora seja análise de densidade) -->
+        <div class="detail-header">
+             <!-- Fundo verde claro, texto escuro -->
+            <div class="detail-symbol group-interpolation">KD</div> <!-- Categoria: Interpolation -->
+            <div class="detail-title">
+                <h2>Kernel Density Estimation</h2>
+                <div class="category">Interpolation / Density Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Técnica não paramétrica para estimar a densidade de ocorrências (geralmente a partir de dados pontuais, mas também aplicável a linhas) em uma área geográfica. Calcula a magnitude por unidade de área usando uma função kernel (um tipo de "janela" suave) para ajustar uma superfície suavemente cônica sobre cada ponto (ou linha). A densidade em cada célula do raster de saída é a soma dos valores das superfícies kernel que a sobrepõem. O resultado é um mapa de densidade contínuo, frequentemente chamado de "mapa de calor" (heat map).
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entrada:</strong> Camada de feições pontuais ou lineares.</li>
+                <li><strong>Campo Populacional (Population Field - Opcional):</strong> Um campo numérico na tabela de atributos que pondera cada feição. Se usado, a densidade calculada representa a magnitude desse campo por unidade de área (ex: densidade de pessoas por km²), caso contrário, representa a densidade de número de feições por unidade de área (ex: ocorrências de crime por km²).</li>
+                <li><strong>Raio de Busca / Largura de Banda (Search Radius / Bandwidth):</strong> Parâmetro crucial que define o tamanho da vizinhança (kernel) ao redor de cada ponto/linha sobre a qual a densidade será calculada e espalhada. Raios maiores produzem superfícies mais suaves e generalizadas; raios menores produzem superfícies mais pontuais e detalhadas. A escolha do raio ideal pode depender da escala do fenômeno e dos dados.</li>
+                <li><strong>Função Kernel:</strong> A forma matemática da superfície ajustada sobre cada ponto (geralmente uma função quártica/biquadrática é o padrão em GIS).</li>
+                <li><strong>Unidades de Área da Saída:</strong> Especifica as unidades desejadas para o valor de densidade no raster de saída (ex: pontos por quilômetro quadrado, pessoas por hectare).</li>
+                <li><strong>Tamanho da Célula de Saída (Output Cell Size):</strong> Define a resolução do raster de densidade gerado.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um mapa de calor mostrando áreas com alta concentração de ocorrências de crimes. Estimar a densidade populacional em uma cidade a partir de pontos de residências ponderados pelo número de habitantes. Mapear a densidade de acidentes de trânsito ao longo de rodovias (usando Kernel Density para linhas). Identificar hotspots de avistamentos de uma espécie animal em uma área de estudo. Visualizar áreas com maior concentração de estabelecimentos comerciais de um determinado tipo. Analisar a densidade de chamados de emergência para otimizar a alocação de recursos.
+            </p>
+            <p><em>Comparação com Hot Spot Analysis (Getis-Ord Gi* - AL):</em> Kernel Density mostra onde os pontos estão espacialmente concentrados (densidade), enquanto Hot Spot Analysis identifica se essa concentração é estatisticamente significativa (se há mais pontos agrupados do que seria esperado por acaso).</p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="kr.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cnv.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

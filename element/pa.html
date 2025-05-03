@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Raster Painting (PA)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">PA</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Raster Painting</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Conjunto de ferramentas interativas que permitem editar os valores das células de um raster diretamente no mapa, como se estivesse pintando sobre a imagem. Permite modificar ou corrigir pequenas áreas de um raster manualmente.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Brush Tool (Pincel):</strong> Permite "pintar" células com um valor específico. O usuário define o valor a ser pintado e o tamanho/forma do pincel.</li>
+                <li><strong>Fill Tool (Preenchimento):</strong> Preenche uma região conectada de células que possuem o mesmo valor (ou um valor específico) com um novo valor. Similar ao "balde de tinta" em softwares de edição de imagem.</li>
+                <li><strong>Erase Tool (Borracha):</strong> Permite "apagar" os valores das células, geralmente substituindo-os por NoData ou outro valor de fundo especificado.</li>
+                <li><strong>Eyedropper (Conta-gotas):</strong> Permite clicar em uma célula para selecionar seu valor atual e usá-lo para pintar com o Pincel ou Preenchimento.</li>
+                <li><strong>Seleção de Valor/Cor:</strong> Interface para escolher o valor numérico ou a cor (se o raster tiver um colormap associado) a ser usada nas operações de pintura ou preenchimento.</li>
+                <li><strong>Edição em Sessão:</strong> As alterações são geralmente feitas em uma sessão de edição que precisa ser salva para tornar as modificações permanentes no arquivo raster.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Corrigir manualmente pequenas áreas mal classificadas em um mapa de uso do solo resultante de uma classificação automática. Editar um raster de máscara, pintando áreas que devem ser incluídas ou excluídas de uma análise. "Apagar" nuvens ou sombras em uma imagem raster substituindo seus pixels por NoData (embora outras técnicas sejam geralmente preferíveis para isso). Modificar um raster de adequabilidade, pintando manualmente áreas que devem ter um valor específico com base em conhecimento local. Criar ou editar manualmente pequenos rasters para fins de teste ou ilustração.
+            </p>
+            <p><em>Nota:</em> Raster Painting é geralmente adequado para edições localizadas e pequenas. Para modificações extensas ou baseadas em regras, outras ferramentas raster (como Reclassify, Nibble, Map Algebra) são mais eficientes.</p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rs.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <!-- Precisa saber qual o próximo elemento real da tabela -->
+            <a href="ra.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

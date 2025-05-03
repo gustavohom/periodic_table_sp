@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Spatial Autocorrelation (Raster) (AL)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management (ou Raster Analysis) -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">AL</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Spatial Autocorrelation (Raster)</h2>
+                <!-- Categoria pode ser ambígua, análise ou gerenciamento -->
+                <div class="category">Raster Data Management / Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Mede o grau em que o valor de uma célula em um raster está correlacionado com os valores das células vizinhas. A autocorrelação espacial avalia se os valores estão agrupados (clusters de valores altos próximos a valores altos, valores baixos próximos a valores baixos - autocorrelação positiva), dispersos (valores altos próximos a valores baixos - autocorrelação negativa) ou distribuídos aleatoriamente no espaço. É um conceito fundamental em estatística espacial (Primeira Lei da Geografia de Tobler).
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Índices</h3>
+            <ul>
+                <li><strong>Moran's I (Global):</strong> Índice mais comum para medir a autocorrelação espacial global em um raster (ou dados vetoriais).
+                    <ul>
+                        <li><em>Valores:</em> Variam tipicamente de -1 a +1.</li>
+                        <li><em>Interpretação:</em> Próximo a +1 indica forte agrupamento (positiva); próximo a -1 indica forte dispersão (negativa); próximo a 0 indica padrão aleatório.</li>
+                        <li><em>Significância Estatística:</em> O cálculo geralmente inclui um Z-score e um p-valor para determinar se o padrão observado é estatisticamente significativo (improvável de ocorrer por acaso).</li>
+                    </ul>
+                </li>
+                 <li><strong>Análise Local de Autocorrelação (LISA - Local Indicators of Spatial Association):</strong> Identifica a contribuição de cada célula individual para o padrão global de autocorrelação, mapeando clusters locais.
+                    <ul>
+                        <li><em>Anselin Local Moran's I:</em> Calcula um valor de Moran's I para cada célula, considerando seus vizinhos. Permite classificar as células em tipos de cluster (ex: High-High, Low-Low, High-Low, Low-High) ou como não significativas.</li>
+                        <li><em>Getis-Ord Gi* (Hot Spot Analysis):</em> Identifica clusters estatisticamente significativos de valores altos (hot spots) e valores baixos (cold spots).</li>
+                    </ul>
+                 </li>
+                 <li><strong>Definição de Vizinhança:</strong> As ferramentas requerem a definição de como a "vizinhança" de uma célula é considerada (ex: 4 vizinhos imediatos, 8 vizinhos incluindo diagonais, vizinhança baseada em distância).</li>
+                 <li><strong>Aplicação em Resíduos de Modelos:</strong> Frequentemente usado para verificar se os erros (resíduos) de um modelo de regressão espacial estão espacialmente autocorrelacionados, o que violaria pressupostos do modelo.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Verificar se os valores de elevação em um DEM estão agrupados espacialmente (esperado). Analisar se os casos de uma doença (representados como densidade em um raster) formam clusters estatisticamente significativos (Hot Spot Analysis). Avaliar se os preços de imóveis (interpolados em um raster) exibem autocorrelação espacial positiva. Mapear clusters locais de alta ou baixa concentração de um poluente em um raster interpolado. Testar a aleatoriedade espacial dos resíduos de um modelo de previsão de rendimento agrícola.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rc.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rg.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

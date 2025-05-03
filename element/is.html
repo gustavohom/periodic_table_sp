@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Image Stretching (IS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">IS</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Image Stretching / Contrast Enhancement</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Técnicas aplicadas para melhorar a visualização de imagens raster (especialmente imagens de sensoriamento remoto), ajustando como os valores originais dos pixels (níveis de cinza ou brilho) são mapeados para a escala de exibição do monitor (geralmente 0-255). O objetivo é aumentar o contraste visual e realçar detalhes que podem estar ocultos na imagem original devido a uma faixa dinâmica limitada ou distribuição desigual dos valores.
+            </p>
+            <p>Geralmente, esses ajustes afetam apenas a *exibição* da imagem, não os valores dos pixels armazenados no arquivo, a menos que a imagem seja exportada com o stretch aplicado.</p>
+
+            <h3>Funções Principais / Técnicas Comuns</h3>
+            <ul>
+                <li><strong>Histogram Stretch (Estiramento de Histograma):</strong> Mapeia um intervalo dos valores de pixel originais para toda a faixa de exibição (0-255).
+                    <ul>
+                        <li><em>Minimum-Maximum:</em> Usa os valores mínimo e máximo reais da imagem (ou de um subconjunto) como limites para o estiramento.</li>
+                        <li><em>Percent Clip:</em> Descarta uma pequena porcentagem dos valores mais baixos e mais altos antes de aplicar o estiramento Mínimo-Máximo, útil para remover o efeito de outliers.</li>
+                        <li><em>Standard Deviation:</em> Define os limites do estiramento com base na média e em um número de desvios padrão (ex: 2 desvios padrão).</li>
+                    </ul>
+                </li>
+                <li><strong>Histogram Equalization (Equalização de Histograma):</strong> Redistribui os valores dos pixels para que haja aproximadamente o mesmo número de pixels em cada nível de cinza na faixa de exibição. Aumenta o contraste global, especialmente em imagens com histogramas concentrados.</li>
+                <li><strong>Gaussian Stretch:</strong> Aplica um estiramento que se ajusta a uma distribuição gaussiana (normal), útil para dados que se aproximam dessa distribuição.</li>
+                <li><strong>Gamma Correction:</strong> Ajusta o brilho e o contraste de forma não linear, modificando os tons médios da imagem. Útil para realçar detalhes em áreas muito claras ou muito escuras.</li>
+                <li><strong>Brightness/Contrast Adjustment:</strong> Controles simples para aumentar/diminuir o brilho geral ou o contraste da imagem exibida.</li>
+                <li><strong>DRA (Dynamic Range Adjustment):</strong> Opção que ajusta dinamicamente o estiramento com base apenas nos pixels atualmente visíveis na tela, útil para explorar imagens com grande variação de brilho.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Melhorar a visibilidade de feições em uma imagem de satélite que parece "lavada" ou com pouco contraste. Realçar detalhes em áreas de sombra ou de brilho intenso em uma fotografia aérea. Ajustar o contraste de um Modelo Digital de Elevação (DEM) para melhor visualização do relevo (antes de aplicar Hillshade). Comparar visualmente diferentes bandas de uma imagem multiespectral ajustando o estiramento de cada uma. Preparar uma imagem para interpretação visual ou digitalização de feições.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ba.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ic.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

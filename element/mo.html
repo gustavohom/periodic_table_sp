@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Mosaic (Raster) (MO)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">MO</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Mosaic (Raster)</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Combina duas ou more imagens raster adjacentes ou sobrepostas em uma única imagem raster contínua (mosaico). O processo pode envolver o gerenciamento de áreas de sobreposição, ajuste de cores/radiometria e a criação de uma imagem de saída sem costuras visíveis.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Mosaic Tool / Create Mosaic Dataset:</strong> Ferramentas que permitem selecionar múltiplas imagens raster de entrada e definir como elas serão combinadas.
+                    <ul>
+                        <li><em>Mosaic Tool (tradicional):</em> Cria um novo arquivo raster físico contendo o mosaico.</li>
+                        <li><em>Mosaic Dataset (ex: ArcGIS):</em> Cria um contêiner virtual que gerencia uma coleção de rasters como se fossem um único mosaico, sem necessariamente criar um novo arquivo gigante. Permite processamento on-the-fly, definição de regras de mosaico complexas e atualizações fáceis.</li>
+                    </ul>
+                </li>
+                <li><strong>Métodos de Mosaico (Mosaic Method / Operator):</strong> Define como os valores dos pixels nas áreas de sobreposição são tratados:
+                    <ul>
+                        <li><em>First/Last:</em> Usa o valor do primeiro/último raster na ordem de entrada.</li>
+                        <li><em>Blend:</em> Suaviza a transição entre os rasters na área de sobreposição (ex: média ponderada pela distância à borda).</li>
+                        <li><em>Minimum/Maximum/Mean:</em> Usa o valor mínimo/máximo/médio dos pixels sobrepostos.</li>
+                        <li><em>By Attribute:</em> Usa um campo de atributo (ex: data de aquisição, % de nuvens) para escolher qual raster tem prioridade na sobreposição. (Mais comum em Mosaic Datasets).</li>
+                    </ul>
+                </li>
+                 <li><strong>Color Balancing / Correction:</strong> Ferramentas para ajustar as diferenças de cor e brilho entre as imagens de entrada para criar uma aparência visualmente homogênea no mosaico final.</li>
+                 <li><strong>Seamline Generation:</strong> Criação automática ou manual de linhas de costura (seamlines) nas áreas de sobreposição, definindo o local exato da transição entre as imagens para minimizar diferenças visuais (ex: seguir estradas ou rios). (Mais comum em Mosaic Datasets).</li>
+                 <li><strong>Footprints e Boundary:</strong> Gerenciamento dos contornos exatos de cada imagem dentro do mosaico.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar uma única imagem de ortofoto cobrindo um município inteiro a partir de múltiplas fotos aéreas adjacentes. Combinar várias cenas de imagem de satélite para cobrir uma grande região de estudo. Montar um mosaico de folhas de mapa topográfico escaneadas e georreferenciadas. Criar um Modelo Digital de Elevação (DEM) contínuo a partir de vários tiles DEM separados. Gerenciar uma coleção de imagens históricas de uma área em um Mosaic Dataset, permitindo visualizá-las individualmente ou como um mosaico baseado na data.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="gr.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rc.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

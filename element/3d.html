@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: 3D Analysis (3D)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-3d-analysis"> <!-- Categoria: 3D Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-3d-analysis">3D</div> <!-- Categoria: 3D Analysis -->
+            <div class="detail-title">
+                <h2>3D Analysis (Overlay/Proximity)</h2>
+                <div class="category">3D Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Realiza operações de análise espacial clássicas, como overlay (sobreposição) e proximity (proximidade), mas utilizando feições que possuem uma dimensão Z (elevação, altura ou profundidade) e considerando essa dimensão nos cálculos. Permite analisar interações e relações espaciais em um ambiente tridimensional real.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>3D Buffer:</strong> Cria zonas de influência tridimensionais (esferas ao redor de pontos, tubos ao redor de linhas, volumes ao redor de polígonos/multipatch) a uma distância especificada em 3D.</li>
+                <li><strong>3D Intersect:</strong> Calcula a intersecção geométrica (volume, área ou linha de sobreposição) entre duas ou mais camadas de feições 3D (multipatch, pontos Z, linhas Z, polígonos Z).</li>
+                <li><strong>3D Union:</strong> Combina geometricamente duas ou mais camadas de feições 3D, criando uma única feição que representa o volume ou área total ocupada por todas as feições de entrada.</li>
+                <li><strong>3D Near:</strong> Calcula a distância tridimensional entre feições em uma camada e as feições mais próximas em outra camada.</li>
+                <li><strong>Inside 3D / Contains 3D:</strong> Ferramentas de seleção ou overlay que determinam se uma feição 3D está contida dentro de outra (ex: pontos dentro de um edifício multipatch).</li>
+                <li><strong>Difference 3D:</strong> Remove o volume de intersecção de uma feição 3D de outra (similar ao Erase, mas em 3D).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar uma zona de segurança esférica de 100 metros ao redor de pontos de explosão. Calcular o volume de intersecção entre um modelo geológico de um corpo de minério (multipatch) e os limites de uma propriedade (polígono extrudado). Determinar quais segmentos de um túnel subterrâneo (linha 3D) passam dentro de uma formação rochosa específica (multipatch). Encontrar a distância real (considerando Z) entre andares de um edifício e saídas de emergência. Verificar quais dutos (linhas 3D) estão dentro de uma zona de exclusão volumétrica (multipatch).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ca.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ls.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

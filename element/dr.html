@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Directions (DR)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-network-analysis"> <!-- Categoria: Network Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-network-analysis">DR</div> <!-- Categoria: Network Analysis -->
+            <div class="detail-title">
+                <h2>Directions / Route Instructions</h2>
+                <div class="category">Network Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Gera instruções de navegação detalhadas, trecho a trecho (turn-by-turn), para uma rota calculada previamente usando uma ferramenta de Roteamento (RT) e um Network Dataset. As direções listam as manobras, nomes de ruas, distâncias e tempos estimados para guiar um usuário do ponto de origem ao destino.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Integração com Roteamento:</strong> Geralmente é uma opção ou uma saída direta da ferramenta de análise de rota (RT).</li>
+                <li><strong>Formato da Saída:</strong> Produz texto formatado, que pode ser exibido em um painel, salvo em um arquivo (HTML, TXT) ou armazenado em atributos da camada de rota.</li>
+                <li><strong>Conteúdo das Instruções:</strong> Inclui tipicamente:
+                    <ul>
+                        <li>Ponto de partida.</li>
+                        <li>Instrução de manobra (ex: "Vire à direita", "Siga em frente", "Pegue a saída X").</li>
+                        <li>Nome da rua/estrada a seguir.</li>
+                        <li>Distância ou tempo até a próxima manobra.</li>
+                        <li>Pontos de referência (landmarks), se disponíveis na rede.</li>
+                        <li>Chegada ao destino ou parada intermediária.</li>
+                    </ul>
+                </li>
+                <li><strong>Idioma e Unidades:</strong> Permite configurar o idioma das instruções e as unidades de medida (metros/quilômetros, pés/milhas).</li>
+                <li><strong>Nível de Detalhe:</strong> Algumas ferramentas podem permitir ajustar o quão verbosas ou concisas as instruções devem ser.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Gerar um roteiro impresso para um motorista de entrega seguir. Exibir instruções de navegação em um aplicativo de mapa móvel. Fornecer direções para visitantes em um site de um evento ou atração turística. Criar um guia passo a passo para uma rota de caminhada ou ciclismo. Documentar o percurso de uma linha de ônibus com todas as suas paradas e conversões.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rt.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="os.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Overlay (OV)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-analysis-conversion"> <!-- Categoria: Analysis/Conversion -->
+        <div class="detail-header">
+            <div class="detail-symbol group-analysis-conversion">OV</div> <!-- Categoria: Analysis/Conversion -->
+            <div class="detail-title">
+                <h2>Overlay</h2>
+                <div class="category">Vector Analysis / Conversion</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Combina geometricamente duas ou mais camadas vetoriais para criar uma nova camada de saída. As feições na camada de saída são baseadas nas relações espaciais (interseção, união, diferença) entre as feições das camadas de entrada. As operações de overlay são fundamentais para análises espaciais que integram informações de múltiplas fontes.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Intersect (Interseção):</strong> Cria uma camada de saída contendo apenas as áreas onde as feições de TODAS as camadas de entrada se sobrepõem. Os atributos de todas as camadas de entrada são combinados na saída.</li>
+                <li><strong>Union (União):</strong> Cria uma camada de saída contendo TODAS as feições e áreas de todas as camadas de entrada. Onde as feições se sobrepõem, elas são divididas, e os atributos de todas as camadas são combinados.</li>
+                <li><strong>Erase (Apagar):</strong> Remove as áreas da camada de entrada que se sobrepõem às feições da camada "erase". Funciona como um "cortador" negativo.</li>
+                <li><strong>Identity (Identidade):</strong> Semelhante à Interseção, mas mantém todas as feições da camada de entrada, dividindo-as onde se sobrepõem à camada "identity" e combinando atributos apenas nessas áreas de sobreposição.</li>
+                <li><strong>Symmetrical Difference (Diferença Simétrica):</strong> Cria uma camada de saída com as áreas que pertencem a UMA das camadas de entrada, mas NÃO a ambas (o oposto da Interseção).</li>
+                <li><strong>Update (Atualizar):</strong> Substitui as áreas da camada de entrada pelas feições da camada "update" onde elas se sobrepõem, como colar um patch.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Identificar áreas que são simultaneamente 'floresta' e 'declividade suave' para encontrar locais potenciais para manejo (<code>Intersect</code>). Criar um mapa único combinando limites de bacias hidrográficas e limites municipais (<code>Union</code>). Remover a área de lagos de um mapa de tipos de solo (<code>Erase</code>). Adicionar informações de zoneamento a lotes de propriedade apenas onde eles se cruzam (<code>Identity</code>). Encontrar áreas que são urbanas OU agrícolas, mas não ambas (<code>Symmetrical Difference</code>). Atualizar um mapa de uso do solo antigo com novas áreas de desenvolvimento (<code>Update</code>).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ex.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="px.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

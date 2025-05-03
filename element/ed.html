@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Editing (ED)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Editing/Cartography (usando cor Table/Editing) -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">ED</div> <!-- Categoria: Editing/Cartography (usando cor Table/Editing) -->
+            <div class="detail-title">
+                <h2>Editing</h2>
+                <div class="category">Editing / Cartography</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Conjunto fundamental de operações para criar, modificar e corrigir a geometria (forma e localização) de feições vetoriais (pontos, linhas, polígonos). A edição é essencial para digitalizar novos dados, atualizar mapas existentes, corrigir erros topológicos e preparar dados para análises precisas. Envolve a manipulação direta de vértices, segmentos e feições inteiras.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Criação de Feições:</strong> Desenhar novos pontos, linhas ou polígonos usando ferramentas de digitalização.</li>
+                <li><strong>Edição de Vértices:</strong> Mover, adicionar ou excluir vértices individuais para refinar a forma de linhas e polígonos.</li>
+                <li><strong>Modificação de Segmentos:</strong> Remodelar (reshape) segmentos de linha ou polígono, dividir (split) feições em partes, unir (merge) feições adjacentes.</li>
+                <li><strong>Ferramentas de Precisão (Snapping):</strong> Configurações que fazem o cursor "grudar" automaticamente em vértices, bordas ou interseções de outras feições durante a edição, garantindo a conectividade e a precisão topológica.</li>
+                <li><strong>Ferramentas de Construção Geométrica:</strong>
+                    <ul>
+                        <li><em>Trim/Extend:</em> Cortar ou estender linhas até encontrarem outra feição.</li>
+                        <li><em>Densify:</em> Adicionar vértices a segmentos em intervalos regulares, útil antes de algumas projeções ou generalizações.</li>
+                        <li><em>Generalize (simplificação leve):</em> Reduzir o número de vértices mantendo a forma geral (diferente da generalização cartográfica mais complexa).</li>
+                        <li><em>Buffer (aplicado na edição):</em> Criar feições paralelas ou buffers diretamente no ambiente de edição.</li>
+                    </ul>
+                </li>
+                <li><strong>Edição de Atributos:</strong> Modificar os valores na tabela de atributos das feições selecionadas durante a sessão de edição.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Digitalizar uma nova estrada a partir de uma imagem de satélite. Corrigir o limite de um lote que estava sobreposto ao lote vizinho. Mover um ponto que representa um poste para sua localização correta após uma vistoria de campo. Dividir um grande polígono de uso do solo em polígonos menores após uma reclassificação. Unir vários segmentos de rio em uma única linha contínua. Estender uma linha de rede de água até conectar a um registro existente usando snapping.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="st.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cf.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

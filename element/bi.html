@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Band Index (BI)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">BI</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Band Index / Spectral Indices</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula novos rasters (índices espectrais) combinando matematicamente os valores de diferentes bandas espectrais de uma imagem multiespectral (satélite, aérea, drone). Esses índices são projetados para realçar fenômenos específicos na superfície terrestre (como vegetação, água, solo exposto, áreas queimadas, minerais) aproveitando suas propriedades de refletância ou absorbância em diferentes comprimentos de onda.
+            </p>
+
+            <h3>Funções Principais / Índices Comuns</h3>
+            <ul>
+                <li><strong>Cálculo Baseado em Fórmulas:</strong> Utiliza expressões de Álgebra de Mapas (MA) aplicadas às bandas da imagem.</li>
+                <li><strong>NDVI (Normalized Difference Vegetation Index):</strong> Índice mais comum para realçar a presença e o vigor da vegetação verde. Usa as bandas do Vermelho (Red) e Infravermelho Próximo (NIR). Fórmula: `(NIR - Red) / (NIR + Red)`. Valores variam de -1 a +1, com valores mais altos indicando vegetação mais densa/saudável.</li>
+                <li><strong>SAVI (Soil-Adjusted Vegetation Index):</strong> Variação do NDVI que tenta minimizar a influência do brilho do solo em áreas com vegetação esparsa. Requer um fator de ajuste do solo (L).</li>
+                <li><strong>EVI (Enhanced Vegetation Index):</strong> Outro índice de vegetação que é menos sensível a efeitos atmosféricos e saturação em áreas de alta biomassa que o NDVI. Utiliza bandas do Azul, Vermelho e NIR.</li>
+                <li><strong>NDWI (Normalized Difference Water Index):</strong> Realça corpos d'água abertos. Existem diferentes formulações, comumente usando Verde e NIR, ou NIR e SWIR (Shortwave Infrared).</li>
+                <li><strong>NDBI (Normalized Difference Built-up Index):</strong> Tenta realçar áreas construídas (urbanas). Frequentemente usa SWIR e NIR.</li>
+                <li><strong>NBR (Normalized Burn Ratio):</strong> Projetado para identificar áreas queimadas. Usa NIR e SWIR. A diferença entre NBR pré e pós-fogo (dNBR) é usada para mapear a severidade da queimada.</li>
+                <li><strong>Tasseled Cap Transformation:</strong> Transformação estatística (baseada em componentes principais) que rotaciona os eixos espectrais para realçar características como Brilho (Brightness), Verdor (Greenness) e Umidade (Wetness) do solo/vegetação.</li>
+                 <li><strong>Índices Geológicos/Minerais:</strong> Índices específicos que usam combinações de bandas (incluindo SWIR) para realçar a presença de certos minerais (argila, óxido de ferro, etc.).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Mapear a saúde da vegetação em áreas agrícolas usando NDVI. Identificar e mapear corpos d'água em uma imagem de satélite usando NDWI. Mapear a extensão e a severidade de um incêndio florestal usando NBR/dNBR. Diferenciar áreas urbanas de solo exposto usando NDBI. Analisar a umidade do solo em uma paisagem usando o índice de Umidade (Wetness) do Tasseled Cap. Identificar áreas potenciais para prospecção mineral usando índices específicos.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ar.html" class="nav-button">&laquo; Anterior</a> <!-- Anterior é AR -->
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="is.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

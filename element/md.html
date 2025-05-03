@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Multidimensional Data (MD)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">MD</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Multidimensional Data</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Refere-se ao gerenciamento e análise de dados raster que possuem mais do que as dimensões espaciais X e Y. Tipicamente, incluem dimensões como tempo, profundidade/altura vertical, ou diferentes variáveis/bandas medidas no mesmo local e tempo. Esses dados são frequentemente armazenados em formatos como NetCDF, HDF, GRIB ou como um Mosaico Dataset configurado com dimensões.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Suporte a Formatos Multidimensionais:</strong> Capacidade de ler, escrever e processar formatos comuns como NetCDF (Network Common Data Form), HDF (Hierarchical Data Format) e GRIB (Gridded Binary - comum em meteorologia).</li>
+                <li><strong>Modelo de Dados Multidimensional:</strong> Estruturas de dados GIS (ex: Raster Multidimensional em ArcGIS, Mosaic Datasets com dimensões) que armazenam dados como "fatias" (slices) ao longo das dimensões definidas (ex: uma fatia para cada passo de tempo, uma para cada nível de profundidade).</li>
+                <li><strong>Seleção e Visualização por Dimensão:</strong> Ferramentas para selecionar e visualizar fatias específicas ou agregar dados ao longo de uma dimensão (ex: visualizar a temperatura média ao longo do tempo, mostrar a salinidade em uma profundidade específica). Integração com o controle de tempo (TM).</li>
+                <li><strong>Processamento e Análise Multidimensional:</strong> Ferramentas que operam sobre os dados considerando suas múltiplas dimensões:
+                    <ul>
+                        <li><em>Aggregate:</em> Calcular estatísticas (média, soma, máx, min) ao longo de uma dimensão (ex: média anual de temperatura a partir de dados mensais).</li>
+                        <li><em>Anomaly Calculation:</em> Calcular a diferença de cada fatia em relação a uma média ou linha de base (ex: anomalia de temperatura mensal).</li>
+                        <li><em>Trend Analysis:</em> Calcular tendências lineares ou outras nos valores ao longo de uma dimensão (geralmente tempo) para cada pixel.</li>
+                        <li>Aplicação de funções raster (Map Algebra) em todas as fatias ou em fatias selecionadas.</li>
+                    </ul>
+                 <li><strong>Criação e Gerenciamento:</strong> Ferramentas para criar rasters multidimensionais a partir de múltiplos rasters individuais (cada um representando uma fatia) ou para modificar as dimensões de um arquivo existente.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Analisar dados de modelos climáticos (temperatura, precipitação) que variam no espaço (X, Y) e no tempo. Processar dados oceanográficos (temperatura, salinidade) que variam em X, Y, profundidade (Z) e tempo. Analisar séries temporais de imagens de satélite (ex: NDVI mensal ao longo de vários anos) para detecção de mudanças na vegetação. Visualizar e analisar dados de modelos atmosféricos com múltiplas variáveis em diferentes níveis de pressão/altitude. Gerenciar dados de saída de modelos numéricos complexos que possuem múltiplas dimensões.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rg.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rs.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

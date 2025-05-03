@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Image Classification (IC)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">IC</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Image Classification</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de atribuir automaticamente cada pixel de uma imagem raster (geralmente multiespectral) a uma classe temática predefinida (ex: água, floresta, área urbana, solo exposto, agricultura). A classificação se baseia nas características espectrais (valores de brilho nas diferentes bandas) dos pixels, agrupando pixels com assinaturas espectrais semelhantes na mesma classe. O resultado é um mapa temático rasterizado.
+            </p>
+
+            <h3>Funções Principais / Tipos de Classificação</h3>
+            <ul>
+                <li><strong>Classificação Supervisionada (Supervised Classification):</strong>
+                    <ul>
+                        <li><em>Amostras de Treinamento (Training Samples):</em> O usuário seleciona áreas representativas na imagem para cada classe de interesse (ex: desenha polígonos sobre áreas conhecidas de floresta, água, etc.).</li>
+                        <li><em>Assinaturas Espectrais:</em> O software calcula as características estatísticas (média, covariância) da assinatura espectral para cada classe com base nas amostras de treinamento.</li>
+                        <li><em>Algoritmo Classificador:</em> Um algoritmo (ex: Máxima Verossimilhança - Maximum Likelihood, Distância Mínima - Minimum Distance, Support Vector Machine - SVM, Random Forest, Redes Neurais/Deep Learning - ver ML) é usado para comparar a assinatura espectral de cada pixel da imagem com as assinaturas das classes de treinamento e atribuir o pixel à classe mais provável/semelhante.</li>
+                    </ul>
+                </li>
+                 <li><strong>Classificação Não Supervisionada (Unsupervised Classification):</strong>
+                    <ul>
+                        <li><em>Agrupamento Automático (Clustering):</em> O software agrupa automaticamente os pixels em um número especificado de "clusters" espectrais com base apenas na semelhança estatística de seus valores nas bandas, sem conhecimento prévio do que esses clusters representam. (Ex: Algoritmos ISODATA, K-Means).</li>
+                        <li><em>Interpretação e Rotulagem:</em> O usuário deve, posteriormente, interpretar e atribuir um rótulo de classe temática (água, floresta, etc.) a cada cluster espectral gerado, com base em conhecimento da área ou outras fontes de dados.</li>
+                    </ul>
+                 </li>
+                 <li><strong>Classificação Baseada em Objetos (Object-Based Image Analysis - OBIA - Ver SG):</strong> Primeiro segmenta a imagem em objetos (grupos de pixels adjacentes e homogêneos) e depois classifica esses objetos com base em suas propriedades espectrais, de forma, textura e contexto espacial. Muitas vezes considerada mais avançada que a classificação baseada em pixel.</li>
+                 <li><strong>Pós-Processamento:</strong> Aplicação de filtros de generalização (RG) para limpar o resultado ("sal e pimenta") e avaliação da acurácia da classificação usando dados de referência independentes (matriz de confusão, índice Kappa).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um mapa de cobertura do solo para uma bacia hidrográfica a partir de imagens Landsat. Mapear diferentes tipos de culturas agrícolas em uma região usando imagens multiespectrais de alta resolução. Identificar áreas de desmatamento comparando classificações de imagens de diferentes datas. Mapear zonas úmidas e corpos d'água. Classificar diferentes tipos de áreas urbanas (residencial, comercial, industrial) com base em suas características espectrais e texturais.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="is.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cb.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

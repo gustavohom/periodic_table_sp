@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: OD Cost Matrix (CM)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-network-analysis"> <!-- Categoria: Network Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-network-analysis">CM</div> <!-- Categoria: Network Analysis -->
+            <div class="detail-title">
+                <h2>OD Cost Matrix (Origin-Destination)</h2>
+                <div class="category">Network Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula o custo de viagem (impedância - geralmente tempo ou distância) pela rede entre múltiplos pontos de origem e múltiplos pontos de destino. O resultado é uma tabela (matriz) que lista o custo do caminho de menor custo para cada par origem-destino viável.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                 <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Origins:</em> Camada de pontos representando os locais de partida.</li>
+                        <li><em>Destinations:</em> Camada de pontos representando os locais de chegada.</li>
+                        <li><em>Network Dataset:</em> A rede usada para calcular os custos.</li>
+                    </ul>
+                </li>
+                <li><strong>Impedância:</strong> Define o custo a ser calculado (ex: Tempo, Distância).</li>
+                <li><strong>Cutoff (Limite - Opcional):</strong> Um valor máximo de custo. Pares origem-destino cujo menor custo exceda esse valor não serão incluídos na saída.</li>
+                <li><strong>Número de Destinos a Encontrar (Opcional):</strong> Limita o número de destinos mais próximos (em termos de custo) a serem encontrados para cada origem. Se não especificado, calcula para todos os pares possíveis (dentro do cutoff).</li>
+                 <li><strong>Restrições e Barreiras:</strong> Pode usar as mesmas restrições e barreiras da análise de Rota (RT).</li>
+                <li><strong>Saída:</strong> Uma tabela contendo, no mínimo, o ID da Origem, o ID do Destino e o Custo Total calculado para esse par. Pode opcionalmente gerar linhas retas conectando os pares OD, simbolizadas pelo custo.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Calcular uma tabela de tempos de viagem entre todos os bairros de uma cidade para análise de acessibilidade. Determinar os custos de transporte entre vários centros de distribuição e todas as lojas de varejo que eles atendem. Analisar os tempos de deslocamento de várias áreas residenciais para múltiplos centros de emprego. Gerar dados de entrada (matriz de distâncias/tempos) para modelos de localização-alocação (OS) ou modelos de interação espacial (como o Huff Model - HM). Comparar a acessibilidade a hospitais a partir de diferentes localizações.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cv.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="hm.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

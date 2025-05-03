@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Proximity (PX)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-analysis-conversion"> <!-- Categoria: Analysis/Conversion -->
+        <div class="detail-header">
+            <div class="detail-symbol group-analysis-conversion">PX</div> <!-- Categoria: Analysis/Conversion -->
+            <div class="detail-title">
+                <h2>Proximity</h2>
+                <div class="category">Vector Analysis / Conversion</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Analisa a proximidade espacial entre feições geográficas. Essas ferramentas calculam distâncias, criam zonas baseadas em distância (buffers) ou determinam qual feição está mais próxima de outra. São essenciais para análises de acessibilidade, definição de áreas de influência, planejamento de serviços e modelagem espacial.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Buffer:</strong> Cria polígonos (zonas de influência) ao redor de feições de entrada (pontos, linhas ou polígonos) a uma distância especificada. Pode ter distâncias múltiplas (múltiplos anéis).</li>
+                <li><strong>Near (Próximo):</strong> Calcula a distância de cada feição na camada de entrada até a feição mais próxima em outra camada. Pode adicionar o ID e a distância da feição mais próxima à tabela de atributos da camada de entrada.</li>
+                <li><strong>Point Distance (Distância entre Pontos):</strong> Calcula as distâncias entre todos os pares de pontos entre duas camadas e gera uma tabela com os resultados.</li>
+                <li><strong>Thiessen Polygons (Voronoi Diagram):</strong> Cria polígonos onde cada polígono contém a área que está mais próxima de um ponto de entrada específico do que de qualquer outro ponto de entrada. Define áreas de influência ou serviço.</li>
+                <li><strong>Generate Near Table:</strong> Similar ao Near, mas gera uma tabela separada listando múltiplas feições próximas (não apenas a mais próxima) dentro de um raio de busca especificado.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Determinar quais residências estão a menos de 1 km de uma escola (<code>Buffer</code> e depois <code>Select By Location</code> ou <code>Spatial Join</code>). Calcular a distância de cada posto de saúde ao hospital mais próximo (<code>Near</code>). Gerar uma matriz de distâncias entre todas as lojas de uma rede (<code>Point Distance</code>). Definir a área de captação primária para cada biblioteca pública em uma cidade (<code>Thiessen Polygons</code>). Encontrar os 5 vizinhos mais próximos para cada árvore em um inventário florestal (<code>Generate Near Table</code>).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ov.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="sj.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

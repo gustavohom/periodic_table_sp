@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Attachments (AT)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">AT</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Attachments</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Funcionalidade (disponível principalmente em Geodatabases) que permite associar arquivos externos (como fotos, vídeos, PDFs, documentos de texto) diretamente a feições individuais em uma camada vetorial. Os arquivos anexados são armazenados dentro do próprio Geodatabase através de tabelas de relacionamento internas, facilitando o gerenciamento e o acesso a mídias relacionadas a partir do ambiente GIS.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Habilitar Anexos (Enable Attachments):</strong> Operação inicial que cria as tabelas de relacionamento necessárias (`__ATTACH` e `__ATTACHREL`) no Geodatabase para permitir que uma camada armazene anexos.</li>
+                <li><strong>Adicionar Anexos (Add Attachments):</strong> Ferramentas (geralmente em painéis de atributos ou barras de edição) que permitem ao usuário selecionar uma feição e navegar para adicionar um ou mais arquivos como anexos a ela.</li>
+                <li><strong>Visualizar/Abrir Anexos:</strong> Funcionalidade (ex: na ferramenta Identify, pop-ups, painel de atributos) que lista os anexos associados a uma feição selecionada e permite abri-los com o aplicativo padrão do sistema operacional.</li>
+                <li><strong>Gerenciar Anexos:</strong> Opções para remover anexos existentes ou visualizar suas propriedades (nome, tipo, tamanho).</li>
+                <li><strong>Acesso via Programação/Web:</strong> APIs e serviços web podem permitir o acesso e a manipulação de anexos programaticamente ou em aplicações web/móveis.</li>
+                <li><strong>Diferença de Hiperlinks:</strong> Hiperlinks armazenam apenas o caminho (URL ou local no disco) para um arquivo externo. Anexos armazenam o próprio arquivo dentro do banco de dados, tornando o conjunto de dados mais autocontido e portátil (mas também maior em tamanho).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Anexar fotos de inspeção a cada poste de iluminação pública em uma camada de inventário. Associar o PDF do laudo técnico a uma feição que representa uma área contaminada. Anexar um pequeno vídeo mostrando a condição de uma válvula em uma rede de água. Guardar o documento de licença ambiental junto ao polígono de uma área de mineração. Anexar fotos de danos a residências após um evento climático. Associar plantas ou croquis a edifícios em um cadastro.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="pf.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="fmv.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

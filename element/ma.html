@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Map Algebra (MA)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+             <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">MA</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Map Algebra</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Linguagem formal, semelhante à álgebra matemática, usada para realizar operações em um ou mais conjuntos de dados raster. Permite combinar rasters usando operadores matemáticos (+, -, *, /), lógicos (AND, OR, XOR, NOT), relacionais (>, <, ==), funções trigonométricas, exponenciais, etc., aplicados célula por célula ou em vizinhanças. É a base para muitas análises raster complexas.
+            </p>
+
+            <h3>Funções Principais / Tipos de Operações</h3>
+            <ul>
+                <li><strong>Operações Locais (Local Operations):</strong> O valor da célula de saída depende apenas do valor da(s) célula(s) de entrada na mesma localização (posição X,Y).
+                    <ul>
+                        <li><em>Aritméticas:</em> Adição, subtração, multiplicação, divisão entre dois rasters ou entre um raster e uma constante.</li>
+                        <li><em>Lógicas/Booleanas:</em> Operações AND, OR, XOR, NOT para combinar rasters binários ou resultados de condições.</li>
+                        <li><em>Relacionais:</em> Comparar valores entre rasters ou com uma constante (>, <, >=, <=, ==, !=), resultando em um raster binário (0 ou 1).</li>
+                        <li><em>Funções Matemáticas:</em> Aplicar funções como Log, Exp, Abs, Sqrt, Sin, Cos, etc., a cada célula.</li>
+                        <li><em>Reclassificação (Reclassify):</em> Mudar os valores das células com base em regras ou tabelas de correspondência.</li>
+                        <li><em>Condicionais (Con):</em> Atribuir valores à célula de saída com base em uma condição (ver CON).</li>
+                    </ul>
+                </li>
+                <li><strong>Operações Focais (Focal Operations / Neighborhood):</strong> O valor da célula de saída depende dos valores das células de entrada dentro de uma vizinhança definida (ex: 3x3, círculo) ao redor da localização correspondente. (Ex: calcular a média, mediana, desvio padrão, mínimo, máximo, maioria, variedade dos vizinhos). Usado para filtros de suavização, detecção de bordas, cálculo de declividade/aspecto (TA).</li>
+                <li><strong>Operações Zonais (Zonal Operations):</strong> O valor da célula de saída depende dos valores das células de entrada que pertencem à mesma zona, definida por um raster de zonas. (Ver Zonal Statistics - ZS).</li>
+                <li><strong>Operações Globais (Global Operations):</strong> O valor da célula de saída depende dos valores de todas as células no raster de entrada. (Ex: calcular estatísticas globais, distâncias euclidianas, distância de custo, análise de bacias hidrográficas).</li>
+                 <li><strong>Calculadora Raster (Raster Calculator):</strong> Interface gráfica comum em softwares GIS para construir e executar expressões de Álgebra de Mapas.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Subtrair um DEM de um ano do DEM de outro ano para calcular erosão/deposição. Calcular o índice NDVI = (NIR - Red) / (NIR + Red). Identificar áreas que são 'floresta' E com 'declividade < 15%' (Raster_Floresta == 1) & (Raster_Declividade < 15). Reclassificar um raster de elevação em 3 classes: Baixa, Média, Alta. Calcular a elevação média em uma janela móvel 5x5 para suavizar um DEM. Multiplicar um raster de adequabilidade por um raster de máscara binária (0 ou 1) para zerar áreas inadequadas.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ra.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cn.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

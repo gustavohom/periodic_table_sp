@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Generalize Vector (GV)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">GV</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Generalize Vector (Dissolve/Eliminate)</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Simplifica camadas vetoriais combinando feições adjacentes que compartilham características comuns ou removendo pequenas feições "residuais" (slivers). O objetivo principal é agregar dados ou limpar geometrias resultantes de operações anteriores (como overlays), reduzindo a complexidade da camada. Difere da Generalização Cartográfica (CA) por focar na agregação baseada em atributos ou na eliminação de polígonos espúrios, e não primariamente na estética para escalas menores.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Dissolve (Dissolver):</strong> Agrega feições (geralmente polígonos) que possuem o mesmo valor em um ou mais campos de atributos especificados. As fronteiras internas entre feições com os mesmos valores são removidas. Permite sumarizar atributos numéricos das feições agregadas (ex: somar área, calcular média de população).</li>
+                <li><strong>Eliminate (Eliminar):</strong> Remove polígonos "slivers" (pequenos polígonos indesejados, geralmente resultado de overlays ou digitalização imprecisa) fundindo-os com polígonos vizinhos adjacentes. A fusão pode ser baseada no vizinho com a maior área de fronteira compartilhada ou com o maior ou menor valor de área. Pode-se definir um critério de tamanho (área e/ou forma) para os polígonos a serem eliminados.</li>
+                <li><strong>Simplify Polygon/Line (Simplificação de Vértices):</strong> Embora também seja um operador de generalização cartográfica (CA), às vezes é agrupado aqui como forma de simplificar a geometria antes ou depois de outras operações de generalização vetorial. Reduz o número de vértices.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um mapa de biomas a partir de uma camada detalhada de tipos de vegetação, dissolvendo polígonos com base no campo 'Bioma' (<code>Dissolve</code>). Agregar dados de vendas por município para obter o total por estado (<code>Dissolve</code> por 'UF', sumarizando 'Vendas'). Limpar uma camada resultante de uma interseção que gerou muitos polígonos minúsculos nas bordas das feições originais (<code>Eliminate</code>). Simplificar os limites de uma camada de municípios para uma visualização mais rápida em nível nacional (<code>Dissolve</code> sem campo de dissolução, apenas para remover fronteiras internas complexas, ou <code>Simplify Polygon</code>).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="pj.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ad.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

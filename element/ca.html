@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Cartographic Generalization (CA)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Editing/Cartography (usando cor Table/Editing) -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">CA</div> <!-- Categoria: Editing/Cartography (usando cor Table/Editing) -->
+            <div class="detail-title">
+                <h2>Cartographic Generalization</h2>
+                <div class="category">Editing / Cartography</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de simplificação e ajuste da representação de feições geográficas para exibição em mapas de escalas menores. O objetivo é reduzir a complexidade visual, eliminar detalhes desnecessários e resolver conflitos espaciais, mantendo a clareza, legibilidade e a comunicação eficaz da informação geográfica principal, mesmo quando o espaço no mapa é limitado.
+            </p>
+
+            <h3>Funções Principais / Operadores de Generalização</h3>
+            <ul>
+                <li><strong>Simplify (Simplificar):</strong> Reduzir o número de vértices em linhas e polígonos, removendo detalhes finos da forma, preservando a característica geral. (Ex: Algoritmos Douglas-Peucker, Bend Simplify).</li>
+                <li><strong>Smooth (Suavizar):</strong> Reduzir ângulos agudos e irregularidades em linhas e polígonos, criando formas mais curvas e esteticamente agradáveis.</li>
+                <li><strong>Aggregate (Agregar):</strong> Combinar múltiplos polígonos pequenos e adjacentes (que pertencem à mesma classe) em um único polígono maior.</li>
+                <li><strong>Collapse (Colapsar):</strong> Substituir feições poligonais pequenas ou lineares complexas por feições pontuais ou lineares mais simples (ex: uma área urbana pequena vira um ponto, um rio de dupla margem vira uma linha única).</li>
+                <li><strong>Displace (Deslocar):</strong> Mover feições que estão muito próximas ou sobrepostas (ex: uma estrada e um rio paralelos) para que ambas sejam visíveis e distintas no mapa.</li>
+                <li><strong>Typify (Tipificar):</strong> Substituir um conjunto denso de feições (ex: muitos edifícios pequenos) por um número menor de feições representativas que indicam o padrão geral.</li>
+                <li><strong>Enhance (Realçar):</strong> Exagerar certas características da forma para manter sua percepção visual em escalas menores (ex: alargar uma curva importante de um rio).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Simplificar a linha costeira de um país para exibição em um mapa múndi. Suavizar curvas de nível para um mapa topográfico de visão geral. Agregar pequenos fragmentos florestais em manchas maiores em um mapa regional de cobertura vegetal. Representar pequenas vilas como pontos em um mapa estadual. Deslocar ligeiramente estradas e ferrovias paralelas para evitar que se fundam visualmente em um mapa de pequena escala.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="gi.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="3d.html" class="nav-button">Próximo &raquo;</a> <!-- Próximo é 3D -->
+        </div>
+    </div>
+</body>
+</html>

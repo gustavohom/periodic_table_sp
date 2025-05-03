@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Extract (EX)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-analysis-conversion"> <!-- Categoria: Analysis/Conversion -->
+        <div class="detail-header">
+            <div class="detail-symbol group-analysis-conversion">EX</div> <!-- Categoria: Analysis/Conversion -->
+            <div class="detail-title">
+                <h2>Extract</h2>
+                <div class="category">Vector Analysis / Conversion</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Cria um subconjunto de feições a partir de uma camada vetorial maior, utilizando critérios espaciais ou de atributos. É uma operação fundamental para focar a análise em áreas de interesse ou em dados específicos. As ferramentas de extração permitem selecionar, recortar (clip) ou dividir feições para gerar novas camadas com os dados desejados.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Clip:</strong> Extrai feições de entrada que se sobrepõem a uma camada de recorte (como cortar um biscoito com um molde). Mantém os atributos das feições de entrada.</li>
+                <li><strong>Select (Seleção):</strong> Cria uma nova camada contendo apenas as feições selecionadas com base em expressões de atributos (SQL) ou localização espacial (relação com outra camada). (Ex: Ferramentas <code>Select Layer By Attribute</code>, <code>Select Layer By Location</code>, seguido de <code>Export Features</code> ou <code>Copy Features</code>).</li>
+                <li><strong>Split (Divisão):</strong> Divide uma camada de entrada em múltiplas camadas de saída com base nos polígonos de uma camada de divisão. Cada nova camada corresponde a um polígono da camada de divisão.</li>
+                <li><strong>Table Select:</strong> Cria uma nova tabela contendo apenas os registros selecionados de uma tabela de atributos com base em uma consulta SQL.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Recortar todas as estradas que estão dentro do limite de um município específico (<code>Clip</code>). Selecionar apenas os rios com vazão acima de um certo valor ou que cruzam uma área de preservação (<code>Select Layer By Attribute</code> / <code>Select Layer By Location</code>). Dividir uma camada de dados de vegetação nacional em camadas separadas por estado (<code>Split</code>). Extrair apenas os registros de clientes de uma determinada cidade de uma tabela geral (<code>Table Select</code>).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="vc.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ov.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

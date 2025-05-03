@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Kriging (KR)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-interpolation"> <!-- Categoria: Interpolation -->
+        <div class="detail-header">
+             <!-- Fundo verde claro, texto escuro -->
+            <div class="detail-symbol group-interpolation">KR</div> <!-- Categoria: Interpolation -->
+            <div class="detail-title">
+                <h2>Kriging / Geostatistics</h2>
+                <div class="category">Interpolation</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Método de interpolação geoestatístico avançado que utiliza a estrutura de autocorrelação espacial dos dados de amostra (quantificada pelo semivariograma) para calcular pesos ótimos e estimar valores em locais não amostrados. Diferente dos métodos determinísticos (IDW, Spline), Kriging fornece não apenas uma superfície de predição, mas também uma medida da incerteza (erro padrão ou variância) associada a essa predição.
+            </p>
+
+            <h3>Funções Principais / Workflow Típico</h3>
+            <ul>
+                <li><strong>1. Análise Exploratória dos Dados (Exploratory Data Analysis - EDA):</strong> Examinar a distribuição dos dados de amostra, identificar outliers, verificar tendências espaciais e avaliar a normalidade. Transformações (ex: log) podem ser necessárias.</li>
+                <li><strong>2. Cálculo do Semivariograma Experimental:</strong> Mede a variância média entre pares de pontos de amostra em função da distância que os separa. Mostra como a similaridade entre os pontos diminui com a distância.</li>
+                <li><strong>3. Modelagem do Semivariograma (Variogram Modeling):</strong> Ajustar um modelo matemático (ex: Esférico, Exponencial, Gaussiano) ao semivariograma experimental. O modelo ajustado captura características importantes da autocorrelação espacial:
+                    <ul>
+                        <li><em>Nugget (Pepita):</em> Variância em distâncias muito curtas (erro de medição + microvariação).</li>
+                        <li><em>Sill (Patamar):</em> Variância total dos dados (aproximadamente a variância global).</li>
+                        <li><em>Range (Alcance):</em> Distância na qual a autocorrelação espacial se torna desprezível (pontos além dessa distância são considerados não correlacionados).</li>
+                    </ul>
+                </li>
+                 <li><strong>4. Predição (Kriging):</strong> Usar o modelo de semivariograma ajustado para calcular os pesos ótimos para os pontos de amostra vizinhos e estimar o valor em cada célula do raster de saída. Existem diferentes tipos de Kriging:
+                    <ul>
+                        <li><em>Ordinary Kriging (OK):</em> Assume que a média local é desconhecida, mas constante na vizinhança. Mais comum.</li>
+                        <li><em>Simple Kriging (SK):</em> Assume que a média global dos dados é conhecida e constante.</li>
+                        <li><em>Universal Kriging (UK):</em> Assume que há uma tendência (trend) espacial nos dados e a modela junto com a autocorrelação dos resíduos.</li>
+                        <li><em>Indicator Kriging, Probability Kriging, Cokriging, etc.:</em> Variações para dados categóricos, probabilidades ou para usar variáveis secundárias correlacionadas.</li>
+                    </ul>
+                 </li>
+                 <li><strong>5. Saída:</strong>
+                    <ul>
+                        <li><em>Superfície de Predição (Raster):</em> Mapa com os valores estimados.</li>
+                        <li><em>Superfície de Erro Padrão/Variância da Predição (Raster):</em> Mapa mostrando a incerteza da estimativa em cada local (geralmente menor perto dos pontos de amostra e maior longe deles).</li>
+                    </ul>
+                 </li>
+                 <li><strong>Validação Cruzada (Cross-validation):</strong> Essencial para avaliar a qualidade do modelo de semivariograma e a precisão das predições.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Estimar a concentração de minério em uma jazida a partir de amostras de furos de sondagem, incluindo um mapa de incerteza. Mapear a distribuição espacial da poluição do ar com base em dados de estações de monitoramento, identificando áreas com maior erro de estimativa. Gerar um Modelo Digital de Elevação a partir de pontos de GPS, usando Kriging para uma interpolação estatisticamente robusta. Prever níveis de lençol freático com base em medições de poços. Mapear a probabilidade de um determinado tipo de solo exceder um limiar de contaminação.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ip.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="kd.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Linear Referencing (LR)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">LR</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Linear Referencing</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Método de armazenar e localizar dados ao longo de feições lineares (como estradas, rios, dutos) usando uma medida de distância relativa (m-value ou measure) a partir de um ponto inicial definido nessa linha, em vez de usar coordenadas X,Y absolutas. Permite mapear eventos ou atributos que ocorrem em posições específicas ou trechos ao longo de uma rede linear.
+            </p>
+
+            <h3>Funções Principais / Componentes</h3>
+            <ul>
+                <li><strong>Rotas (Routes):</strong> Feições lineares que possuem um identificador único (Route ID) e valores de medida (m-values) armazenados em seus vértices, definindo a distância ao longo da linha a partir de um ponto de origem conhecido. As medidas devem ser (geralmente) monotonicamente crescentes.</li>
+                <li><strong>Eventos (Events):</strong> Dados armazenados em tabelas separadas que descrevem atributos ou ocorrências associadas às rotas. Existem dois tipos principais:
+                    <ul>
+                        <li><em>Point Events:</em> Ocorrências em um ponto específico ao longo de uma rota, definidas pelo Route ID e um único valor de medida (ex: localização de um acidente no km 10.5 da BR-101).</li>
+                        <li><em>Line Events:</em> Atributos ou condições que se aplicam a um trecho de uma rota, definidos pelo Route ID e medidas de início e fim (ex: limite de velocidade de 80 km/h do km 5.0 ao km 15.0 da BR-101).</li>
+                    </ul>
+                </li>
+                <li><strong>Criação e Calibração de Rotas:</strong> Ferramentas para criar feições de rota a partir de linhas existentes e definir/ajustar seus valores de medida (m-values) com base em pontos de controle conhecidos (calibration points).</li>
+                <li><strong>Localização de Eventos (Dynamic Segmentation):</strong> Ferramentas que desenham dinamicamente os eventos (pontuais ou lineares) sobre as rotas correspondentes no mapa, com base nas informações das tabelas de eventos.</li>
+                <li><strong>Análise de Eventos:</strong> Operações como overlay de eventos (encontrar onde diferentes condições de eventos lineares se sobrepõem), concatenação de eventos, etc.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Mapear e gerenciar dados de condição do pavimento (buracos, trincas) ao longo de rodovias, referenciados por quilometragem. Localizar marcos quilométricos, pontes, ou sinais de trânsito em uma rede rodoviária. Gerenciar informações sobre limites de velocidade, número de faixas ou restrições de tráfego que variam ao longo das estradas. Mapear resultados de monitoramento da qualidade da água em diferentes pontos de coleta ao longo de rios, referenciados pela distância da foz. Gerenciar dados de inspeção de dutos (oleodutos, gasodutos) localizando defeitos ou características por medida linear.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="tp.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="sa.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

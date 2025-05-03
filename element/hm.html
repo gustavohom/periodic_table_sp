@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Huff Model (HM)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-network-analysis"> <!-- Categoria: Network Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-network-analysis">HM</div> <!-- Categoria: Network Analysis -->
+            <div class="detail-title">
+                <h2>Huff Gravity Model</h2>
+                <div class="category">Network Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Modelo de interação espacial, baseado na lei da gravidade, usado principalmente em geomarketing e análise de varejo para prever a probabilidade de consumidores de uma determinada área de demanda (ex: setor censitário) escolherem visitar uma loja ou instalação específica, entre várias opções concorrentes. O modelo assume que a probabilidade é diretamente proporcional à atratividade da loja (ex: tamanho, variedade) e inversamente proporcional à distância ou custo de viagem para chegar até ela, elevado a um expoente.
+            </p>
+
+            <h3>Funções Principais / Componentes</h3>
+            <ul>
+                 <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Demand Points (Pontos de Demanda):</em> Localizações de onde os consumidores vêm (ex: centroides de setores censitários), com um atributo representando o potencial de demanda (ex: população, renda, gastos potenciais).</li>
+                        <li><em>Facility/Store Points (Lojas/Instalações):</em> Localizações das lojas concorrentes, com um atributo representando sua atratividade (ex: área de vendas, número de funcionários, um índice composto).</li>
+                        <li><em>Distance/Travel Cost:</em> A distância ou o custo de viagem (tempo) entre cada ponto de demanda e cada loja. Isso é frequentemente obtido a partir de uma análise de OD Cost Matrix (CM).</li>
+                        <li><em>Distance Exponent (Lambda - λ):</em> Um parâmetro que controla o quão sensível os consumidores são à distância. Valores maiores indicam maior sensibilidade (distância tem mais peso). Este valor muitas vezes precisa ser calibrado.</li>
+                        <li><em>Attractiveness Exponent (Alpha - α):</em> Um parâmetro (frequentemente assumido como 1) que controla o peso da atratividade da loja.</li>
+                    </ul>
+                </li>
+                 <li><strong>Cálculo da Probabilidade:</strong> Para cada ponto de demanda 'i' e cada loja 'j', a probabilidade Pij é calculada como: (Atratividade_j ^ α / Distância_ij ^ λ) / Σ (Atratividade_k ^ α / Distância_ik ^ λ) para todas as lojas 'k'.</li>
+                <li><strong>Saída:</strong>
+                    <ul>
+                        <li>Uma tabela mostrando a probabilidade de cada ponto de demanda visitar cada loja.</li>
+                        <li>Estimativas de vendas ou número de clientes para cada loja, multiplicando a probabilidade pela demanda total da área e somando para todas as áreas de demanda.</li>
+                        <li>Linhas de fluxo mostrando a interação (probabilidade ou fluxo estimado) entre demandas e lojas.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Estimar a participação de mercado (market share) de diferentes supermercados em uma cidade. Prever o impacto nas vendas de lojas existentes com a abertura de uma nova loja concorrente. Identificar áreas de demanda com maior potencial de gastos para uma determinada loja. Avaliar diferentes locais potenciais para uma nova franquia, escolhendo aquele que atrai a maior probabilidade de visita dos consumidores-alvo. Analisar a "área de influência" ou "trade area" de um shopping center, baseada nas probabilidades de visita das áreas vizinhas.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cm.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <!-- Assumindo que este é o último da lista fornecida -->
+            <a href="dm.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

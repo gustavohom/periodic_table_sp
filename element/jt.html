@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Join Table (JT)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Tables -->
+        <div class="detail-header">
+            <!-- Forçando texto escuro para melhor leitura sobre o amarelo -->
+            <div class="detail-symbol group-table-editing force-dark-text">JT</div> <!-- Categoria: Tables -->
+            <div class="detail-title">
+                <h2>Join Table (Attribute Join)</h2>
+                <div class="category">Tables</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Anexa colunas de uma tabela (ou camada) a outra tabela (ou camada) com base em valores correspondentes em um campo chave comum (key field). Diferente do Spatial Join, o Join de Atributos não utiliza a localização espacial, apenas os valores nos campos especificados. É usado para combinar informações descritivas de diferentes fontes que compartilham um identificador único.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Seleção das Tabelas/Camadas:</strong> Especifica a tabela de destino (à qual os campos serão anexados) e a tabela de origem (de onde os campos virão).</li>
+                <li><strong>Seleção dos Campos Chave:</strong> Identifica o campo na tabela de destino e o campo na tabela de origem que contêm os valores correspondentes a serem usados para fazer a ligação (ex: 'ID_Municipio' em ambas as tabelas). Os tipos de dados dos campos chave devem ser compatíveis.</li>
+                <li><strong>Tipo de Junção (Cardinalidade):</strong> Define como os registros são combinados:
+                    <ul>
+                        <li><em>One-to-one (1:1):</em> Cada registro na tabela de destino corresponde a no máximo um registro na tabela de origem.</li>
+                        <li><em>One-to-many (1:M):</em> Um registro na tabela de destino pode corresponder a múltiplos registros na tabela de origem. O comportamento padrão geralmente anexa apenas o primeiro registro correspondente da origem, a menos que se use ferramentas específicas como `Join Field` que podem agregar/sumarizar.</li>
+                        <li><em>Many-to-one (M:1):</em> Múltiplos registros na tabela de destino podem corresponder a um único registro na tabela de origem (funciona bem).</li>
+                        <li><em>Many-to-many (M:N):</em> Requer geralmente tabelas intermediárias ou a funcionalidade de `Relate`.</li>
+                    </ul>
+                </li>
+                 <li><strong>Opção de Manter Registros:</strong> Escolher se apenas os registros que têm correspondência em ambas as tabelas devem ser mantidos na saída (inner join) ou se todos os registros da tabela de destino devem ser mantidos, preenchendo com nulos onde não há correspondência (left outer join).</li>
+                 <li><strong>Persistência:</strong> O Join pode ser temporário (virtual, em memória, como em `Add Join`) ou permanente (criando uma nova tabela/camada ou modificando a existente, como em `Join Field`).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Anexar dados de população de uma tabela de censo a uma camada de polígonos de municípios usando o campo 'Codigo_IBGE' como chave. Adicionar informações detalhadas sobre o proprietário (nome, endereço) de uma tabela separada a uma camada de lotes usando o 'Numero_Cadastro' como chave. Juntar dados de vendas mensais de uma tabela a uma camada de lojas usando o 'ID_Loja' como chave.
+            </p>
+             <p>
+                <em>Diferença chave do Relate (RL):</em> O Join anexa fisicamente (ou virtualmente) as colunas à tabela de destino. O Relate apenas estabelece uma ligação, permitindo selecionar registros relacionados sem modificar as tabelas originais.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cg.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rl.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Machine Learning (ML)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-emerging-tech"> <!-- Categoria: Emerging Technology -->
+        <div class="detail-header">
+            <div class="detail-symbol group-emerging-tech">ML</div> <!-- Categoria: Emerging Technology -->
+            <div class="detail-title">
+                <h2>Machine Learning / AI</h2>
+                <div class="category">Emerging Technology</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Aplicação de algoritmos de aprendizado de máquina (Machine Learning - ML) e inteligência artificial (AI) para analisar dados geoespaciais, permitindo que o computador aprenda padrões, faça previsões ou classifique dados sem ser explicitamente programado para cada tarefa. Em GIS, é usado para classificação de imagens, previsão de eventos espaciais, clusterização e detecção de anomalias. O Deep Learning, um subcampo do ML usando redes neurais profundas, é particularmente poderoso para tarefas com imagens e dados complexos.
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Técnicas</h3>
+            <ul>
+                <li><strong>Classificação (Supervisionada):</strong> Treinar um modelo usando dados rotulados para classificar novas feições ou pixels.
+                    <ul>
+                        <li><em>Classificação de Imagens/Pixels (Raster):</em> Classificar uso do solo, detectar objetos (piscinas, edifícios) em imagens de satélite/aéreas. (Ex: Ferramentas de Deep Learning como <code>Train Deep Learning Model</code>, <code>Classify Pixels Using Deep Learning</code>).</li>
+                        <li><em>Classificação de Feições (Vetor):</em> Prever uma categoria para feições vetoriais com base em seus atributos e/ou contexto espacial (Ex: Prever risco de incêndio para parcelas).</li>
+                    </ul>
+                </li>
+                <li><strong>Regressão/Previsão (Supervisionada):</strong> Treinar um modelo para prever um valor numérico contínuo.
+                    <ul>
+                        <li><em>Previsão Espacial:</em> Estimar valores em locais não amostrados (ex: prever preço de imóveis, concentração de poluentes). (Ex: Ferramentas como <code>Geographically Weighted Regression</code>, modelos baseados em Random Forest, Gradient Boosting).</li>
+                    </ul>
+                </li>
+                 <li><strong>Clusterização (Não Supervisionada):</strong> Agrupar feições ou locais com características semelhantes sem conhecimento prévio das classes.
+                    <ul>
+                        <li><em>Spatially Constrained Multivariate Clustering:</em> Agrupar feições com atributos semelhantes que também são espacialmente próximas.</li>
+                        <li><em>Density-based Clustering:</em> Identificar áreas de alta concentração de pontos (ex: DBSCAN, HDBSCAN).</li>
+                    </ul>
+                 </li>
+                 <li><strong>Deep Learning Toolset (Ex: ArcGIS):</strong> Conjunto de ferramentas específicas para:
+                    <ul>
+                        <li><em>Preparar Dados de Treinamento:</em> Exportar amostras de imagens rotuladas.</li>
+                        <li><em>Treinar Modelos:</em> Usar arquiteturas de redes neurais (U-Net, ResNet, etc.) para tarefas específicas.</li>
+                        <li><em>Inferência:</em> Aplicar modelos treinados para detectar objetos, classificar pixels ou classificar feições.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Detectar automaticamente piscinas ou painéis solares em imagens aéreas de alta resolução (Deep Learning - Detecção de Objetos). Classificar tipos de cobertura do solo (floresta, água, urbano, agrícola) em imagens de satélite (Deep Learning/ML - Classificação de Pixels). Prever áreas com alta probabilidade de ocorrência de deslizamentos com base em declividade, tipo de solo e precipitação (ML - Classificação/Regressão). Agrupar bairros com perfis socioeconômicos e demográficos semelhantes (ML - Clusterização). Identificar padrões de tráfego anômalos em dados de sensores em tempo real (ML - Detecção de Anomalias).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="bd.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="de.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

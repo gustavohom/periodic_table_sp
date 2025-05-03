@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Conditional Tool (Con) (CON)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+            <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">CON</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Conditional Tool (Con)</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Ferramenta de Álgebra de Mapas (MA) que realiza uma avaliação condicional (if/then/else) para cada célula de um raster de entrada. Se a condição especificada para uma célula for verdadeira, ela recebe um valor; se for falsa, recebe outro valor. Permite criar rasters de saída com base em critérios lógicos aplicados aos valores das células.
+            </p>
+
+            <h3>Funções Principais / Sintaxe Típica</h3>
+            <ul>
+                <li><strong>Estrutura Lógica:</strong> `Con(condition_raster, true_raster_or_value, {false_raster_or_value})`</li>
+                <li><strong>Condition Raster (Raster de Condição):</strong> Um raster (ou uma expressão que resulta em um raster) avaliado logicamente. Geralmente é um raster booleano (0 e 1) resultante de uma operação relacional (>, <, ==, etc.) ou lógica (AND, OR, etc.), ou qualquer raster onde 0 é interpretado como FALSO e qualquer outro valor como VERDADEIRO.</li>
+                <li><strong>True Raster or Value (Valor se Verdadeiro):</strong> O valor que será atribuído à célula de saída se a condição for verdadeira na célula correspondente. Pode ser um valor constante, o valor de outro raster na mesma célula, ou uma expressão.</li>
+                <li><strong>False Raster or Value (Valor se Falso - Opcional):</strong> O valor que será atribuído à célula de saída se a condição for falsa. Se omitido, as células onde a condição é falsa geralmente recebem NoData. Pode ser um valor constante, o valor de outro raster ou uma expressão.</li>
+                <li><strong>Aninhamento:</strong> Instruções `Con` podem ser aninhadas para criar lógicas mais complexas (if/then/elseif/else). `Con(cond1, val1, Con(cond2, val2, val3))`</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um raster binário mostrando áreas com elevação acima de 1000 metros: `Con("DEM" > 1000, 1, 0)`.
+                Atribuir um custo de travessia alto (100) para áreas com declividade > 20% e baixo (10) para as demais: `Con("Slope_Percent" > 20, 100, 10)`.
+                Substituir valores NoData em um raster 'Dados' pelos valores correspondentes de um raster 'Base': `Con(IsNull("Dados"), "Base", "Dados")`.
+                Classificar áreas como 'Adequado' (valor 1) se forem Floresta E tiverem declividade baixa, caso contrário 'Inadequado' (valor 0): `Con(("UsoSolo" == 5) & ("Declividade" < 10), 1, 0)`.
+                Atribuir um valor de risco (1, 2 ou 3) com base em intervalos de distância de rios: `Con("Dist_Rio" < 100, 3, Con("Dist_Rio" < 500, 2, 1))`.
+            </p>
+            <p><em>Nota:</em> A ferramenta `Con` é uma das mais versáteis e fundamentais na Álgebra de Mapas para implementar lógica condicional em análises raster.</p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="su.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <!-- Precisa saber qual o próximo elemento real da tabela (seria IN?) -->
+            <a href="bi.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

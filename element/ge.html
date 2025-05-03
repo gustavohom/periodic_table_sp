@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: GeoEnrichment (GE)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">GE</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>GeoEnrichment</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de adicionar informações demográficas, socioeconômicas, de estilo de vida, ambientais ou de negócios a dados geográficos existentes (pontos, linhas ou polígonos). Utiliza serviços ou bases de dados externas para buscar atributos relevantes com base na localização das feições de entrada ou em áreas de influência (buffers, áreas de tempo de viagem) criadas ao redor delas.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Seleção da Camada de Entrada:</strong> A camada (pontos, linhas ou polígonos) cujas feições serão enriquecidas.</li>
+                <li><strong>Definição da Área de Análise:</strong>
+                    <ul>
+                        <li><em>Usar a própria geometria da feição:</em> Para polígonos de entrada (ex: enriquecer municípios com dados).</li>
+                        <li><em>Criar Buffers:</em> Gerar buffers (distância fixa) ao redor de pontos ou linhas de entrada.</li>
+                        <li><em>Criar Áreas de Tempo de Viagem/Distância de Rede:</em> Gerar polígonos de área de serviço usando análise de rede.</li>
+                    </ul>
+                </li>
+                <li><strong>Seleção das Variáveis de Enriquecimento:</strong> Escolher quais dados adicionar a partir de catálogos oferecidos por serviços de GeoEnrichment (ex: Esri Business Analyst, fontes de dados governamentais como IBGE). As variáveis podem incluir:
+                    <ul>
+                        <li>População total, por faixa etária, sexo, raça/etnia.</li>
+                        <li>Renda média ou mediana domiciliar.</li>
+                        <li>Níveis de escolaridade.</li>
+                        <li>Dados de gastos do consumidor.</li>
+                        <li>Segmentação de estilo de vida (Tapestry, etc.).</li>
+                        <li>Número de domicílios, tipo de moradia.</li>
+                        <li>Dados de negócios (número de empresas por setor).</li>
+                        <li>Variáveis ambientais (cobertura do solo, risco climático - dependendo do serviço).</li>
+                    </ul>
+                </li>
+                <li><strong>Execução e Saída:</strong> A ferramenta consulta o serviço de dados, calcula os valores das variáveis selecionadas para cada área de análise e os adiciona como novos campos à tabela de atributos da camada de entrada (ou cria uma nova camada enriquecida).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Adicionar a população total e a renda média domiciliar a uma camada de setores censitários. Estimar o número de pessoas com mais de 65 anos que vivem a menos de 10 minutos de carro de cada hospital proposto. Caracterizar o perfil demográfico predominante em um buffer de 1 km ao redor de cada loja de uma rede varejista. Analisar o potencial de mercado para um novo produto adicionando dados de gastos do consumidor a áreas de CEP. Comparar diferentes locais candidatos para um novo parque com base na densidade populacional e na idade média dos residentes nas proximidades.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="sa.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="sp.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Cost Path / Least Cost Path (CP)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+             <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">CP</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Cost Path / Least Cost Path</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula o caminho de menor custo acumulado entre um destino (ou múltiplos destinos) e uma origem (ou múltiplas origens) sobre uma superfície de custo. A superfície de custo é um raster onde cada célula representa o custo (ex: tempo, dinheiro, dificuldade, risco) para atravessá-la. A ferramenta utiliza resultados de análises prévias de distância de custo (Cost Distance, Cost Back Link).
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Workflow Típico</h3>
+            <ul>
+                <li><strong>1. Criação da Superfície de Custo (Cost Surface):</strong> Um raster onde cada célula tem um valor representando o custo para mover-se através dela. Células com custo mais alto são mais "difíceis" ou "caras" de atravessar. Pode ser derivado de tipo de solo, declividade, uso do solo, etc.</li>
+                <li><strong>2. Cálculo da Distância de Custo (Cost Distance / Cost Allocation):</strong> Calcula, para cada célula, o menor custo acumulado para alcançar a origem mais próxima (ou uma origem específica) atravessando a superfície de custo. O resultado é um raster de custo acumulado.</li>
+                <li><strong>3. Cálculo do Back Link (Cost Back Link / Cost Direction):</strong> Cria um raster onde cada célula aponta para a célula vizinha que está no caminho de menor custo acumulado de volta para a origem mais próxima. Define a direção do caminho ótimo a partir de qualquer célula.</li>
+                <li><strong>4. Cost Path (Caminho de Menor Custo):</strong> Utiliza o raster de custo acumulado e o raster de back link para traçar o caminho específico de menor custo entre um ponto de destino e sua origem de menor custo. A saída é geralmente uma camada vetorial de linha.</li>
+                <li><strong>Opções (Cost Path):</strong>
+                    <ul>
+                       <li><em>Input Destination:</em> Ponto(s) ou raster de destino.</li>
+                       <li><em>Input Cost Distance Raster:</em> Saída da ferramenta Cost Distance.</li>
+                       <li><em>Input Cost Backlink Raster:</em> Saída da ferramenta Cost Back Link.</li>
+                       <li><em>Path Type:</em> Define como lidar com múltiplos destinos (ex: EACH_CELL encontra o caminho de cada célula de destino, BEST_SINGLE encontra o caminho para o destino de menor custo global).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Encontrar a rota de menor custo para construir uma nova estrada ou linha de transmissão, minimizando custos de construção relacionados à declividade e tipo de terreno. Modelar o caminho mais provável que um animal selvagem usaria para se mover entre duas áreas de habitat, considerando barreiras e corredores. Planejar a rota de uma trilha de caminhada que minimize o ganho de elevação acumulado. Determinar o caminho mais rápido para equipes de resgate alcançarem um local remoto, considerando a dificuldade de deslocamento em diferentes tipos de vegetação. Modelar a dispersão de populações ou doenças considerando fatores de resistência ambiental.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="zs.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rp.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

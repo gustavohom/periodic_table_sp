@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Address Geocoding (AD)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">AD</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Address Geocoding</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de transformar descrições de localização baseadas em texto (como endereços postais, nomes de lugares ou códigos postais) em coordenadas geográficas (latitude/longitude ou X/Y) que podem ser mapeadas. Utiliza um serviço de geocodificação ou um localizador de endereços (baseado em dados de referência de ruas e pontos de interesse) para encontrar a localização espacial correspondente a cada endereço.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Geocode Addresses (Geocodificar Endereços):</strong> Ferramenta principal que recebe uma tabela com endereços (em um ou múltiplos campos) e utiliza um localizador de endereços para adicionar coordenadas X/Y a cada registro ou criar uma nova camada de pontos.</li>
+                <li><strong>Address Locator (Localizador de Endereços):</strong> O "motor" da geocodificação. É um conjunto de dados e regras que mapeia componentes de endereço (número, rua, cidade, CEP) para localizações geográficas. Pode ser um serviço online (ex: ArcGIS Online, Google Maps Geocoding API) ou um arquivo local construído a partir de dados de referência (ex: eixos de rua com faixas de endereço, pontos de endereço).</li>
+                <li><strong>Matching Parameters (Parâmetros de Correspondência):</strong> Configurações que controlam a sensibilidade da correspondência (pontuação mínima, tolerância a erros de digitação).</li>
+                <li><strong>Output Fields (Campos de Saída):</strong> Além das coordenadas XY, a geocodificação geralmente adiciona campos indicando a qualidade da correspondência (Score), o tipo de correspondência (ex: Ponto de Endereço, Interpolação de Rua) e o endereço padronizado encontrado pelo localizador.</li>
+                <li><strong>Rematch Addresses (Re-geocodificar):</strong> Ferramentas para revisar e tentar corrigir endereços que não foram encontrados ou tiveram baixa pontuação na geocodificação inicial.</li>
+                <li><strong>Reverse Geocode (Geocodificação Reversa):</strong> Processo inverso: transforma coordenadas geográficas (X/Y) em um endereço textual mais próximo.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Mapear a localização de milhares de clientes a partir de uma lista de endereços em uma planilha. Localizar todos os endereços de incidentes reportados para análise de padrões de criminalidade. Transformar uma lista de nomes de escolas em pontos georreferenciados usando um localizador de pontos de interesse. Verificar a localização espacial de endereços fornecidos em formulários online. Encontrar o endereço mais próximo de um ponto onde uma foto foi tirada (<code>Reverse Geocode</code>).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="gv.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="tp.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

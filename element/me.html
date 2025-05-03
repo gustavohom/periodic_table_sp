@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Mensuration (Image) (ME)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">ME</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Mensuration (Image Measurement)</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de realizar medições geométricas precisas de feições diretamente em imagens georreferenciadas (aéreas, satélite, oblíquas), utilizando informações sobre o sensor, a plataforma e, frequentemente, um Modelo Digital de Elevação (DEM) subjacente para corrigir distorções e calcular dimensões no espaço 2D ou 3D.
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Tipos de Medição</h3>
+            <ul>
+                <li><strong>Entradas:</strong> Imagem georreferenciada (ortorretificada ou com modelo de sensor), DEM (para medições 3D ou correção de relevo), e, opcionalmente, metadados do sensor/plataforma.</li>
+                <li><strong>Medições 2D (Planimétricas):</strong>
+                    <ul>
+                        <li><em>Distância:</em> Medir a distância horizontal entre dois ou mais pontos na imagem.</li>
+                        <li><em>Área:</em> Calcular a área de um polígono desenhado sobre a imagem.</li>
+                        <li><em>Perímetro:</em> Calcular o perímetro do polígono.</li>
+                        <li><em>Ângulo:</em> Medir o ângulo entre três pontos ou duas linhas.</li>
+                        <li><em>Localização (Coordenadas):</em> Obter as coordenadas geográficas de um ponto clicado na imagem.</li>
+                    </ul>
+                 </li>
+                <li><strong>Medições 3D (Requer DEM ou Estéreo):</strong>
+                    <ul>
+                        <li><em>Altura de Objetos:</em> Estimar a altura de objetos verticais (edifícios, árvores, torres) medindo o comprimento de sua sombra (se o ângulo solar for conhecido) ou usando paralaxe em imagens estéreo ou modelos de sensor rigorosos com DEM.</li>
+                        <li><em>Distância 3D:</em> Calcular a distância real entre dois pontos considerando a variação de elevação.</li>
+                        <li><em>Volume (Aproximado):</em> Estimar o volume de pilhas ou escavações visíveis na imagem (requer DEM ou múltiplos pontos medidos).</li>
+                    </ul>
+                </li>
+                 <li><strong>Correção de Relevo:</strong> As ferramentas de mensuração precisam considerar o relevo do terreno (usando um DEM) para corrigir distorções de deslocamento devido ao relevo (relief displacement) em imagens não ortorretificadas ou oblíquas, garantindo medições planimétricas mais precisas.</li>
+                 <li><strong>Interface Interativa:</strong> As medições são geralmente realizadas interativamente pelo usuário desenhando pontos, linhas ou polígonos diretamente sobre a imagem exibida no software GIS ou de processamento de imagens.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Medir a largura de um rio ou a distância entre duas pontes em uma imagem de satélite. Calcular a área de um campo agrícola ou de um desmatamento recente. Estimar a altura de edifícios em uma área urbana a partir de imagens aéreas oblíquas. Medir o comprimento de uma pista de aeroporto. Determinar as coordenadas exatas de um ponto de interesse observado em uma imagem. Calcular a área de telhados para estimativa de potencial de painéis solares. Medir o ângulo de uma curva de estrada.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="dn.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ph.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

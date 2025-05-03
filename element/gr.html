@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Georeferencing (Raster) (GR)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Note a mudança de cor/categoria para Raster Data Management -->
+     <div class="detail-container border-data-management-raster">
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">GR</div>
+            <div class="detail-title">
+                <h2>Georeferencing (Raster)</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de atribuir coordenadas geográficas do mundo real a dados raster (imagens, mapas escaneados) que não possuem informações espaciais inerentes. Isso é feito identificando pontos de controle (locais na imagem raster cujas coordenadas reais são conhecidas) e aplicando uma transformação matemática (esticamento, escala, rotação, inclinação) para alinhar a imagem ao sistema de coordenadas desejado.
+            </p>
+            <p>Similar ao Spatial Adjustment (SA) para vetores, mas aplicado a imagens raster.</p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Adição de Pontos de Controle (Control Points):</strong> O usuário seleciona um local identificável na imagem raster (origem) e insere suas coordenadas geográficas correspondentes (destino) obtidas de um mapa base, dados vetoriais, GPS ou outra fonte confiável.</li>
+                <li><strong>Seleção do Método de Transformação:</strong> Escolher a transformação matemática que será usada para ajustar a imagem com base nos pontos de controle. A complexidade da transformação necessária depende do tipo e magnitude da distorção na imagem original. Métodos comuns incluem:
+                    <ul>
+                        <li><em>Polynomial (0, 1st, 2nd, 3rd order):</em> Transformações que variam de um simples deslocamento (0 ordem) a ajustes mais complexos para curvatura e distorção (ordens maiores). A 1ª ordem (Affine) é muito comum.</li>
+                        <li><em>Spline / Rubbersheet:</em> Transformações não lineares que deformam a imagem localmente para se ajustar precisamente aos pontos de controle, úteis para distorções complexas, mas podem introduzir artefatos.</li>
+                        <li><em>Projective:</em> Corrige distorções de perspectiva.</li>
+                        <li><em>Similarity:</em> Ajusta escala, rotação e translação uniformemente.</li>
+                    </ul>
+                </li>
+                 <li><strong>Visualização do Erro Residual:</strong> A ferramenta geralmente exibe o erro (distância entre a localização transformada do ponto de controle e sua localização real) para cada ponto, ajudando a identificar links ruins e avaliar a qualidade geral do georreferenciamento (ex: erro RMS).</li>
+                 <li><strong>Retificação / Salvamento (Rectify / Save):</strong> Aplica permanentemente a transformação à imagem, criando um novo arquivo raster georreferenciado (ex: GeoTIFF) ou salvando as informações de transformação em um arquivo auxiliar (world file - ex: .tfw, .jgw).</li>
+                 <li><strong>Auto Georeference (Opcional):</strong> Algumas ferramentas tentam encontrar pontos de controle correspondentes automaticamente entre a imagem a ser georreferenciada e uma imagem de referência já georreferenciada.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Alinhar um mapa histórico escaneado a um sistema de coordenadas moderno usando cruzamentos de ruas visíveis como pontos de controle. Georreferenciar uma fotografia aérea antiga que não possui metadados espaciais. Corrigir a posição de uma imagem de satélite que está ligeiramente deslocada em relação a dados vetoriais de referência. Alinhar plantas de engenharia escaneadas a coordenadas de projeto. Preparar imagens de drones (sem GPS RTK/PPK preciso) para uso como camada de mapa.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ar.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="mo.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

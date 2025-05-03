@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Geometry Shape (GS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-analysis-conversion"> <!-- Categoria: Analysis/Conversion -->
+        <div class="detail-header">
+            <div class="detail-symbol group-analysis-conversion">GS</div> <!-- Categoria: Analysis/Conversion -->
+            <div class="detail-title">
+                <h2>Geometry Shape / Metrics</h2>
+                <div class="category">Vector Analysis / Conversion</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula métricas e índices que descrevem a forma geométrica das feições vetoriais (principalmente polígonos e linhas). Essas métricas vão além da área e perímetro básicos, quantificando características como complexidade, compactação, elongação ou orientação da forma. São frequentemente usadas em ecologia de paisagens, análise urbana, geomorfologia e outras áreas onde a forma espacial é relevante.
+            </p>
+            <p>
+                Embora relacionado à ferramenta "Calculate Geometry" (CG), o foco aqui está nas métricas de *forma* mais complexas, e não apenas nas medidas básicas (área, comprimento).
+            </p>
+
+            <h3>Funções Principais / Métricas Comuns</h3>
+            <ul>
+                <li><strong>Índice de Compactação (Compactness Ratio):</strong> Compara a forma da feição com a de um círculo (para polígonos) de mesma área. Valores próximos a 1 indicam forma mais compacta (circular). Frequentemente calculado como a razão entre o perímetro da feição e o perímetro de um círculo de mesma área.</li>
+                <li><strong>Razão Perímetro/Área (Perimeter-Area Ratio):</strong> Indica a complexidade da borda em relação à área. Valores maiores sugerem formas mais complexas ou alongadas.</li>
+                <li><strong>Retangularidade (Rectangular Fit / Minimum Bounding Rectangle):</strong> Mede o quão bem a forma se encaixa em um retângulo. Pode ser calculado pela razão entre a área da feição e a área do seu retângulo envolvente mínimo.</li>
+                <li><strong>Elongação (Elongation):</strong> Mede o quão alongada é uma forma, comparando o eixo maior com o eixo menor do polígono.</li>
+                <li><strong>Orientação (Orientation):</strong> Calcula o ângulo do eixo principal da forma (geralmente o eixo mais longo da elipse de mesma área e momento de inércia).</li>
+                <li><strong>Sinuosidade (Sinuosity - para linhas):</strong> Compara o comprimento real da linha com a distância em linha reta entre seus pontos inicial e final. Valores maiores indicam linhas mais sinuosas (ex: rios).</li>
+                <li><strong>Índice de Forma (Shape Index):</strong> Existem várias formulações, geralmente comparando o perímetro com a raiz quadrada da área, ajustado por constantes, para avaliar a complexidade da forma em relação a uma forma regular (quadrado ou círculo).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Analisar a fragmentação de habitats florestais medindo a compactação e a razão perímetro/área dos fragmentos. Avaliar a regularidade de quarteirões urbanos usando a retangularidade. Estudar a orientação preferencial de dunas de areia ou feições geológicas lineares. Quantificar a sinuosidade de rios para estudos hidrológicos ou de transporte de sedimentos. Comparar a complexidade da forma de lagos de diferentes origens.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="pd.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="tb.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

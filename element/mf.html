@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Math Function (Raster) (MF)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+            <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">MF</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Math Functions (Raster)</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Aplica funções matemáticas diretamente aos valores das células de um ou mais rasters de entrada, operando célula por célula (operações locais na Álgebra de Mapas - MA). Permite realizar uma ampla gama de transformações e cálculos nos dados raster.
+            </p>
+
+            <h3>Funções Principais / Categorias de Funções</h3>
+            <ul>
+                <li><strong>Aritméticas:</strong> Operações básicas:
+                    <ul>
+                        <li><em>Add, Subtract, Multiply, Divide:</em> Realizar as quatro operações entre dois rasters ou um raster e uma constante.</li>
+                        <li><em>Abs (Absolute Value):</em> Retorna o valor absoluto de cada célula.</li>
+                        <li><em>Int (Integer), Float:</em> Trunca ou converte o valor da célula para inteiro ou ponto flutuante.</li>
+                        <li><em>Round Up, Round Down:</em> Arredonda o valor da célula para o inteiro mais próximo (para cima ou para baixo).</li>
+                        <li><em>Mod (Modulo):</em> Retorna o resto da divisão do valor da célula por um divisor.</li>
+                        <li><em>Square (Quadrado), Square Root (Raiz Quadrada):</em> Eleva ao quadrado ou calcula a raiz quadrada do valor da célula.</li>
+                    </ul>
+                </li>
+                <li><strong>Potência (Power):</strong>
+                    <ul>
+                        <li><em>Power (Pow):</em> Eleva o valor da célula de um raster à potência dos valores correspondentes de outro raster ou a uma constante.</li>
+                    </ul>
+                </li>
+                <li><strong>Exponenciais:</strong>
+                    <ul>
+                        <li><em>Exp:</em> Calcula 'e' (base do logaritmo natural) elevado ao valor da célula.</li>
+                        <li><em>Exp2:</em> Calcula 2 elevado ao valor da célula.</li>
+                        <li><em>Exp10:</em> Calcula 10 elevado ao valor da célula.</li>
+                    </ul>
+                </li>
+                <li><strong>Logarítmicas:</strong>
+                    <ul>
+                        <li><em>Log (Ln):</em> Calcula o logaritmo natural (base 'e') do valor da célula.</li>
+                        <li><em>Log2:</em> Calcula o logaritmo na base 2.</li>
+                        <li><em>Log10:</em> Calcula o logaritmo na base 10.</li>
+                    </ul>
+                </li>
+                 <li><strong>Trigonométricas:</strong> Funções como Sin, Cos, Tan, Asin, Acos, Atan (operam sobre valores em radianos, geralmente).</li>
+                 <li><strong>Bitwise (Operações a nível de bit):</strong> Operações como Bitwise And, Or, Xor, Not, Left Shift, Right Shift (usadas em manipulações específicas, como máscaras).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Converter um raster de temperatura de Celsius para Fahrenheit: (`Raster_C` * 1.8) + 32. Calcular a raiz quadrada da precipitação em cada célula. Transformar valores de refletância usando logaritmos para análise de imagens. Calcular o valor absoluto da diferença entre dois DEMs. Somar rasters de adequabilidade de diferentes fatores em um modelo. Multiplicar um raster por uma constante para mudar sua escala. Extrair bits específicos de um raster de qualidade de imagem.
+            </p>
+             <p><em>Nota:</em> Essas funções são os blocos de construção usados na Calculadora Raster ou em expressões de Álgebra de Mapas (MA).</p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ta.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="su.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

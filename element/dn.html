@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Data Mining / Dimensionality Reduction (DN)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">DN</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Data Mining / Dimensionality Reduction</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Aplicação de técnicas para explorar grandes conjuntos de dados (raster ou vetorial com muitos atributos), identificar padrões, extrair informações úteis e, frequentemente, reduzir a dimensionalidade dos dados. Em sensoriamento remoto, a redução de dimensionalidade é usada para eliminar redundância entre bandas espectrais altamente correlacionadas, agregando a informação essencial em um número menor de componentes, o que pode melhorar a performance e os resultados de classificações ou outras análises.
+            </p>
+
+            <h3>Funções Principais / Técnicas Comuns</h3>
+            <ul>
+                <li><strong>Redução de Dimensionalidade (Dimensionality Reduction):</strong> Objetivo de transformar dados de um espaço de alta dimensão (muitas bandas/variáveis) para um espaço de menor dimensão, preservando o máximo possível da variância ou informação original.
+                    <ul>
+                        <li><em>Principal Component Analysis (PCA - Análise de Componentes Principais):</em> Técnica estatística linear que transforma um conjunto de variáveis correlacionadas (ex: bandas espectrais) em um novo conjunto de variáveis não correlacionadas (componentes principais), ordenadas pela quantidade de variância original que elas explicam. As primeiras componentes geralmente capturam a maior parte da informação, permitindo descartar as últimas componentes (que representam mais ruído) sem grande perda de informação.</li>
+                        <li><em>Independent Component Analysis (ICA):</em> Separa um sinal multivariado em componentes aditivos que são estatisticamente independentes.</li>
+                        <li><em>Feature Selection:</em> Selecionar um subconjunto das bandas/variáveis originais mais relevantes para a análise, em vez de transformá-las.</li>
+                    </ul>
+                </li>
+                 <li><strong>Aplicações da PCA em Sensoriamento Remoto:</strong>
+                    <ul>
+                        <li><em>Redução de Dados:</em> Usar as primeiras componentes principais (ex: as 3 primeiras) como entrada para algoritmos de classificação (IC), reduzindo a carga computacional e potencialmente melhorando a separabilidade das classes ao remover ruído.</li>
+                        <li><em>Detecção de Mudanças:</em> Aplicar PCA a imagens multitemporais empilhadas para realçar áreas de mudança nos componentes de menor variância.</li>
+                        <li><em>Realce de Imagem:</em> Visualizar as primeiras componentes principais como uma composição colorida para realçar padrões espectrais sutis.</li>
+                    </ul>
+                 </li>
+                 <li><strong>Data Mining em GIS (Geral):</strong> Além da redução de dimensionalidade, inclui técnicas de clusterização (ML), análise de associação, detecção de outliers, etc., aplicadas a dados espaciais para descobrir padrões ocultos.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Aplicar PCA a uma imagem hiperespectral (com centenas de bandas) para reduzir a dimensionalidade antes da classificação. Usar as 3 primeiras componentes principais de uma imagem Landsat como entrada para um classificador SVM. Detectar mudanças sutis em uma paisagem comparando as componentes principais de imagens de diferentes datas. Realçar variações geológicas em uma imagem multiespectral visualizando as componentes principais menos correlacionadas. Reduzir o número de variáveis climáticas correlacionadas antes de usá-las em um modelo de distribuição de espécies.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="sg.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="me.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Optimal Site / Location-Allocation (OS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-network-analysis"> <!-- Categoria: Network Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-network-analysis">OS</div> <!-- Categoria: Network Analysis -->
+            <div class="detail-title">
+                <h2>Optimal Site / Location-Allocation</h2>
+                <div class="category">Network Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Tipo de análise de rede que ajuda a determinar as melhores localizações para instalar novas instalações (ou escolher entre instalações existentes) para atender a um conjunto de pontos de demanda (clientes, incidentes, etc.) de forma otimizada. A otimização pode visar minimizar o custo total de viagem, maximizar a cobertura da demanda dentro de um tempo/distância limite, ou considerar a capacidade das instalações e a competição.
+            </p>
+
+            <h3>Funções Principais / Tipos de Problema</h3>
+            <ul>
+                <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Facilities (Instalações):</em> Pontos representando as localizações candidatas (ou existentes) para as instalações. Podem ter atributos como capacidade ou atratividade.</li>
+                        <li><em>Demand Points (Pontos de Demanda):</em> Pontos representando os locais a serem atendidos (clientes, residências, áreas de incidentes). Podem ter um peso (população, volume de vendas, número de chamados).</li>
+                        <li><em>Network Dataset:</em> A rede usada para calcular distâncias/tempos entre instalações e demandas.</li>
+                    </ul>
+                </li>
+                <li><strong>Tipos Comuns de Problema de Location-Allocation:</strong>
+                    <ul>
+                        <li><em>Minimize Impedance (P-Median):</em> Encontra as N melhores localizações que minimizam a soma total (ou média) do custo de viagem ponderado entre as demandas e a instalação alocada mais próxima. (Ex: Onde colocar 5 armazéns para minimizar o custo de transporte total para todos os clientes?).</li>
+                        <li><em>Maximize Coverage:</em> Encontra o número mínimo de instalações necessárias para atender (cobrir) a maior porcentagem possível da demanda dentro de um tempo/distância limite. (Ex: Onde colocar postos de bombeiros para cobrir 90% da população em 5 minutos?).</li>
+                        <li><em>Maximize Capacitated Coverage:</em> Similar ao Maximize Coverage, mas considera a capacidade finita de cada instalação e o peso da demanda. (Ex: Onde colocar clínicas que podem atender X pacientes por dia para cobrir a maior demanda possível dentro de 15 minutos?).</li>
+                        <li><em>Minimize Facilities:</em> Encontra o número mínimo de instalações para cobrir toda a demanda dentro de um limite de impedância.</li>
+                        <li><em>Maximize Attendance / Market Share:</em> Aloca a demanda às instalações com base na atratividade e distância, considerando que a demanda pode ser dividida entre instalações concorrentes. (Ex: Qual localização para uma nova loja capturaria a maior fatia de mercado?).</li>
+                    </ul>
+                </li>
+                <li><strong>Saída:</strong> Identifica quais instalações candidatas foram escolhidas, quais pontos de demanda foram alocados a cada instalação escolhida, e linhas mostrando essas alocações.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Determinar os locais ótimos para novas escolas em um distrito em crescimento para minimizar a distância média de viagem dos alunos. Escolher quais postos de saúde existentes devem permanecer abertos para maximizar a cobertura da população idosa dentro de um raio de 10 km. Posicionar centros de distribuição para minimizar custos logísticos. Alocar zonas de patrulha policial para garantir tempos de resposta rápidos.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="dr.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cv.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

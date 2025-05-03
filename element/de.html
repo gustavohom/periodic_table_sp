@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Data Engineering (DE)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-emerging-tech"> <!-- Categoria: Emerging Technology -->
+        <div class="detail-header">
+            <div class="detail-symbol group-emerging-tech">DE</div> <!-- Categoria: Emerging Technology -->
+            <div class="detail-title">
+                <h2>Data Engineering</h2>
+                <div class="category">Emerging Technology</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Disciplina focada na preparação, limpeza, transformação e validação de dados geoespaciais brutos para torná-los adequados e confiáveis para análise, modelagem (especialmente Machine Learning) e visualização. Envolve a construção de pipelines de dados eficientes para lidar com a ingestão, processamento e armazenamento de dados espaciais, garantindo sua qualidade e usabilidade.
+            </p>
+
+            <h3>Funções Principais / Tarefas</h3>
+            <ul>
+                <li><strong>Ingestão de Dados:</strong> Coletar dados de diversas fontes (bancos de dados, APIs, arquivos, streams) e formatos.</li>
+                <li><strong>Limpeza de Dados (Data Cleaning):</strong> Identificar e corrigir erros, inconsistências, valores ausentes (nulos) ou outliers nos atributos e geometrias. (Ex: Usar Topologia (TP), ferramentas de validação de atributos, preenchimento de nulos).</li>
+                <li><strong>Transformação de Dados:</strong> Converter formatos, reprojetar (PJ), normalizar ou padronizar atributos, criar novas variáveis (feature engineering) a partir de dados existentes (ex: calcular distância até a feição mais próxima, agregar dados em novas geometrias).</li>
+                <li><strong>Validação de Dados:</strong> Verificar se os dados atendem a critérios de qualidade predefinidos (ex: regras de domínio, restrições topológicas, consistência temporal).</li>
+                <li><strong>Integração de Dados:</strong> Combinar dados de diferentes fontes usando joins espaciais (SJ), joins de atributos (JT) ou conflation (CF).</li>
+                <li><strong>Otimização de Performance:</strong> Estruturar dados e criar índices espaciais e de atributos para acelerar consultas e análises.</li>
+                <li><strong>Construção de Pipelines (ETL/ELT):</strong> Automatizar o fluxo de Extração, Transformação e Carga (ETL) ou Extração, Carga e Transformação (ELT) de dados usando ferramentas visuais (ex: ArcGIS Data Engineering view, FME) ou código (Python com GeoPandas, SQL).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Limpar uma tabela de endereços removendo caracteres inválidos e padronizando abreviações antes da geocodificação (AD). Preencher valores ausentes de altitude em uma camada de pontos usando interpolação dos vizinhos. Criar variáveis como "distância ao centro da cidade" e "densidade populacional no entorno" para cada imóvel em uma base de dados para alimentar um modelo de previsão de preços (ML). Validar se todos os registros de uma tabela de clientes possuem um CEP válido. Construir um pipeline automatizado que baixa dados meteorológicos diários, os transforma em pontos e atualiza uma camada de análise. Integrar dados demográficos de diferentes censos em uma única tabela consistente.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ml.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="iot.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

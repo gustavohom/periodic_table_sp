@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Grid Index / Map Series (GI)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Editing/Cartography (usando cor Table/Editing) -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">GI</div> <!-- Categoria: Editing/Cartography (usando cor Table/Editing) -->
+            <div class="detail-title">
+                <h2>Grid Index / Map Series</h2>
+                <div class="category">Editing / Cartography</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Cria uma camada de polígonos regulares (geralmente retangulares ou hexagonais) ou uma série de polígonos sequenciais que cobrem uma área de interesse ou seguem uma feição linear. Essa camada de índice é usada principalmente para definir as extensões de múltiplas páginas em um atlas ou série de mapas (Map Series / Data Driven Pages), garantindo uma cobertura sistemática e organizada da área.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Grid Index Features / Create Fishnet:</strong> Gera uma rede (malha) de células retangulares (ou poligonais) de tamanho e espaçamento definidos pelo usuário sobre uma determinada extensão.</li>
+                <li><strong>Tessellation (Hexagonal/Quadrado):</strong> Cria uma cobertura completa da área com polígonos regulares que se encaixam perfeitamente (ex: hexágonos, quadrados, triângulos).</li>
+                <li><strong>Strip Map Index Features:</strong> Cria uma série de polígonos retangulares sequenciais que seguem o curso de uma feição linear (ex: estrada, rio, pipeline), ideal para mapas de rota ou projetos lineares longos.</li>
+                <li><strong>Integração com Map Series / Data Driven Pages / QGIS Atlas:</strong> A camada de índice gerada é usada para controlar a extensão geográfica de cada página em uma série de mapas automatizada. Campos na tabela de atributos do índice (como número da página, nome da folha) podem ser usados para rotular e organizar as páginas.</li>
+                <li><strong>Geração de Rótulos e Escalas:</strong> Pode calcular automaticamente rótulos de página, escalas apropriadas e informações de folhas adjacentes para incluir no layout do mapa.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um conjunto de folhas de mapa em escala 1:10.000 para cobrir um município inteiro. Gerar um atlas mostrando detalhes de cada distrito censitário da cidade. Produzir um mapa sequencial de um projeto de construção de rodovia, com cada página mostrando um trecho de 5 km. Criar uma grade hexagonal sobre uma área de estudo para análise de densidade ou amostragem sistemática, e usar essa grade para gerar mapas individuais de cada célula.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cf.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ca.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

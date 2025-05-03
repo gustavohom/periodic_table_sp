@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Projections (PJ)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">PJ</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Projections & Transformations</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Gerencia os Sistemas de Referência de Coordenadas (SRC ou CRS) associados a camadas geoespaciais. Isso inclui definir o SRC correto para uma camada que não o possui ou transformar (reprojetar) uma camada de um SRC para outro. É fundamental para garantir que as camadas se alinhem corretamente no espaço e que medições (área, distância) sejam precisas.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Define Projection (Definir Projeção):</strong> Atribui ou sobrescreve a informação do SRC armazenada com uma camada. Esta ferramenta <strong>NÃO</strong> altera as coordenadas dos dados, apenas a sua interpretação. Deve ser usada apenas quando o SRC está ausente ou incorreto.</li>
+                <li><strong>Project (Projetar):</strong> Transforma as coordenadas das feições de uma camada de um SRC de origem para um SRC de destino. Cria uma nova camada com as coordenadas recalculadas. Esta é a ferramenta correta para mudar o sistema de coordenadas de uma camada (ex: de Lat/Long para UTM). Requer que a camada de entrada já tenha um SRC corretamente definido.</li>
+                <li><strong>Transformação Geográfica / Datum Transformation:</strong> Parte essencial da ferramenta `Project` quando os SRCs de origem e destino usam Datums geodésicos diferentes (ex: WGS84 para SAD69). É necessário escolher um método de transformação adequado para a região para garantir a precisão da conversão entre datums.</li>
+                <li><strong>Identify Projection / Layer Properties:</strong> Ferramentas ou painéis para visualizar o SRC atual de uma camada.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Receber um Shapefile sem arquivo .prj e usar <code>Define Projection</code> para informar que seus dados estão em WGS84 (Lat/Long). Converter uma camada de pontos coletados em GPS (WGS84 Lat/Long) para UTM Zona 23S para realizar medições de distância em metros (<code>Project</code>). Alinhar uma camada em SAD69 com outra em SIRGAS 2000, utilizando uma transformação de datum apropriada durante a reprojeção (<code>Project</code> com transformação). Definir o SRC de um arquivo CAD importado que não tinha informações geográficas associadas (<code>Define Projection</code> após georreferenciamento/ajuste espacial, se necessário).
+            </p>
+            <p><strong>Atenção:</strong> Usar <code>Define Projection</code> quando se deveria usar <code>Project</code> (ou vice-versa) é um erro comum que leva a dados desalinhados.</p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="dm.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="gv.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

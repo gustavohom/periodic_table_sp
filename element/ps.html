@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Pansharpening (PS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">PS</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Pansharpening / Image Fusion</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Técnica de fusão de imagens que combina uma imagem pancromática (PAN) de alta resolução espacial (geralmente em tons de cinza) com uma imagem multiespectral (MS) de menor resolução espacial, mas com maior resolução espectral (múltiplas bandas coloridas). O objetivo é criar uma imagem multiespectral de saída que possua tanto a alta resolução espacial da imagem PAN quanto a informação de cor da imagem MS original.
+            </p>
+
+            <h3>Funções Principais / Técnicas Comuns</h3>
+            <ul>
+                <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Imagem Pancromática (PAN):</em> Raster de banda única com alta resolução espacial.</li>
+                        <li><em>Imagem Multiespectral (MS):</em> Raster multibanda (ex: Vermelho, Verde, Azul, NIR) com resolução espacial menor que a PAN, mas cobrindo a mesma área.</li>
+                    </ul>
+                 </li>
+                <li><strong>Pré-requisito:</strong> As imagens PAN e MS devem estar corretamente coregistradas (alinhadas espacialmente). Frequentemente, a imagem MS é reamostrada (RS) para a resolução da PAN antes ou durante o processo.</li>
+                <li><strong>Algoritmos de Fusão (Pansharpening Algorithms):</strong> Existem vários métodos para realizar a fusão, cada um com suas vantagens e desvantagens em termos de preservação espectral (manter as cores corretas) versus realce espacial (nitidez). Exemplos:
+                    <ul>
+                        <li><em>IHS (Intensity-Hue-Saturation):</em> Transforma as bandas MS para o espaço de cor IHS, substitui a banda de Intensidade (I) pela imagem PAN (ajustada), e transforma de volta para o espaço RGB. Rápido, mas pode distorcer cores.</li>
+                        <li><em>Brovey Transform:</em> Multiplica cada banda MS reamostrada por uma razão entre a banda PAN e uma combinação linear das bandas MS. Tende a produzir resultados visualmente nítidos, mas pode alterar a radiometria.</li>
+                        <li><em>Gram-Schmidt:</em> Método mais robusto que simula a banda PAN a partir das bandas MS, realiza uma transformação de Gram-Schmidt nos dados, substitui o primeiro componente pela banda PAN real, e inverte a transformação. Geralmente preserva melhor as cores.</li>
+                        <li><em>Wavelet-based methods:</em> Decompõem as imagens em diferentes níveis de detalhe usando transformadas wavelet e fundem os detalhes da PAN com as informações de cor da MS.</li>
+                        <li><em>ESRI Pansharpening:</em> Algoritmo específico da Esri, geralmente baseado em uma média ponderada.</li>
+                    </ul>
+                </li>
+                <li><strong>Saída:</strong> Uma imagem raster multiespectral com a mesma resolução espacial da imagem PAN de entrada e (idealmente) as características espectrais da imagem MS original.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Aumentar a resolução espacial de uma imagem Landsat (MS 30m) usando sua banda pancromática (PAN 15m) para criar uma imagem colorida de 15m. Fundir imagens de satélites de altíssima resolução (ex: WorldView, Pleiades) que possuem bandas MS de ~2m e uma banda PAN de ~0.5m para obter uma imagem colorida de 0.5m. Melhorar a capacidade de interpretação visual e extração de feições (digitalização) de imagens de média resolução espacial. Criar produtos de imagem visualmente mais atraentes e detalhados para mapeamento e análise.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cb.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ac.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

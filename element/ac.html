@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Atmospheric Correction (AC)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">AC</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Atmospheric Correction</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de remover ou reduzir os efeitos da atmosfera (espalhamento e absorção da luz por gases e aerossóis) nos valores de radiância ou reflectância medidos por sensores remotos (satélites, aeronaves). O objetivo é converter os valores de Número Digital (DN) ou radiância no sensor para valores de reflectância de superfície (ou de fundo d'água), que representam a verdadeira refletividade do alvo no solo, permitindo comparações mais precisas entre imagens de diferentes datas, sensores ou locais.
+            </p>
+
+            <h3>Funções Principais / Métodos</h3>
+            <ul>
+                <li><strong>Necessidade:</strong> A atmosfera espalha a luz solar (adicionando brilho - path radiance) e absorve/espalha a luz refletida pela superfície antes que ela chegue ao sensor, alterando a assinatura espectral medida. A correção é crucial para análises quantitativas, cálculo de índices precisos e comparação temporal/multissensor.</li>
+                <li><strong>Métodos Baseados em Imagem (Image-Based):</strong>
+                    <ul>
+                        <li><em>Dark Object Subtraction (DOS) / Haze Removal:</em> Assume que existem pixels na imagem que deveriam ser "pretos" (reflectância zero, ex: sombra profunda, água limpa e profunda) e que qualquer valor medido nesses pixels é devido ao espalhamento atmosférico (haze). Esse valor mínimo é subtraído de toda a banda. É um método simples, mas aproximado.</li>
+                        <li><em>Histogram Matching:</em> Ajusta o histograma de uma imagem para coincidir com o de uma imagem de referência (já corrigida ou de condições atmosféricas claras).</li>
+                    </ul>
+                </li>
+                 <li><strong>Modelos de Transferência Radiativa (Radiative Transfer Models - RTM):</strong> Métodos mais sofisticados e fisicamente baseados que modelam explicitamente as interações da luz com a atmosfera. Requerem informações sobre as condições atmosféricas no momento da aquisição da imagem (ex: vapor d'água, concentração de aerossóis, ozônio), geometria de iluminação/visada e características do sensor.
+                    <ul>
+                        <li><em>Exemplos de Softwares/Modelos:</em> FLAASH, ATCOR, 6S, MODTRAN. Frequentemente integrados em softwares GIS ou de processamento de imagens.</li>
+                        <li><em>Fontes de Dados Atmosféricos:</em> Podem ser estimados a partir da própria imagem ou obtidos de fontes externas (modelos meteorológicos, dados de estações AERONET).</li>
+                    </ul>
+                </li>
+                 <li><strong>Saída:</strong> Imagem raster com valores representando a reflectância de superfície (geralmente escalonada, ex: valores de 0 a 10000 ou 0 a 1).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Preparar imagens Landsat ou Sentinel-2 para análise de séries temporais de NDVI, garantindo que as variações sejam devidas à vegetação e não a mudanças atmosféricas. Comparar a reflectância de alvos medidos em campo com espectrômetro com os valores extraídos de imagens de satélite. Realizar classificações de uso do solo mais precisas usando reflectância de superfície em vez de DNs ou radiância. Mapear propriedades biofísicas da vegetação (ex: teor de clorofila) que dependem de valores de reflectância precisos. Obter cores mais realistas e consistentes entre diferentes imagens em um mosaico.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ps.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="sg.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

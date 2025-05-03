@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Point Cloud (PC)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management (embora trate dados pontuais massivos) -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">PC</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Point Cloud Management</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Refere-se ao gerenciamento, visualização e análise de grandes conjuntos de dados de nuvens de pontos, tipicamente adquiridos por tecnologias como LiDAR (Light Detection and Ranging) aéreo ou terrestre, ou fotogrametria densa. Nuvens de pontos consistem em milhões ou bilhões de pontos 3D (com coordenadas X, Y, Z) que representam detalhadamente a superfície de objetos e do terreno. Formatos comuns incluem LAS e LAZ (LAS compactado).
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Visualização 3D:</strong> Ferramentas otimizadas para renderizar e navegar por nuvens de pontos massivas em 3D, permitindo simbolização por elevação, intensidade, classificação, RGB (se disponível), etc.</li>
+                <li><strong>Gerenciamento de Arquivos LAS/LAZ:</strong> Ferramentas para criar, converter, mesclar, dividir (tile) e gerenciar conjuntos de dados LAS (LAS Dataset em ArcGIS).</li>
+                <li><strong>Filtragem e Classificação:</strong> Ferramentas para filtrar pontos (ex: por classe, elevação, retorno do laser) ou classificar pontos automaticamente (ex: solo, vegetação baixa/média/alta, edifícios, água) usando algoritmos específicos.</li>
+                <li><strong>Extração de Feições:</strong> Ferramentas para extrair informações ou criar dados vetoriais a partir da nuvem de pontos:
+                    <ul>
+                        <li><em>Gerar Raster (DEM/DSM):</em> Interpolar a nuvem (geralmente pontos classificados como solo) para criar Modelos Digitais de Elevação (MDE/DEM) ou Modelos Digitais de Superfície (MDS/DSM).</li>
+                        <li><em>Extrair Edifícios (Footprints/Modelos 3D):</em> Identificar pontos pertencentes a telhados e paredes para gerar polígonos de base ou modelos 3D simplificados.</li>
+                        <li><em>Extrair Árvores:</em> Identificar pontos individuais de árvores e estimar sua altura e localização.</li>
+                        <li><em>Extrair Linhas (Ex: Fios Elétricos):</em> Identificar e vetorizar feições lineares suspensas.</li>
+                    </ul>
+                </li>
+                <li><strong>Medição 3D:</strong> Ferramentas para realizar medições precisas de distância, área ou altura diretamente na nuvem de pontos.</li>
+                <li><strong>Análise de Perfil/Seção Transversal:</strong> Criar perfis 2D através da nuvem de pontos.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um Modelo Digital de Terreno (MDT) de alta resolução a partir de dados LiDAR aéreo após classificar e filtrar os pontos de solo. Mapear a altura da vegetação em uma floresta subtraindo um MDT de um MDS gerado a partir da nuvem completa. Extrair automaticamente os contornos (footprints) de todos os edifícios em uma área urbana. Identificar possíveis pontos de invasão de vegetação em corredores de linhas de transmissão elétrica. Gerar modelos 3D de sítios arqueológicos ou infraestruturas complexas. Realizar análises de volume de pilhas de material.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="co.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ws.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

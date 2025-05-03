@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Photogrammetry (PH)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">PH</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Photogrammetry</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Ciência e técnica de obter informações confiáveis sobre objetos físicos e o ambiente através do processo de registrar, medir e interpretar imagens fotográficas (e padrões de energia eletromagnética radiante e outros fenômenos). Em GIS e sensoriamento remoto, a fotogrametria é usada principalmente para criar dados geoespaciais (mapas, ortofotos, DEMs, nuvens de pontos, modelos 3D) a partir de imagens aéreas ou de satélite sobrepostas, utilizando os princípios da visão estéreo e da paralaxe.
+            </p>
+
+            <h3>Funções Principais / Workflow Típico</h3>
+            <ul>
+                <li><strong>Aquisição de Imagens Sobrepostas:</strong> Coleta de múltiplas imagens (geralmente aéreas ou de drone) da mesma área a partir de diferentes pontos de vista, garantindo uma sobreposição significativa entre imagens adjacentes (ex: 60-80% de sobreposição frontal e lateral).</li>
+                <li><strong>Orientação Interna e Externa (Aerotriangulação / Ajustamento de Blocos):</strong> Processo de determinar a posição exata (X, Y, Z) e a orientação (ângulos Omega, Phi, Kappa) da câmera no momento em que cada foto foi tirada, bem como os parâmetros internos da câmera (distância focal, distorção da lente). Usa pontos de ligação (tie points) identificados automaticamente entre as imagens e, opcionalmente, pontos de controle no solo (GCPs) com coordenadas conhecidas.</li>
+                <li><strong>Geração de Nuvem de Pontos Densa (Dense Point Cloud):</strong> Com base na orientação das imagens, algoritmos de correspondência de múltiplos pontos de vista (Multi-View Stereo - MVS) encontram pontos correspondentes em várias imagens e calculam suas coordenadas 3D, gerando uma nuvem de pontos densa que representa a superfície (incluindo objetos).</li>
+                <li><strong>Geração de Modelo Digital de Superfície (DSM):</strong> Interpolar a nuvem de pontos densa para criar um raster DSM.</li>
+                <li><strong>Geração de Modelo Digital de Elevação/Terreno (DEM/DTM):</strong> Classificar ou filtrar a nuvem de pontos para identificar pontos do solo e interpolá-los para criar um DEM/DTM.</li>
+                <li><strong>Ortorretificação e Geração de Ortomosaico:</strong> Corrigir cada imagem individualmente para remover distorções geométricas causadas pelo relevo (usando o DEM/DTM) e pela perspectiva da câmera, criando ortofotos. Em seguida, combinar (mosaicar - MO) as ortofotos em um único ortomosaico georreferenciado e sem costuras.</li>
+                 <li><strong>Geração de Modelos 3D Mesh:</strong> Criar modelos de superfície 3D texturizados (meshes) a partir da nuvem de pontos densa.</li>
+                 <li><strong>Softwares:</strong> Softwares dedicados como Agisoft Metashape, Pix4Dmapper, RealityCapture, ou módulos GIS como ArcGIS Drone2Map, Site Scan for ArcGIS, Reality Studio.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar ortomosaicos e DEMs de alta resolução a partir de imagens de drone para mapeamento de precisão, agricultura, monitoramento de obras. Gerar nuvens de pontos e modelos 3D de edifícios ou sítios arqueológicos para documentação e análise. Produzir mapas topográficos e ortofotos para grandes áreas usando fotografia aérea tradicional. Atualizar bases cartográficas. Criar modelos 3D realistas de cidades.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="me.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ob.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

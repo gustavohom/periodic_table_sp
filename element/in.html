@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Interpolation (IN)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-interpolation"> <!-- Categoria: Interpolation -->
+        <div class="detail-header">
+            <!-- IN é main element, fundo verde escuro, texto claro -->
+            <div class="detail-symbol group-interpolation is-main-element">IN</div> <!-- Categoria: Interpolation -->
+            <div class="detail-title">
+                <h2>Interpolation</h2>
+                <div class="category">Interpolation</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de estimar valores desconhecidos em locais não amostrados com base nos valores de pontos de amostra conhecidos e vizinhos. O resultado é geralmente uma superfície raster contínua (ou um conjunto de valores em novas localizações) que representa a distribuição espacial estimada da variável de interesse. É fundamental para criar mapas contínuos a partir de dados pontuais discretos.
+            </p>
+
+            <h3>Funções Principais / Métodos Comuns</h3>
+            <ul>
+                <li><strong>Objetivo:</strong> Prever valores Z (elevação, temperatura, concentração química, etc.) em todas as células de um raster de saída, usando um conjunto limitado de pontos de entrada onde o valor Z é conhecido.</li>
+                <li><strong>Métodos Determinísticos:</strong> Usam fórmulas matemáticas baseadas na distância ou suavidade para calcular os valores interpolados. Não fornecem estimativa do erro de predição.
+                    <ul>
+                        <li><em>Inverse Distance Weighted (IDW):</em> Estima o valor de uma célula como uma média ponderada dos valores dos pontos de amostra vizinhos. O peso de cada ponto de amostra é inversamente proporcional à sua distância da célula sendo estimada (pontos mais próximos têm mais peso). O usuário controla o expoente da distância (Power) e a vizinhança (número de pontos ou raio).</li>
+                        <li><em>Spline:</em> Ajusta uma superfície matematicamente suave (como uma lâmina flexível) que passa exatamente através dos pontos de amostra. Tende a produzir superfícies visualmente agradáveis, mas pode gerar valores fora do intervalo dos dados originais (overshoots) e é sensível a outliers. Existem diferentes tipos (Regularized, Tension).</li>
+                        <li><em>Trend Surface Analysis:</em> Ajusta uma superfície polinomial (linear, quadrática, cúbica) aos pontos de amostra usando regressão. Captura tendências globais, mas não variações locais finas.</li>
+                        <li><em>Natural Neighbor:</em> Baseado em polígonos de Voronoi, encontra os vizinhos mais próximos de uma célula e atribui pesos com base na área de sobreposição "roubada" desses vizinhos. Adapta-se bem à distribuição irregular dos pontos.</li>
+                    </ul>
+                </li>
+                 <li><strong>Métodos Geoestatísticos (Ver Kriging - KR):</strong> Usam a teoria estatística da autocorrelação espacial (medida pelo semivariograma) para estimar os valores e fornecer medidas da incerteza (erro padrão) da predição.</li>
+                 <li><strong>Parâmetros de Vizinhança:</strong> A maioria dos métodos permite definir como os pontos de amostra vizinhos são selecionados para a interpolação (número fixo de pontos, raio de busca fixo ou variável).</li>
+                 <li><strong>Validação Cruzada (Cross-validation):</strong> Técnica para avaliar a performance do modelo de interpolação, removendo temporariamente um ponto de amostra, prevendo seu valor usando os demais, e comparando o valor previsto com o real.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um Modelo Digital de Elevação (DEM) a partir de pontos de cotas altimétricas. Gerar um mapa de distribuição de temperatura a partir de dados de estações meteorológicas. Estimar a concentração de um poluente no solo entre pontos de amostragem. Criar um mapa de níveis de ruído em uma cidade a partir de medições pontuais. Interpolar dados de batimetria para criar um modelo do fundo de um lago ou oceano. Gerar uma superfície de precipitação a partir de dados de pluviômetros.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rd.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="kr.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

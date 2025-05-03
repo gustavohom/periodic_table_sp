@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Composite Bands (CB)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">CB</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Composite Bands</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Ferramenta que combina múltiplos rasters de banda única (single-band rasters) em um único arquivo raster multiespectral (multi-band raster). É usado principalmente para criar composições coloridas (RGB) a partir de bandas individuais de imagens de satélite ou aéreas, permitindo a visualização em cores reais ou falsas cores.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entrada:</strong> Uma lista de dois ou mais rasters de banda única. As bandas de entrada devem ter a mesma extensão, resolução (tamanho de célula) e sistema de coordenadas para um resultado correto.</li>
+                <li><strong>Ordem das Bandas:</strong> A ordem em que as bandas de entrada são listadas determina a ordem das bandas no raster de saída. Isso é crucial para a exibição correta das composições coloridas.</li>
+                <li><strong>Saída:</strong> Um único arquivo raster contendo múltiplas bandas. O formato de saída deve suportar múltiplas bandas (ex: GeoTIFF, IMG, formato de Geodatabase).</li>
+                <li><strong>Aplicação para Visualização RGB:</strong> Após criar o raster composto, o usuário pode configurar a exibição no software GIS mapeando quais bandas do arquivo correspondem aos canais Vermelho (Red), Verde (Green) e Azul (Blue) do monitor.
+                    <ul>
+                        <li><em>Composição Cor Real (True Color):</em> Mapeia as bandas Vermelha, Verde e Azul do sensor para os canais RGB do monitor, respectivamente. Ex: Landsat 8 bandas 4(R), 3(G), 2(B).</li>
+                        <li><em>Composição Falsa Cor (False Color):</em> Mapeia outras bandas para os canais RGB para realçar características específicas. Uma composição comum é mapear Infravermelho Próximo (NIR), Vermelho (Red) e Verde (Green) para os canais R, G, B, respectivamente. Isso faz a vegetação saudável aparecer em tons vibrantes de vermelho. Ex: Landsat 8 bandas 5(NIR), 4(R), 3(G).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Combinar as bandas individuais Azul, Verde, Vermelho e NIR de uma imagem Landsat ou Sentinel-2 baixadas separadamente em um único arquivo multibanda. Criar um raster composto para poder visualizar a imagem em cores reais ou falsas cores no software GIS. Combinar os resultados de diferentes índices espectrais (ex: NDVI, NDWI, NDBI) como bandas de um único raster para análise visual ou classificação combinada. Agrupar diferentes camadas de dados raster (ex: Elevação, Declividade, Aspecto) em um único arquivo multibanda para facilitar o gerenciamento (embora não seja para visualização RGB direta).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ic.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ps.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>
