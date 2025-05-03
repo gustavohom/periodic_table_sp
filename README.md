@@ -40,14 +40,14 @@ Você pode acessar pela pagina:
 Este projeto é uma recriação e adaptação da ideia original da **The Periodic Table for Spatial Analysis**. Todo o crédito pelo conceito original vai para a GIS Geography.
 
 *   **Link Original:** [https://gisgeography.com/spatial-analysis-periodic-table/](https://gisgeography.com/spatial-analysis-periodic-table/)
-   
+
 ## 🔮 Melhorias Futuras (Sugestões)
 
-*   Completar as páginas de detalhe para todos os elementos.
-*   Adicionar mais exemplos e casos de uso nas páginas de detalhe.
-*   Implementar navegação dinâmica entre páginas de detalhe usando JavaScript.
-*   Adicionar funcionalidade de busca ou filtro para encontrar elementos específicos.
-*   Melhorar a responsividade para diferentes tamanhos de tela.
-*   Incluir links para documentação oficial das ferramentas (ArcGIS, QGIS, etc.) nas páginas de detalhe.
+- [ ] Completar as páginas de detalhe para todos os elementos.
+- [ ] Adicionar mais exemplos e casos de uso nas páginas de detalhe.
+- [ ] Implementar navegação dinâmica entre páginas de detalhe usando JavaScript.
+- [ ] Adicionar funcionalidade de busca ou filtro para encontrar elementos específicos.
+- [ ] Melhorar a responsividade para diferentes tamanhos de tela.
+- [ ] Incluir links para documentação oficial das ferramentas (ArcGIS, QGIS, etc.) nas páginas de detalhe.
 
   
