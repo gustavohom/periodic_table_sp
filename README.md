@@ -41,7 +41,7 @@ Este projeto é uma recriação e adaptação da ideia original da **The Periodi
 
 *   **Link Original:** [https://gisgeography.com/spatial-analysis-periodic-table/](https://gisgeography.com/spatial-analysis-periodic-table/)
 
-## 🔮 Melhorias Futuras (Sugestões)
+## 🔮 Melhorias Futuras
 
 - [ ] Completar as páginas de detalhe para todos os elementos.
 - [ ] Adicionar mais exemplos e casos de uso nas páginas de detalhe.
