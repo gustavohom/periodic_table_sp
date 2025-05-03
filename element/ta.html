@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Terrain Analysis (TA)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+            <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">TA</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Terrain Analysis</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Conjunto de operações realizadas sobre Modelos Digitais de Elevação (DEM) ou outras superfícies raster para calcular e mapear características geomorfométricas do terreno, como inclinação, orientação, curvatura, rugosidade e formas de relevo. Essas características são fundamentais para diversas análises ambientais, hidrológicas, de engenharia e de visibilidade.
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Métricas</h3>
+            <ul>
+                <li><strong>Slope (Declividade):</strong> Calcula a taxa máxima de mudança de elevação para cada célula, geralmente expressa em graus ou percentual. Indica a inclinação do terreno.</li>
+                <li><strong>Aspect (Orientação/Aspecto):</strong> Calcula a direção para a qual a encosta está voltada (a direção da declividade máxima), geralmente medida em graus de 0 a 360 (Norte=0/360, Leste=90, Sul=180, Oeste=270). Áreas planas recebem um valor especial (ex: -1).</li>
+                <li><strong>Curvature (Curvatura):</strong> Mede a forma da superfície. Pode ser calculada de diferentes formas:
+                    <ul>
+                        <li><em>Profile Curvature:</em> Curvatura paralela à direção da declividade (influencia aceleração/desaceleração do fluxo).</li>
+                        <li><em>Plan Curvature:</em> Curvatura perpendicular à direção da declividade (influencia convergência/divergência do fluxo).</li>
+                        <li><em>General Curvature:</em> Combinação das duas.</li>
+                    </ul>
+                </li>
+                 <li><strong>Hillshade (Sombreamento):</strong> Cria uma representação visual do relevo simulando a iluminação do sol sobre a superfície a partir de um ângulo e azimute definidos, realçando a topografia.</li>
+                 <li><strong>Viewshed / Line of Sight (Visibilidade):</strong> Análises que determinam áreas visíveis a partir de pontos observadores (ver VW, LS).</li>
+                 <li><strong>Cut/Fill / Volume:</strong> Calcula volumes entre superfícies (ver VS).</li>
+                 <li><strong>Ruggedness / Roughness (Rugosidade):</strong> Índices que quantificam a variabilidade ou irregularidade da elevação em uma vizinhança (ex: TRI - Terrain Ruggedness Index).</li>
+                 <li><strong>Topographic Position Index (TPI):</strong> Compara a elevação de uma célula com a elevação média de seus vizinhos. Valores altos indicam cristas, valores baixos indicam vales, valores próximos a zero indicam encostas planas ou médias. Usado para classificar formas de relevo.</li>
+                 <li><strong>Geomorphons / Landform Classification:</strong> Ferramentas que classificam cada célula em tipos de formas de relevo predefinidas (pico, crista, encosta, vale, fundo de vale, etc.) com base em padrões de elevação na vizinhança.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Mapear áreas com declividade excessiva para planejamento urbano ou análise de risco de deslizamento. Identificar encostas voltadas para o sul para análise de potencial de energia solar ou agricultura. Calcular o sombreamento do relevo para melhorar a visualização de um mapa topográfico. Determinar áreas visíveis a partir de uma torre de observação. Classificar o terreno em diferentes formas de relevo para estudos geomorfológicos ou ecológicos. Calcular a rugosidade do terreno para modelagem de habitat.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="re.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="mf.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

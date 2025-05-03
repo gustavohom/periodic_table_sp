@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Zonal Statistics (ZS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+            <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">ZS</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Zonal Statistics</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula estatísticas descritivas sobre os valores de um raster (raster de valor) para cada zona definida por outro conjunto de dados (raster de zona ou camada de feições vetoriais de zona). Permite resumir as características de uma superfície contínua dentro de áreas ou categorias específicas.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Zone Dataset (Conjunto de Dados de Zona):</em> Define as áreas (zonas) para as quais as estatísticas serão calculadas. Pode ser um raster de inteiros (onde cada valor único representa uma zona) ou uma camada de feições vetoriais (polígonos).</li>
+                        <li><em>Value Raster (Raster de Valor):</em> O raster contendo os valores sobre os quais as estatísticas serão calculadas (ex: DEM, precipitação, densidade populacional).</li>
+                    </ul>
+                </li>
+                <li><strong>Estatísticas Calculadas (Selecionáveis):</strong>
+                    <ul>
+                        <li>Mean (Média), Median (Mediana), Majority (Maioria - valor mais frequente), Minority (Minoria)</li>
+                        <li>Minimum (Mínimo), Maximum (Máximo), Range (Amplitude = Max - Min)</li>
+                        <li>Standard Deviation (Desvio Padrão), Variety (Número de valores únicos)</li>
+                        <li>Sum (Soma), Count (Contagem de células na zona)</li>
+                        <li>Percentile (Percentil - requer especificação do percentil)</li>
+                    </ul>
+                </li>
+                <li><strong>Saída:</strong>
+                    <ul>
+                        <li><em>Zonal Statistics as Table:</em> Cria uma tabela separada onde cada linha corresponde a uma zona e as colunas contêm as estatísticas calculadas para essa zona.</li>
+                        <li><em>Se as zonas forem feições vetoriais:</em> As estatísticas calculadas podem ser anexadas diretamente à tabela de atributos da camada de zonas.</li>
+                    </ul>
+                </li>
+                 <li><strong>Considerar NoData (Opcional):</strong> Opção para incluir ou ignorar células NoData do raster de valor nos cálculos estatísticos.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Calcular a elevação média, mínima e máxima para cada município (zonas = polígonos de municípios, valor = DEM). Determinar a precipitação total acumulada para cada bacia hidrográfica (zonas = polígonos de bacias, valor = raster de precipitação). Calcular a porcentagem de cobertura florestal (valor = raster binário floresta/não floresta, estatística = Média * 100) para cada tipo de solo (zonas = raster de tipos de solo). Encontrar a densidade populacional média dentro de buffers de 1 km ao redor de escolas (zonas = polígonos de buffer, valor = raster de densidade populacional). Determinar o tipo de uso do solo predominante (Majority) em cada setor censitário.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cn.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cp.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Raster Creation (RC)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">RC</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Raster Creation</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Ferramentas para gerar novos conjuntos de dados raster (grades de células) a partir do zero ou com base em parâmetros definidos pelo usuário, em vez de converter dados existentes (como vetores ou TINs) ou importar imagens. Permite criar rasters com valores constantes, aleatórios ou baseados em funções simples para uso em modelagem, análise ou como máscaras.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Create Constant Raster:</strong> Gera um raster onde todas as células dentro de uma extensão especificada possuem um único valor constante definido pelo usuário.</li>
+                <li><strong>Create Random Raster:</strong> Gera um raster onde cada célula recebe um valor aleatório, geralmente dentro de um intervalo especificado (ex: números inteiros entre 0 e 100, ou números decimais entre 0.0 e 1.0).</li>
+                <li><strong>Create Normal Raster:</strong> Similar ao Random Raster, mas os valores aleatórios seguem uma distribuição normal (gaussiana) com média e desvio padrão definidos.</li>
+                <li><strong>Parâmetros Comuns de Criação:</strong>
+                    <ul>
+                        <li><em>Output Extent:</em> Define a área geográfica que o novo raster cobrirá (pode ser definida por coordenadas, por outra camada ou pela exibição atual).</li>
+                        <li><em>Cell Size:</em> Especifica o tamanho (resolução) de cada célula no raster de saída.</li>
+                        <li><em>Data Type:</em> Define o tipo de dado a ser armazenado em cada célula (ex: inteiro de 8 bits, ponto flutuante de 32 bits).</li>
+                        <li><em>Number of Bands:</em> Para rasters multibandas, define o número de bandas.</li>
+                    </ul>
+                </li>
+                 <li><strong>Uso como Máscara ou Base:</strong> Rasters criados podem ser usados como máscaras em análises (ex: um raster constante com valor 1 dentro da área de estudo e NoData fora) ou como base para cálculos em Map Algebra (MA).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um raster com valor 0 para representar áreas fora de uma bacia hidrográfica, para usar como máscara em cálculos hidrológicos. Gerar um raster com valores aleatórios para simular a distribuição inicial de uma espécie em um modelo ecológico. Criar um raster constante com o valor médio de precipitação anual para uma região, para usar em um modelo de erosão simplificado. Gerar um raster base com valor NoData para preencher posteriormente com resultados de interpolação. Criar um raster para testes de algoritmos de processamento de imagem.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="mo.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="al.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Sampling (SP)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">SP</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Sampling</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Cria um conjunto de pontos ou seleciona um subconjunto de feições existentes (pontos, linhas ou polígonos) com base em um método de amostragem específico. A amostragem espacial é usada para coletar dados representativos em campo, reduzir o tamanho de grandes conjuntos de dados para análise exploratória ou modelagem, ou para gerar locais para validação de modelos.
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Métodos</h3>
+            <ul>
+                <li><strong>Create Random Points:</strong> Gera um número especificado de pontos em locais aleatórios dentro de uma extensão definida (retângulo, polígono de estudo) ou dentro de feições de uma camada de entrada.</li>
+                <li><strong>Create Fishnet / Regular Points:</strong> Cria uma grade regular de pontos com espaçamento definido pelo usuário sobre uma área de interesse.</li>
+                <li><strong>Stratified Random Sampling:</strong> Divide a área de estudo ou a população de feições em estratos (subgrupos, ex: tipos de solo, zonas de risco) e, em seguida, gera um número proporcional ou fixo de amostras aleatórias dentro de cada estrato. Garante representatividade de todos os subgrupos.</li>
+                <li><strong>Systematic Sampling:</strong> Seleciona feições ou gera pontos em intervalos regulares (ex: a cada 100 metros ao longo de uma linha, selecionar 1 a cada 10 polígonos ordenados por área).</li>
+                <li><strong>Cluster Sampling:</strong> Seleciona aleatoriamente grupos (clusters) de feições e amostra todas ou algumas feições dentro dos clusters selecionados.</li>
+                <li><strong>Subset Features (Seleção Aleatória):</strong> Seleciona aleatoriamente uma porcentagem ou um número fixo de feições de uma camada existente.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Gerar 100 locais aleatórios dentro de um parque nacional para realizar inventário de espécies (<code>Create Random Points</code>). Criar uma grade de pontos a cada 500 metros sobre uma área agrícola para coleta de amostras de solo (<code>Create Fishnet</code> / <code>Regular Points</code>). Selecionar locais para validação de um mapa de uso do solo, garantindo que todas as classes de uso do solo sejam amostradas proporcionalmente à sua área (<code>Stratified Random Sampling</code>). Selecionar 10% das parcelas de uma cidade aleatoriamente para uma pesquisa detalhada (<code>Subset Features</code>). Gerar pontos de monitoramento a cada 1 km ao longo de um rio (<code>Systematic Sampling</code> ao longo de linha).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ge.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="gt.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

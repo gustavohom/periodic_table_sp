@@ -1,0 +1,424 @@
+/* --- Variáveis de Cor e Fonte (Originais + Adicional) --- */
+:root {
+    /* --- Cores Base (EXATAMENTE como no seu CSS original) --- */
+    --color-analysis-conversion-base: #f47fb6;
+    --color-table-editing-base: #e64c5a;
+    --color-3d-analysis-base: #f7931e;
+    --color-network-analysis-base: #bdbf3a;
+    --color-data-management-vector-base: #fff100;
+    --color-emerging-tech-base: #80c5e7;
+    --color-remote-sensing-base: #87d0ca;
+    --color-data-management-raster-base: #c9c8d4;
+    --color-raster-analysis-base: #9f83be;
+    --color-interpolation-base: #86c77a;
+    --color-nature-environment-base: #a9a9a9; /* Cinza médio original */
+    --color-society-economy-base: #7a7a7a;   /* Cinza escuro original */
+
+    /* --- Variantes Claras (EXATAMENTE como no seu CSS original) --- */
+    --color-analysis-conversion-light: #f9c5d8;
+    --color-table-editing-light: #f08e96;
+    --color-3d-analysis-light: #fbb971;
+    --color-data-management-vector-light: #fff780;
+    --color-raster-analysis-light: #c5b0d9;
+    --color-interpolation-light: #b9e0b0;
+
+    /* --- Cores de Texto e Fontes (Originais + Adicional) --- */
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --font-main: 'Roboto', sans-serif; /* Fonte principal original */
+    --font-secondary: 'Lato', sans-serif; /* Fonte para header/footer */
+    --element-size: 70px; /* Tamanho original */
+    --grid-gap: 3px;      /* Gap original */
+}
+
+/* --- Reset Básico e Estilos Globais --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main); /* Fonte principal original */
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    /* Fundo mais limpo e neutro para a página index */
+    background-color: #f8f9fa; /* Um cinza muito claro */
+}
+
+/* --- ESTILOS DA PÁGINA PRINCIPAL (INDEX.HTML) --- */
+
+/* Header da Página Index - Novo Estilo Limpo */
+.page-header {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 30px 20px 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0; /* Linha sutil de separação */
+    margin-bottom: 30px; /* Espaço antes da tabela */
+}
+
+.page-header h1 {
+    font-family: var(--font-secondary); /* Usando Lato */
+    font-size: 2.2em; /* Tamanho ajustado */
+    font-weight: 700; /* Negrito */
+    color: #2c3e50; /* Azul acinzentado escuro */
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    font-family: var(--font-secondary); /* Usando Lato */
+    font-size: 1em;
+    color: #555; /* Cinza médio */
+    font-weight: 300; /* Mais leve */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Container da Tabela (Aparência Externa - como no seu CSS original) */
+.periodic-table-container {
+    max-width: calc(18 * (var(--element-size) + var(--grid-gap)) + 2 * var(--grid-gap));
+    margin: 0 auto 30px auto; /* Centralizado, com margem inferior */
+    overflow-x: auto;
+    padding: 10px; /* Padding original */
+    background-color: #fff; /* Fundo branco original */
+    border-radius: 10px; /* Raio original */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra original */
+}
+
+/* --- ESTILOS DA TABELA PERIÓDICA (EXATAMENTE COMO NO SEU CSS ORIGINAL) --- */
+.periodic-table {
+    display: grid;
+    grid-template-rows: repeat(11, var(--element-size));
+    grid-template-columns: repeat(18, var(--element-size));
+    gap: var(--grid-gap);
+    justify-content: center;
+    padding: var(--grid-gap);
+    /* grid-auto-rows e grid-auto-columns não são estritamente necessários aqui
+       se rows/cols estão definidos, mas mantidos se estavam no original implícito */
+}
+
+.element, .element-title {
+    min-height: var(--element-size);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3px; /* Padding original */
+    position: relative;
+    overflow: hidden;
+    font-size: 0.95rem; /* Tamanho original */
+}
+
+.element {
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+    text-decoration: none;
+}
+.element:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-color: #555;
+}
+.element-title {
+    cursor: default;
+    font-weight: 700;
+}
+
+/* --- Overrides Específicos de Cor de Texto (Tentativa 2) --- */
+/* Aplica diretamente aos SPANs dentro do elemento com a classe */
+.element.force-dark-text span {
+    color: var(--color-text-dark) !important;
+}
+
+.element.force-light-text span {
+    color: var(--color-text-light) !important; /* Usa a variável de cor clara */
+}
+
+.element .symbol, .element-title .symbol {
+    font-size: 1.3em; /* Tamanho original */
+    font-weight: 700;
+    display: block;
+    line-height: 1.1;
+    margin-bottom: 1px;
+}
+.element .name, .element-title .title-name {
+    font-size: 0.6em; /* Tamanho original */
+    font-weight: 400;
+    display: block;
+    line-height: 1.1;
+    word-wrap: break-word;
+    max-height: 2.2em; /* Altura original */
+    overflow: hidden;
+}
+
+.empty {
+    background-color: transparent;
+    border: none;
+    min-height: var(--element-size);
+}
+.empty.span-18 {
+    grid-column: 1 / span 18;
+    height: 20px;
+    min-height: 20px;
+    border: none;
+}
+
+/* Aplicação das Cores Base (Originais) */
+.group-analysis-conversion { background-color: var(--color-analysis-conversion-base); color: var(--color-text-dark); }
+.group-table-editing       { background-color: var(--color-table-editing-base); color: var(--color-text-light); }
+.group-3d-analysis         { background-color: var(--color-3d-analysis-base); color: var(--color-text-dark); }
+.group-network-analysis    { background-color: var(--color-network-analysis-base); color: var(--color-text-dark); }
+.group-data-management-vector { background-color: var(--color-data-management-vector-base); color: var(--color-text-dark); }
+.group-emerging-tech       { background-color: var(--color-emerging-tech-base); color: var(--color-text-dark); }
+.group-remote-sensing      { background-color: var(--color-remote-sensing-base); color: var(--color-text-dark); }
+.group-data-management-raster { background-color: var(--color-data-management-raster-base); color: var(--color-text-dark); }
+.group-raster-analysis     { background-color: var(--color-raster-analysis-base); color: var(--color-text-light); }
+.group-interpolation       { background-color: var(--color-interpolation-base); color: var(--color-text-dark); }
+.group-nature-environment  { background-color: var(--color-nature-environment-base); color: var(--color-text-light); } /* Cinza Médio Original */
+.group-society-economy     { background-color: var(--color-society-economy-base); color: var(--color-text-light); }   /* Cinza Escuro Original */
+
+/* Aplicação das Cores Claras (Originais) */
+.group-analysis-conversion:not(.is-main-element) { background-color: var(--color-analysis-conversion-light); }
+.group-table-editing:not(.is-main-element)       { background-color: var(--color-table-editing-light); }
+.group-3d-analysis:not(.is-main-element)         { background-color: var(--color-3d-analysis-light); }
+.group-data-management-vector:not(.is-main-element) { background-color: var(--color-data-management-vector-light); }
+.group-raster-analysis:not(.is-main-element)     { background-color: var(--color-raster-analysis-light); }
+.group-interpolation:not(.is-main-element)       { background-color: var(--color-interpolation-light); }
+/* Os grupos N/E e S/E não tinham variação de cor no seu CSS original, então não há :not(.is-main-element) para eles */
+
+/* Classe Main Element (Original) */
+.is-main-element {} /* Apenas marcador lógico */
+
+/* Legenda (Exatamente como no seu CSS original) */
+.legend {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #e9eef2; /* Fundo original */
+    border-radius: 8px; /* Raio original */
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    margin-right: 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+    display: inline-block;
+}
+.legend-color.is-main-element {
+    margin-left: 5px; /* Espaço original */
+}
+
+/* Cores da Legenda (Originais) */
+.legend-color.group-analysis-conversion { background-color: var(--color-analysis-conversion-light); }
+.legend-color.group-analysis-conversion.is-main-element { background-color: var(--color-analysis-conversion-base); }
+.legend-color.group-table-editing { background-color: var(--color-table-editing-light); }
+.legend-color.group-table-editing.is-main-element { background-color: var(--color-table-editing-base); }
+.legend-color.group-3d-analysis { background-color: var(--color-3d-analysis-light); }
+.legend-color.group-3d-analysis.is-main-element { background-color: var(--color-3d-analysis-base); }
+.legend-color.group-network-analysis { background-color: var(--color-network-analysis-base); }
+.legend-color.group-data-management-vector { background-color: var(--color-data-management-vector-light); }
+.legend-color.group-data-management-vector.is-main-element { background-color: var(--color-data-management-vector-base); }
+.legend-color.group-emerging-tech { background-color: var(--color-emerging-tech-base); }
+.legend-color.group-remote-sensing { background-color: var(--color-remote-sensing-base); }
+.legend-color.group-data-management-raster { background-color: var(--color-data-management-raster-base); }
+.legend-color.group-raster-analysis { background-color: var(--color-raster-analysis-light); }
+.legend-color.group-raster-analysis.is-main-element { background-color: var(--color-raster-analysis-base); }
+.legend-color.group-interpolation { background-color: var(--color-interpolation-light); }
+.legend-color.group-interpolation.is-main-element { background-color: var(--color-interpolation-base); }
+.legend-color.group-nature-environment { background-color: var(--color-nature-environment-base); } /* Cor única original */
+.legend-color.group-society-economy { background-color: var(--color-society-economy-base); }   /* Cor única original */
+
+/* Footer da Página Index - Novo Estilo Limpo */
+.page-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0; /* Linha sutil */
+    background-color: #ffffff; /* Fundo branco */
+    color: #666; /* Cinza médio */
+    font-size: 0.85em;
+    font-family: var(--font-secondary);
+}
+.page-footer p { margin-bottom: 5px; }
+.page-footer a { color: #3498db; text-decoration: none; } /* Azul claro para links */
+.page-footer a:hover { text-decoration: underline; }
+
+/* --- FIM DOS ESTILOS DA TABELA PERIÓDICA --- */
+
+
+/* === ESTILOS DAS PÁGINAS DE DETALHE (Mantidos/Adicionados como você gostou) === */
+
+/* Container mais largo para detalhes */
+.detail-container {
+    max-width: 1100px; /* <<< LARGURA AUMENTADA MANTIDA */
+    margin: 30px auto;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    border-left: 10px solid; /* Cor definida pela classe específica */
+    font-family: var(--font-main); /* Garante fonte padrão */
+}
+
+/* Header da página de detalhe */
+.detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Linha mais fina */
+}
+
+.detail-symbol {
+    font-size: 3.5em; /* Ligeiramente menor para caber melhor */
+    font-weight: 700;
+    min-width: 90px;  /* Ligeiramente menor */
+    text-align: center;
+    margin-right: 25px;
+    padding: 10px;
+    border-radius: 8px;
+    /* Cores aplicadas por classes group-* */
+}
+
+.detail-title h2 {
+    font-family: var(--font-secondary); /* Usando Lato */
+    font-size: 2.5em; /* Ajustado */
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #333;
+}
+
+.detail-title .category {
+    font-size: 1em; /* Ajustado */
+    color: #666;
+    font-weight: 400; /* Normal */
+    margin-top: 5px;
+    text-transform: uppercase; /* Opcional: Deixa a categoria em maiúsculas */
+    letter-spacing: 0.5px;
+}
+
+/* Conteúdo da página de detalhe */
+.detail-content h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.4em; /* Ajustado */
+    color: #2c3e50; /* Azul do header da index */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+    font-family: var(--font-secondary); /* Usando Lato */
+    font-weight: 700;
+}
+
+.detail-content p {
+    margin-bottom: 15px;
+    text-align: left; /* Alinhamento justificado pode ser ruim para ler */
+    line-height: 1.7; /* Maior espaçamento entre linhas */
+}
+
+.detail-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    list-style: disc;
+    padding-left: 15px; /* Adiciona padding para afastar da margem */
+}
+
+.detail-content li {
+    margin-bottom: 10px; /* Mais espaço entre itens */
+    line-height: 1.7;
+}
+
+.detail-content strong {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Navegação da Página de Detalhe (Mantida) */
+.detail-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.nav-button, .back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    font-size: 0.95em;
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.nav-button.disabled, .nav-button:disabled { /* Estilo para botão desabilitado */
+    background-color: #e9ecef;
+    color: #adb5bd;
+    cursor: not-allowed;
+    pointer-events: none; /* Impede clique */
+}
+
+
+.nav-button {
+    background-color: #f8f9fa; /* Cinza bem claro */
+    color: #343a40; /* Cinza escuro */
+    border-color: #dee2e6; /* Borda cinza claro */
+}
+.nav-button:not(.disabled):hover {
+    background-color: #e9ecef; /* Escurece um pouco no hover */
+    border-color: #ced4da;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.back-link {
+    background-color: #6c757d; /* Cinza médio */
+    color: white;
+}
+.back-link:hover {
+    background-color: #5a6268; /* Cinza mais escuro */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Cores para Símbolos e Bordas da Página de Detalhe (Usa Cores BASE Originais) */
+.detail-symbol.group-analysis-conversion    { background-color: var(--color-analysis-conversion-base); color: var(--color-text-dark); }
+.detail-symbol.group-table-editing          { background-color: var(--color-table-editing-base); color: var(--color-text-light); }
+.detail-symbol.group-3d-analysis            { background-color: var(--color-3d-analysis-base); color: var(--color-text-dark); }
+.detail-symbol.group-network-analysis       { background-color: var(--color-network-analysis-base); color: var(--color-text-dark); }
+.detail-symbol.group-data-management-vector { background-color: var(--color-data-management-vector-base); color: var(--color-text-dark); }
+.detail-symbol.group-emerging-tech          { background-color: var(--color-emerging-tech-base); color: var(--color-text-dark); }
+.detail-symbol.group-remote-sensing         { background-color: var(--color-remote-sensing-base); color: var(--color-text-dark); }
+.detail-symbol.group-data-management-raster { background-color: var(--color-data-management-raster-base); color: var(--color-text-dark); }
+.detail-symbol.group-raster-analysis        { background-color: var(--color-raster-analysis-base); color: var(--color-text-light); }
+.detail-symbol.group-interpolation          { background-color: var(--color-interpolation-base); color: var(--color-text-dark); }
+.detail-symbol.group-nature-environment     { background-color: var(--color-nature-environment-base); color: var(--color-text-light); } /* Cinza original */
+.detail-symbol.group-society-economy        { background-color: var(--color-society-economy-base); color: var(--color-text-light); }   /* Cinza original */
+
+.detail-container.border-analysis-conversion    { border-left-color: var(--color-analysis-conversion-base); }
+.detail-container.border-table-editing          { border-left-color: var(--color-table-editing-base); }
+.detail-container.border-3d-analysis            { border-left-color: var(--color-3d-analysis-base); }
+.detail-container.border-network-analysis       { border-left-color: var(--color-network-analysis-base); }
+.detail-container.border-data-management-vector { border-left-color: var(--color-data-management-vector-base); }
+.detail-container.border-emerging-tech          { border-left-color: var(--color-emerging-tech-base); }
+.detail-container.border-remote-sensing         { border-left-color: var(--color-remote-sensing-base); }
+.detail-container.border-data-management-raster { border-left-color: var(--color-data-management-raster-base); }
+.detail-container.border-raster-analysis        { border-left-color: var(--color-raster-analysis-base); }
+.detail-container.border-interpolation          { border-left-color: var(--color-interpolation-base); }
+.detail-container.border-nature-environment     { border-left-color: var(--color-nature-environment-base); } /* Cinza original */
+.detail-container.border-society-economy        { border-left-color: var(--color-society-economy-base); }   /* Cinza original */
+
+/* === FIM DOS ESTILOS DAS PÁGINAS DE DETALHE === */

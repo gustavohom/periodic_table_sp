@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Segmentation (Image) (SG)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">SG</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Image Segmentation</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de particionar uma imagem digital (raster) em múltiplos segmentos ou objetos, onde cada segmento representa um grupo de pixels adjacentes que são homogêneos com base em critérios como cor (valores espectrais), textura ou forma. É a etapa fundamental da Análise de Imagem Baseada em Objetos (Object-Based Image Analysis - OBIA) e também usada em tarefas de visão computacional e pré-processamento para classificação.
+            </p>
+
+            <h3>Funções Principais / Algoritmos Comuns</h3>
+            <ul>
+                <li><strong>Objetivo:</strong> Agrupar pixels em regiões significativas que correspondam a objetos do mundo real (ex: edifícios individuais, campos agrícolas, fragmentos florestais), em vez de tratar cada pixel isoladamente como na classificação tradicional baseada em pixel (IC).</li>
+                <li><strong>Critérios de Homogeneidade:</strong> Os algoritmos de segmentação buscam minimizar a variância (ou maximizar a similaridade) dos pixels *dentro* de um segmento e maximizar a diferença *entre* segmentos vizinhos. Os critérios podem incluir:
+                    <ul>
+                        <li><em>Cor/Espectral:</em> Similaridade nos valores das bandas espectrais.</li>
+                        <li><em>Textura:</em> Padrões de variação espacial nos valores dos pixels.</li>
+                        <li><em>Forma/Tamanho:</em> Considerar a compactação, suavidade ou tamanho dos segmentos durante o processo de crescimento ou fusão.</li>
+                    </ul>
+                </li>
+                <li><strong>Algoritmos Comuns:</strong>
+                    <ul>
+                        <li><em>Mean Shift Segmentation:</em> Algoritmo iterativo que move janelas de análise para áreas de maior densidade de pixels no espaço de características (cor, espacial), agrupando pixels que convergem para o mesmo modo.</li>
+                        <li><em>Region Growing (Crescimento de Regiões):</em> Começa com pixels "semente" e agrega pixels vizinhos que atendem a critérios de homogeneidade.</li>
+                        <li><em>Multi-resolution Segmentation (eCognition):</em> Abordagem popular em OBIA que cria segmentos em diferentes níveis de escala, permitindo análises hierárquicas.</li>
+                        <li><em>Watershed Segmentation:</em> Trata a imagem como um relevo topográfico (baseado em gradientes) e identifica "bacias hidrográficas" como segmentos.</li>
+                    </ul>
+                </li>
+                 <li><strong>Parâmetros de Controle:</strong> Os algoritmos geralmente possuem parâmetros que controlam o nível de detalhe da segmentação (tamanho mínimo do segmento, limiar de homogeneidade, peso relativo dos critérios espectrais vs. forma).</li>
+                 <li><strong>Saída:</strong> Geralmente um raster onde cada segmento recebe um ID único, ou uma camada vetorial de polígonos representando os segmentos. Os atributos médios (cor, textura) de cada segmento podem ser calculados.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Segmentar uma imagem aérea de alta resolução para delinear edifícios individuais antes de classificá-los. Agrupar pixels de uma imagem agrícola em segmentos correspondentes a talhões de cultivo homogêneos. Segmentar uma imagem florestal para identificar copas de árvores individuais ou fragmentos florestais. Pré-processar uma imagem médica para identificar órgãos ou tecidos específicos. Criar objetos de análise para classificação OBIA de uso do solo, onde cada objeto (segmento) é classificado como um todo.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ac.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="dn.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

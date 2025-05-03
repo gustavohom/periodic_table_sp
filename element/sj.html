@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Spatial Join (SJ)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-analysis-conversion"> <!-- Categoria: Analysis/Conversion -->
+        <div class="detail-header">
+            <div class="detail-symbol group-analysis-conversion">SJ</div> <!-- Categoria: Analysis/Conversion -->
+            <div class="detail-title">
+                <h2>Spatial Join</h2>
+                <div class="category">Vector Analysis / Conversion</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Combina atributos de duas camadas com base na sua relação espacial (localização). Diferente do Join de Tabela (que usa um campo chave comum), o Spatial Join transfere atributos de uma camada para outra baseado em critérios como interseção, contenção, proximidade ou toque. É uma ferramenta poderosa para enriquecer dados com informações contextuais de camadas vizinhas ou sobrepostas.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Opções de Junção (Join Operation):</strong>
+                    <ul>
+                        <li><em>Join one to one:</em> Cada feição de destino recebe atributos da feição de origem que satisfaz a relação espacial (pode haver regras para desempate se mais de uma feição de origem corresponder).</li>
+                        <li><em>Join one to many:</em> Cria múltiplas cópias da feição de destino, uma para cada feição de origem correspondente, ou (mais comum) cria uma feição de destino única com atributos agregados/sumarizados das múltiplas feições de origem correspondentes (ex: contagem, soma, média).</li>
+                    </ul>
+                </li>
+                <li><strong>Opções de Correspondência (Match Option):</strong> Define a relação espacial a ser usada:
+                    <ul>
+                        <li><em>Intersect:</em> As geometrias se cruzam de alguma forma.</li>
+                        <li><em>Contains:</em> A geometria de destino contém completamente a geometria de origem.</li>
+                        <li><em>Within:</em> A geometria de destino está completamente dentro da geometria de origem.</li>
+                        <li><em>Closest:</em> Junta com a feição de origem mais próxima (dentro de uma distância opcional).</li>
+                        <li><em>Touches:</em> As fronteiras das geometrias se tocam.</li>
+                        <li><em>Are identical to:</em> As geometrias são exatamente as mesmas.</li>
+                        <li>E outras relações topológicas...</li>
+                    </ul>
+                </li>
+                 <li><strong>Agregação/Sumarização (Merge Rule):</strong> Para joins 'one-to-many', permite calcular estatísticas (soma, média, contagem, min, max, etc.) dos atributos das feições de origem correspondentes.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Adicionar o nome do município a uma camada de escolas (escolas <em>within</em> municípios - join one-to-one). Contar quantos crimes ocorreram em cada bairro (bairros <em>contain</em> crimes - join one-to-many com regra de merge 'Count'). Atribuir a cada residência o ID da zona de planejamento mais próxima (join one-to-one com match 'Closest'). Identificar quais segmentos de estrada tocam um determinado parque (estradas <em>touch</em> parque - join one-to-many ou one-to-one dependendo do objetivo).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="px.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="pd.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

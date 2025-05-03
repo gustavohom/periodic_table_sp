@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Temporal Data Management (TM)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">TM</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Temporal Data Management</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Funcionalidades e ferramentas GIS que permitem habilitar, gerenciar e visualizar a dimensão temporal dos dados geoespaciais. Permite que camadas (vetoriais ou raster) que possuem atributos de data e/ou hora sejam exibidas e analisadas ao longo do tempo, revelando padrões, tendências e mudanças.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Habilitar Tempo na Camada (Enable Time):</strong> Configurar as propriedades de uma camada para reconhecer um ou mais campos de atributos como representantes do tempo (instante inicial, instante final, ou ambos).</li>
+                <li><strong>Time Slider / Controle de Tempo:</strong> Interface gráfica (geralmente uma barra deslizante) que permite ao usuário controlar o período de tempo sendo exibido no mapa. Apenas as feições cujo intervalo de tempo (definido nos atributos) se sobrepõe ao período selecionado no controle de tempo são exibidas.</li>
+                <li><strong>Animação Temporal:</strong> Criar animações que mostram a evolução dos dados no mapa ao longo do tempo, reproduzindo sequencialmente diferentes intervalos de tempo. A animação pode ser exportada como vídeo ou GIF.</li>
+                <li><strong>Gerenciamento de Campos de Tempo:</strong>
+                    <ul>
+                        <li><em>Convert Time Field:</em> Converte dados de tempo entre diferentes formatos (texto, numérico) para um formato de data/hora reconhecido pelo GIS.</li>
+                        <li><em>Convert Time Zone:</em> Ajusta os valores de data/hora de um fuso horário para outro.</li>
+                        <li><em>Calculate Field (para Tempo):</em> Ferramentas para calcular durações, extrair componentes (ano, mês, dia), ou manipular valores de tempo nos atributos.</li>
+                    </ul>
+                </li>
+                <li><strong>Análise Temporal:</strong> Integração com ferramentas de análise que consideram o tempo, como a criação de Space-Time Cubes (SC), análise de tendências, ou detecção de mudanças.</li>
+                <li><strong>Dados Temporais Instantâneos vs. Intervalos:</strong> Suporte para dados que representam um evento em um único momento (ex: localização de um raio) ou uma condição que persiste por um período (ex: status de um segmento de estrada em obras de DD/MM/AAAA a DD/MM/AAAA).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Visualizar a propagação de um incêndio florestal ao longo dos dias usando polígonos de área queimada com data. Animar a movimentação de veículos ou animais rastreados por GPS ao longo do tempo. Exibir dados de precipitação acumulada por hora em um mapa. Analisar a mudança no uso do solo em uma região comparando mapas de diferentes anos. Visualizar o histórico de manutenção de uma rede de dutos, mostrando os trechos inspecionados em cada mês. Criar uma animação mostrando o crescimento urbano de uma cidade ao longo das décadas.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="im.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rtt.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

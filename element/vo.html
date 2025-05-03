@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Volume Calculation (VO)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-3d-analysis"> <!-- Categoria: 3D Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-3d-analysis">VO</div> <!-- Categoria: 3D Analysis -->
+            <div class="detail-title">
+                <h2>Volume Calculation / Cut and Fill</h2>
+                <div class="category">3D Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula o volume de espaço entre duas superfícies tridimensionais (geralmente representando o terreno antes e depois de uma modificação) ou entre uma superfície e um plano de referência horizontal. É frequentemente usado para estimar a quantidade de material a ser removido (corte/cut) ou adicionado (aterro/fill) em projetos de engenharia e terraplanagem.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong> Requer uma superfície 'antes' (before surface) e uma superfície 'depois' (after surface), ambas podendo ser Raster DEMs ou TINs. Alternativamente, pode usar uma única superfície e um plano de referência com uma elevação constante.</li>
+                <li><strong>Área de Interesse (Opcional):</strong> Um polígono pode ser fornecido para limitar o cálculo a uma área específica.</li>
+                <li><strong>Saídas Comuns:</strong>
+                    <ul>
+                        <li>Volume líquido total (Fill - Cut).</li>
+                        <li>Volume total de corte (material removido).</li>
+                        <li>Volume total de aterro (material adicionado).</li>
+                        <li>Área total de corte.</li>
+                        <li>Área total de aterro.</li>
+                        <li>Um raster ou polígonos de saída mostrando as áreas de corte (valores negativos) e aterro (valores positivos), e a profundidade/altura da diferença em cada local.</li>
+                    </ul>
+                </li>
+                <li><strong>Fator Z (Opcional):</strong> Permite ajustar a escala vertical se as unidades Z forem diferentes das unidades XY.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Estimar o volume de terra a ser movido para a construção de uma estrada ou plataforma de edifício (<code>Cut/Fill</code> entre o terreno original e o projeto final). Calcular a capacidade de armazenamento de um reservatório proposto comparando o fundo do vale com o nível da água planejado (<code>Volume</code> entre superfície e plano). Medir o volume de material erodido ou depositado em uma praia ou encosta comparando levantamentos de diferentes datas (<code>Cut/Fill</code>). Calcular o volume de uma pilha de material (minério, agregados) comparando a superfície da pilha com a base plana.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ls.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="vw.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

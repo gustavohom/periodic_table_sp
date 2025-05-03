@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Spatial Regression (RE)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+             <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">RE</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Spatial Regression</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Técnicas estatísticas usadas para modelar a relação entre uma variável dependente (aquilo que se quer prever ou explicar) e uma ou mais variáveis independentes (explicativas ou preditoras) no espaço geográfico. O objetivo é entender como as variáveis explicativas influenciam a variável dependente e, frequentemente, usar o modelo treinado para criar uma superfície raster de predição para a variável dependente em toda a área de estudo.
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Modelos</h3>
+            <ul>
+                <li><strong>Ordinary Least Squares (OLS - Mínimos Quadrados Ordinários):</strong> Modelo de regressão linear global que assume que a relação entre as variáveis é constante em toda a área de estudo. Fornece uma única equação de regressão. É um ponto de partida, mas muitas vezes viola pressupostos espaciais (autocorrelação dos resíduos).</li>
+                <li><strong>Geographically Weighted Regression (GWR - Regressão Ponderada Geograficamente):</strong> Modelo de regressão local que permite que a relação entre as variáveis mude no espaço. Calibra uma equação de regressão diferente para cada localização (ou feição), ponderando as observações vizinhas com base na distância. Produz mapas dos coeficientes locais, intercepto local e R² local, mostrando onde as relações são mais fortes ou diferentes.</li>
+                <li><strong>Modelos de Machine Learning para Regressão (ver ML):</strong> Algoritmos como Random Forest, Gradient Boosting, Support Vector Regression podem ser usados para modelar relações complexas e não lineares e gerar superfícies de predição. Muitas vezes requerem a extração de valores das variáveis (rasters explicativos) para pontos de amostra da variável dependente.</li>
+                <li><strong>Entradas Típicas:</strong>
+                    <ul>
+                        <li><em>Variável Dependente:</em> Pontos de amostra com o valor a ser modelado (ex: preço de imóveis, rendimento de colheita, número de espécies).</li>
+                        <li><em>Variáveis Explicativas (Rasters):</em> Camadas raster representando os fatores que podem influenciar a variável dependente (ex: distância ao centro, elevação, tipo de solo, densidade populacional).</li>
+                    </ul>
+                </li>
+                 <li><strong>Saída:</strong>
+                    <ul>
+                        <li><em>Diagnósticos do Modelo:</em> Estatísticas que avaliam a performance do modelo (R², R² ajustado, AICc, teste de autocorrelação dos resíduos - Moran's I).</li>
+                        <li><em>Superfície de Predição (Raster):</em> Um mapa raster mostrando os valores previstos da variável dependente para toda a área de estudo.</li>
+                        <li><em>Raster de Resíduos:</em> Mapa mostrando a diferença entre os valores observados e previstos, útil para identificar onde o modelo erra mais.</li>
+                        <li><em>Mapas de Coeficientes (para GWR):</em> Rasters mostrando como a influência de cada variável explicativa varia espacialmente.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Criar um mapa preditivo de preços de imóveis com base em características como área construída, distância a escolas e parques, e renda média do bairro. Modelar o rendimento de uma cultura agrícola com base em variáveis como tipo de solo, precipitação e temperatura. Prever a distribuição espacial de uma espécie animal com base em variáveis ambientais (elevação, cobertura vegetal, distância da água). Identificar os fatores que mais influenciam a ocorrência de crimes em diferentes partes de uma cidade usando GWR. Mapear áreas com maior adequabilidade para energia solar com base na radiação solar, declividade e distância da rede elétrica.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rp.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ta.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

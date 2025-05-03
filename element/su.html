@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Suitability Modeling (SU)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+             <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">SU</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Suitability Modeling</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Processo de análise espacial, geralmente baseado em raster, que combina múltiplas camadas de critérios (fatores) para identificar as áreas mais adequadas (ou inadequadas) para uma determinada finalidade ou atividade. Cada critério é geralmente reclassificado para uma escala comum de adequabilidade (ex: 1 a 10, onde 10 é mais adequado) e, em seguida, os critérios são combinados usando sobreposição ponderada ou outras técnicas para produzir um mapa final de adequabilidade.
+            </p>
+
+            <h3>Funções Principais / Workflow Típico</h3>
+            <ul>
+                <li><strong>1. Definição do Problema e Critérios:</strong> Identificar claramente o objetivo (ex: encontrar locais adequados para um parque eólico) e os fatores relevantes (ex: velocidade do vento, declividade, distância de áreas protegidas, distância da rede elétrica).</li>
+                <li><strong>2. Aquisição e Preparação dos Dados:</strong> Obter os dados raster (ou vetor a serem rasterizados) para cada critério. Garantir que todos tenham a mesma projeção, extensão e resolução (usando ferramentas como Project - PJ, Resample - RS, Clip - RP).</li>
+                <li><strong>3. Reclassificação / Transformação para Escala Comum (Suitability Scale):</strong> Transformar os valores de cada raster de critério em uma escala de adequabilidade comum (ex: 1-5, 1-10, 0-1). Isso pode ser feito com:
+                    <ul>
+                       <li><em>Reclassify:</em> Atribuir valores de adequabilidade a intervalos ou categorias dos dados originais.</li>
+                       <li><em>Fuzzy Membership:</em> Usar funções de lógica fuzzy (linear, gaussiana, sigmoidal) para atribuir graus de pertencimento (0 a 1) a um conjunto "adequado", permitindo transições graduais.</li>
+                       <li><em>Rescale by Function:</em> Aplicar funções matemáticas para reescalonar os valores.</li>
+                    </ul>
+                 </li>
+                <li><strong>4. Ponderação dos Critérios (Weighting):</strong> Atribuir pesos a cada critério reclassificado para refletir sua importância relativa na decisão final. A soma dos pesos geralmente totaliza 1 ou 100%.</li>
+                <li><strong>5. Combinação / Sobreposição (Overlay):</strong> Combinar os rasters de critérios reclassificados e ponderados para gerar o mapa final de adequabilidade. Técnicas comuns:
+                    <ul>
+                        <li><em>Weighted Sum (Soma Ponderada):</em> Multiplica cada raster de critério reclassificado pelo seu peso e soma os resultados.</li>
+                        <li><em>Weighted Overlay:</em> Ferramenta que combina reclassificação, ponderação e soma em uma única interface.</li>
+                        <li><em>Fuzzy Overlay:</em> Combina rasters de pertinência fuzzy usando operadores fuzzy (AND, OR, Gamma).</li>
+                    </ul>
+                 </li>
+                <li><strong>6. Análise e Interpretação:</strong> Analisar o mapa de adequabilidade resultante, identificando as áreas com os maiores valores (mais adequadas) e, possivelmente, aplicando limiares ou restrições adicionais.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Identificar os melhores locais para desenvolvimento residencial considerando declividade, acesso a estradas, distância de áreas de risco e zoneamento. Encontrar áreas adequadas para a conservação de uma espécie ameaçada com base em tipo de habitat, distância de atividades humanas e fontes de água. Selecionar locais potenciais para instalação de painéis solares considerando radiação solar, declividade, orientação da encosta e proximidade da rede elétrica. Avaliar a adequabilidade de terras para diferentes tipos de culturas agrícolas com base em solo, clima e topografia. Priorizar áreas para reflorestamento com base em fatores como erosão do solo, conectividade de habitat e custo da terra.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="mf.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="con.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

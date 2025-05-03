@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Route (RT)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-network-analysis"> <!-- Categoria: Network Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-network-analysis">RT</div> <!-- Categoria: Network Analysis -->
+            <div class="detail-title">
+                <h2>Route Analysis</h2>
+                <div class="category">Network Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula a rota ótima (geralmente a mais rápida ou a mais curta) entre duas ou mais localizações (paradas ou "stops") utilizando um Network Dataset (conjunto de dados de rede, como ruas, ferrovias, etc.). Permite encontrar o melhor caminho para viagens, entregas, inspeções, considerando as características da rede.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong>
+                    <ul>
+                        <li><em>Network Dataset:</em> A rede sobre a qual a rota será calculada (ex: ruas com limites de velocidade, restrições de sentido).</li>
+                        <li><em>Stops (Paradas):</em> Dois ou more pontos que definem o início, o fim e possíveis paradas intermediárias da rota.</li>
+                    </ul>
+                </li>
+                <li><strong>Impedância (Custo):</strong> Define o que está sendo minimizado (ex: Tempo de Viagem, Distância). O Network Dataset geralmente armazena esses custos para cada segmento da rede.</li>
+                <li><strong>Restrições:</strong> Permite incorporar regras como evitar pedágios, não usar vias específicas, respeitar sentidos únicos, proibições de conversão, restrições de altura/peso.</li>
+                <li><strong>Barreiras:</strong> Permite adicionar pontos, linhas ou polígonos temporários que bloqueiam ou adicionam custo à passagem pela rede (ex: acidente, área de construção).</li>
+                <li><strong>Otimização da Ordem das Paradas:</strong> Se houver múltiplas paradas intermediárias, a ferramenta pode encontrar a sequência ótima para visitá-las, minimizando o custo total da rota (problema do caixeiro viajante - TSP).</li>
+                <li><strong>Saída:</strong> Uma camada de linha representando a rota ótima, geralmente com atributos como tempo e distância totais. Pode também gerar instruções de direção (ver DR).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Calcular a rota mais rápida de casa para o trabalho em um determinado horário (considerando tráfego, se disponível na rede). Planejar a rota de entrega para um motorista que precisa visitar 10 clientes, encontrando a sequência e o caminho mais eficientes. Determinar o caminho mais curto para uma ambulância chegar a um local de emergência. Encontrar a rota para um caminhão pesado que evite pontes com limite de peso baixo. Simular o tempo de viagem entre diferentes bairros usando a rede de transporte público.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="sc.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="dr.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

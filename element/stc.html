@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Space-Time Cubes (STC)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-3d-analysis"> <!-- Categoria: 3D Analysis (ou Spatio-Temporal) -->
+        <div class="detail-header">
+            <div class="detail-symbol group-3d-analysis">STC</div> <!-- Categoria: 3D Analysis -->
+            <div class="detail-title">
+                <h2>Space-Time Cubes</h2>
+                <!-- Categoria poderia ser também "Spatio-Temporal Analysis" -->
+                <div class="category">3D Analysis / Spatio-Temporal</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Estrutura de dados e conjunto de ferramentas de análise que agregam dados pontuais com informações de tempo em "bins" (caixas) tridimensionais, onde as dimensões são X, Y e Tempo. Cada bin no cubo contém uma contagem ou resumo estatístico dos pontos que caem naquela localização espacial e naquele intervalo de tempo. Isso permite visualizar e analisar padrões e tendências espaço-temporais.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Create Space Time Cube:</strong> Ferramenta principal que recebe uma camada de pontos com um campo de data/hora e agrega esses pontos em bins de um tamanho espacial e temporal definido pelo usuário (ex: bins de 1km² por semana). Pode agregar contagens ou sumarizar atributos numéricos dos pontos.</li>
+                <li><strong>Visualize Space Time Cube in 3D:</strong> Exibe o cubo como uma estrutura 3D, onde cada bin pode ser simbolizado pela sua contagem ou valor resumido, permitindo identificar visualmente clusters espaciais que persistem ou mudam ao longo do tempo.</li>
+                <li><strong>Emerging Hot Spot Analysis:</strong> Analisa os valores (contagens/sumários) em cada coluna de bins (localização fixa ao longo do tempo) para identificar tendências e classificar cada localização como um novo hot spot, hot spot consecutivo, hot spot esporádico, hot spot histórico, cold spot, etc.</li>
+                <li><strong>Time Series Clustering:</strong> Agrupa locais com padrões temporais semelhantes (com base nos valores dos bins ao longo do tempo).</li>
+                <li><strong>Local Outlier Analysis:</strong> Identifica localizações cujos padrões temporais são significativamente diferentes dos seus vizinhos espaciais.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Analisar a evolução de focos de crime em uma cidade ao longo dos meses para identificar áreas com problemas emergentes ou persistentes (Emerging Hot Spot Analysis). Rastrear a dispersão de uma doença, visualizando onde e quando os casos se concentram (Visualize Cube, Emerging Hot Spot Analysis). Analisar padrões de chamados de emergência 192 por hora e dia da semana em diferentes bairros. Identificar áreas com tendências crescentes ou decrescentes no número de acidentes de trânsito ao longo dos anos. Agrupar estações meteorológicas com perfis de temperatura semelhantes ao longo das estações do ano (Time Series Clustering).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="sl.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="rt.html" class="nav-button">Próximo &raquo;</a> <!-- Próximo é RT -->
+        </div>
+    </div>
+</body>
+</html>

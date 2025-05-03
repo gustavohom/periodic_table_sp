@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Real-time Tracking (RTT)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">RTT</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Real-time Tracking / Streaming Data</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Capacidade de sistemas GIS de receber, processar, visualizar e analisar fluxos contínuos de dados (data streams) que reportam a localização e/ou o status de objetos em movimento ou sensores em (quase) tempo real. Permite o monitoramento ao vivo de eventos e ativos dinâmicos.
+            </p>
+
+            <h3>Funções Principais / Componentes</h3>
+            <ul>
+                <li><strong>Ingestão de Dados (Data Ingestion):</strong> Conectores e interfaces para receber dados de diversas fontes em tempo real, como dispositivos GPS (veículos, pessoas), sensores IoT (Internet of Things), feeds de redes sociais, dados meteorológicos, etc. Utiliza protocolos como HTTP, TCP/UDP, Kafka, MQTT.</li>
+                <li><strong>Processamento Contínuo (Real-time Analytics):</strong> Ferramentas (ex: ArcGIS GeoEvent Server, processadores de stream) que aplicam filtros, transformações, cálculos e análises espaciais nos dados à medida que eles chegam, sem a necessidade de armazená-los primeiro em um banco de dados tradicional.</li>
+                <li><strong>Análises Comuns em Tempo Real:</strong>
+                    <ul>
+                        <li><em>Geofencing:</em> Detectar quando um objeto rastreado entra ou sai de uma área geográfica predefinida (geofence).</li>
+                        <li><em>Detecção de Incidentes:</em> Identificar padrões ou condições específicas nos dados que indicam um evento de interesse (ex: veículo parado por muito tempo, sensor reportando valor fora do normal).</li>
+                        <li><em>Cálculo de Proximidade:</em> Verificar a proximidade entre objetos rastreados ou entre um objeto e um local fixo.</li>
+                    </ul>
+                </li>
+                 <li><strong>Visualização Dinâmica (Real-time Visualization):</strong> Atualização automática da posição e status dos objetos no mapa à medida que novos dados chegam. Camadas de streaming (Stream Layers) exibem os dados mais recentes.</li>
+                 <li><strong>Armazenamento Opcional (Data Archiving):</strong> Capacidade de armazenar os dados de stream processados ou brutos em um banco de dados (frequentemente um Big Data Store) para análise histórica posterior.</li>
+                 <li><strong>Alertas e Notificações:</strong> Acionar alertas (email, SMS, pop-up no painel) quando certas condições de análise em tempo real são atendidas (ex: veículo entrando em área restrita).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Monitorar a localização e o status de uma frota de veículos de entrega ou serviço em um mapa ao vivo. Rastrear a posição de ônibus urbanos e fornecer estimativas de chegada em tempo real para passageiros. Monitorar sensores ambientais (qualidade do ar, nível de rios) e gerar alertas se limiares forem ultrapassados. Acompanhar equipes de resposta a emergências no campo durante um incidente. Criar painéis operacionais (dashboards) que exibem indicadores chave e localizações atualizadas em tempo real para gerenciamento de tráfego ou segurança pública. Detectar automaticamente a chegada de navios em um porto usando dados AIS (Automatic Identification System).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="tm.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <!-- Precisa saber qual o próximo elemento real da tabela -->
+            <a href="bd.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

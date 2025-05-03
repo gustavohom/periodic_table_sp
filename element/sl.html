@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Skyline (SL)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-3d-analysis"> <!-- Categoria: 3D Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-3d-analysis">SL</div> <!-- Categoria: 3D Analysis -->
+            <div class="detail-title">
+                <h2>Skyline Analysis</h2>
+                <div class="category">3D Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Gera uma representação gráfica ou vetorial do horizonte (skyline) como visto a partir de um ponto de observação específico. Essencialmente, traça a linha que separa o céu das obstruções (terreno, edifícios, etc.) em todas as direções ou em um setor angular definido. Pode também gerar gráficos ou sombras baseados nessa linha do horizonte.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong> Ponto(s) observador(es), superfície de referência (DEM, TIN) e/ou camada de feições 3D (obstáculos).</li>
+                 <li><strong>Parâmetros do Observador e Campo de Visão:</strong> Similar ao Viewshed (altura, raio, azimutes, ângulos verticais).</li>
+                <li><strong>Saídas Comuns:</strong>
+                    <ul>
+                        <li><em>Linha do Horizonte (Skyline Feature):</em> Uma linha 3D (ou 2D com atributos Z) que representa o limite superior das obstruções visíveis.</li>
+                        <li><em>Gráfico do Horizonte (Skyline Graph):</em> Um gráfico polar ou cartesiano mostrando o ângulo de elevação vertical do horizonte para cada ângulo azimutal horizontal.</li>
+                        <li><em>Barreira do Horizonte (Skyline Barrier):</em> Um polígono 3D representando a "parede" vertical formada pelo horizonte, útil para análises de sombra ou obstrução solar/celeste.</li>
+                        <li><em>Sombra do Horizonte (Skyline Shadow/Silhouette):</em> Uma representação gráfica (raster ou vetor) das áreas obscurecidas pelo horizonte, como se uma luz viesse de trás dele.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Análise de sombreamento em áreas urbanas para planejamento de construção e painéis solares. Determinar obstruções celestes para observatórios astronômicos ou posicionamento de antenas parabólicas. Criar visualizações 3D realistas incorporando o horizonte correto. Avaliar o impacto visual de novas estruturas no perfil do horizonte existente. Análise de visibilidade em terrenos complexos para aplicações militares ou de telecomunicações.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="vw.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="stc.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

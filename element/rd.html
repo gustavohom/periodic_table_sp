@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Radar (RD)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-remote-sensing"> <!-- Categoria: Remote Sensing -->
+        <div class="detail-header">
+            <div class="detail-symbol group-remote-sensing">RD</div> <!-- Categoria: Remote Sensing -->
+            <div class="detail-title">
+                <h2>Radar / SAR</h2>
+                <div class="category">Remote Sensing</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Tecnologia de sensoriamento remoto ativo que utiliza pulsos de micro-ondas emitidos por um sensor (a bordo de satélites ou aeronaves) para iluminar a superfície terrestre. O sensor mede a intensidade e o tempo de retorno do sinal de micro-ondas que é retroespalhado (backscattered) pela superfície. Como opera em comprimentos de onda de micro-ondas, o radar pode "ver" através de nuvens, neblina e chuva, e operar dia e noite. SAR (Synthetic Aperture Radar) é uma técnica avançada que simula uma antena muito longa para obter alta resolução espacial.
+            </p>
+
+            <h3>Funções Principais / Características</h3>
+            <ul>
+                <li><strong>Sensor Ativo:</strong> O radar fornece sua própria fonte de iluminação (pulsos de micro-ondas).</li>
+                <li><strong>Capacidade Todo Tempo/Dia e Noite:</strong> As micro-ondas penetram nuvens, chuva leve e escuridão, permitindo aquisições independentes das condições atmosféricas e de iluminação solar.</li>
+                <li><strong>Interação com a Superfície:</strong> A intensidade do sinal retroespalhado (backscatter) depende de fatores como:
+                    <ul>
+                        <li><em>Rugosidade da Superfície:</em> Superfícies ásperas (em relação ao comprimento de onda do radar) espalham mais energia de volta para o sensor (aparecem brilhantes), enquanto superfícies lisas (ex: água calma) refletem a energia para longe (aparecem escuras - reflexão especular).</li>
+                        <li><em>Constante Dielétrica (Umidade):</em> A presença de água aumenta significativamente a constante dielétrica do material, afetando a intensidade do backscatter (muito usado para detectar umidade do solo).</li>
+                        <li><em>Geometria/Orientação do Alvo:</em> A forma e a orientação do alvo em relação ao feixe de radar influenciam o retorno (ex: cantos de edifícios causam forte retorno - double-bounce).</li>
+                        <li><em>Estrutura da Vegetação:</em> O radar interage com o volume da vegetação (galhos, folhas, tronco), e diferentes polarizações/frequências penetram diferentes níveis da copa.</li>
+                    </ul>
+                </li>
+                <li><strong>Polarização:</strong> O radar pode transmitir e receber pulsos com diferentes orientações de polarização (Horizontal - H, Vertical - V), como HH, VV, HV, VH. Dados polarimétricos (que usam múltiplas combinações) fornecem mais informações sobre as propriedades do alvo.</li>
+                <li><strong>Interferometria SAR (InSAR):</strong> Técnica que utiliza a diferença de fase entre duas imagens SAR da mesma área, adquiridas de posições ligeiramente diferentes (ou em momentos diferentes), para medir deformações sutis da superfície (subsidência, movimento de falhas) ou gerar DEMs.</li>
+                <li><strong>Aplicações:</strong> Monitoramento de desmatamento (mesmo sob nuvens), detecção de derramamentos de óleo no mar, mapeamento de inundações, monitoramento de umidade do solo, análise de gelo marinho, detecção de navios, medição de subsidência do terreno, mapeamento geológico.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Monitorar o desmatamento na Amazônia durante a estação chuvosa usando imagens Sentinel-1 (SAR). Mapear a extensão de uma inundação sob cobertura de nuvens. Detectar navios no oceano para vigilância marítima. Medir a deformação do solo causada por extração de água subterrânea usando InSAR. Estimar a umidade do solo em grandes áreas agrícolas. Classificar diferentes tipos de gelo no Ártico. Mapear estruturas geológicas com base na rugosidade da superfície revelada pelo radar.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="ob.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ip.html" class="nav-button">Próximo &raquo;</a> <!-- Próximo é IP (IN) -->
+        </div>
+    </div>
+</body>
+</html>

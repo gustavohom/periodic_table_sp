@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Relate (RL)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Tables -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">RL</div> <!-- Categoria: Tables -->
+            <div class="detail-title">
+                <h2>Relate</h2>
+                <div class="category">Tables</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Define uma relação (ligação) entre duas tabelas (ou camadas) com base em um campo chave comum, similar ao Join de Atributos. No entanto, ao contrário do Join, o Relate não anexa as colunas de uma tabela à outra. Em vez disso, ele estabelece uma associação que permite selecionar registros em uma tabela e ver/selecionar facilmente os registros correspondentes na tabela relacionada. É particularmente útil para relações de cardinalidade one-to-many (1:M) ou many-to-many (M:N).
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Seleção das Tabelas/Camadas:</strong> Especifica a tabela de origem e a tabela relacionada.</li>
+                <li><strong>Seleção dos Campos Chave:</strong> Identifica o campo chave primário na tabela de origem e o campo chave estrangeiro na tabela relacionada que contêm os valores correspondentes.</li>
+                <li><strong>Nome da Relação:</strong> Define um nome descritivo para a relação criada.</li>
+                <li><strong>Cardinalidade:</strong> Especifica o tipo de relação (1:1, 1:M, M:N). O Relate é mais vantajoso para 1:M e M:N, onde um Join simples não mostraria todos os dados relacionados facilmente.</li>
+                <li><strong>Interatividade:</strong> Uma vez estabelecida a relação, ao selecionar um ou mais registros na tabela de origem, ferramentas específicas do software GIS permitem visualizar ou selecionar automaticamente os registros associados na tabela relacionada (e vice-versa).</li>
+                <li><strong>Não Modifica Tabelas:</strong> A estrutura das tabelas originais não é alterada, apenas a definição da relação é armazenada (geralmente no projeto ou mapa).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Relacionar uma camada de edifícios (chave: 'ID_Edificio') com uma tabela de inspeções de segurança (chave estrangeira: 'ID_Edificio'), onde um edifício pode ter várias inspeções (1:M). Relacionar uma camada de parcelas (chave: 'ID_Parcela') com uma tabela de proprietários (chave: 'ID_Proprietario') através de uma tabela intermediária de ligação (parcela_proprietario) para lidar com múltiplos proprietários por parcela e múltiplas parcelas por proprietário (M:N). Relacionar uma camada de pontos de monitoramento ambiental (chave: 'ID_Ponto') com uma tabela de amostras coletadas (chave estrangeira: 'ID_Ponto'), permitindo ver todas as amostras de um ponto selecionado.
+            </p>
+             <p>
+                <em>Diferença chave do Join (JT):</em> O Relate mantém as tabelas separadas e define apenas uma ligação para seleção associada. O Join combina as colunas (temporária ou permanentemente). Relate é ideal quando você não quer duplicar dados (em joins 1:M) ou quando a relação é complexa (M:N).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="jt.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="st.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

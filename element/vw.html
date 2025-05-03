@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Viewshed (VW)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-3d-analysis"> <!-- Categoria: 3D Analysis -->
+        <div class="detail-header">
+            <div class="detail-symbol group-3d-analysis">VW</div> <!-- Categoria: 3D Analysis -->
+            <div class="detail-title">
+                <h2>Viewshed Analysis</h2>
+                <div class="category">3D Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Determina as áreas na superfície do terreno (ou incluindo obstáculos 3D) que são visíveis a partir de um ou mais pontos de observação. Ao contrário da Linha de Visão (LS) que analisa a visibilidade ao longo de uma linha específica, o Viewshed analisa a visibilidade em todas as direções (ou dentro de um campo de visão definido) a partir do observador.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Entradas:</strong> Requer a localização do(s) ponto(s) ou linha(s) observador(es) e uma superfície de referência (geralmente um Raster DEM). Camadas de obstáculos 3D (edifícios, árvores) podem ser incluídas opcionalmente.</li>
+                <li><strong>Parâmetros do Observador:</strong>
+                    <ul>
+                        <li><em>OFFSETA:</em> Altura do observador acima da superfície.</li>
+                        <li><em>OFFSETB:</em> Altura dos alvos/superfície a serem considerados (geralmente 0, mas pode ser usado para ver objetos de uma certa altura).</li>
+                        <li><em>RADIUS1 / RADIUS2:</em> Distância mínima e máxima de visibilidade a ser considerada.</li>
+                        <li><em>AZIMUTH1 / AZIMUTH2:</em> Ângulos horizontais inicial e final para limitar o campo de visão.</li>
+                        <li><em>VERT1 / VERT2:</em> Ângulos verticais mínimo e máximo para limitar o campo de visão.</li>
+                    </ul>
+                </li>
+                <li><strong>Saída:</strong> Um raster (grade) onde cada célula tem um valor indicando se ela é visível (ex: 1) ou não visível (ex: 0) a partir de pelo menos um dos pontos observadores. Se múltiplos observadores forem usados, a saída pode indicar quantas vezes cada célula é vista.</li>
+                <li><strong>Considera Curvatura e Refração (Opcional):</strong> Pode ajustar os cálculos para longas distâncias.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Identificar locais ideais para torres de vigia de incêndio florestal que maximizem a área de cobertura visual. Avaliar o impacto visual de um novo parque eólico, mostrando de quais áreas residenciais as turbinas seriam visíveis. Planejar rotas cênicas em parques nacionais, identificando trechos com as melhores vistas panorâmicas. Posicionar câmeras de segurança para cobrir a maior área possível sem pontos cegos. Determinar áreas onde sinais de celular de uma torre podem ser bloqueados pelo terreno.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="vs.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="sl.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

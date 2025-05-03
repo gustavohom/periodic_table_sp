@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Statistics (ST)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Tables -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">ST</div> <!-- Categoria: Tables -->
+            <div class="detail-title">
+                <h2>Statistics</h2>
+                <div class="category">Tables</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Calcula estatísticas descritivas básicas para um ou mais campos numéricos em uma tabela de atributos. Essas ferramentas fornecem resumos quantitativos dos dados, ajudando a entender a distribuição, tendência central e dispersão dos valores, seja para toda a tabela ou para grupos específicos de registros.
+            </p>
+
+            <h3>Funções Principais / Ferramentas / Métricas</h3>
+            <ul>
+                <li><strong>Estatísticas Descritivas Básicas (para um campo):</strong>
+                    <ul>
+                        <li><em>Count:</em> Número total de registros (ou valores não nulos).</li>
+                        <li><em>Minimum (Min):</em> O menor valor no campo.</li>
+                        <li><em>Maximum (Max):</em> O maior valor no campo.</li>
+                        <li><em>Sum:</em> A soma de todos os valores no campo.</li>
+                        <li><em>Mean (Média):</em> O valor médio (soma dividida pela contagem).</li>
+                        <li><em>Standard Deviation (Desvio Padrão):</em> Medida da dispersão dos valores em torno da média.</li>
+                        <li><em>Nulls:</em> Contagem de valores nulos (ausentes).</li>
+                        <li><em>Median (Mediana):</em> O valor central quando os dados são ordenados (menos afetado por outliers que a média). (Nem sempre disponível em todas as ferramentas básicas).</li>
+                        <li><em>Range (Amplitude):</em> Diferença entre o máximo e o mínimo. (Nem sempre calculado explicitamente).</li>
+                    </ul>
+                 </li>
+                 <li><strong>Summary Statistics (Estatísticas Resumo):</strong> Calcula as estatísticas acima (e possivelmente outras) agrupando os resultados por categorias definidas em um ou mais campos (Case Fields). Gera uma nova tabela com os resultados sumarizados por grupo.</li>
+                 <li><strong>Frequency (Frequência):</strong> Conta quantas vezes cada valor único (ou combinação de valores únicos) aparece em um ou mais campos (categóricos ou numéricos). Gera uma tabela de frequência.</li>
+                 <li><strong>Estatísticas de Validação (Exemplo):</strong> Cálculo de métricas como RMSE (Raiz do Erro Quadrático Médio) ou MAE (Erro Absoluto Médio) se a tabela contiver valores previstos e observados de um modelo.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Verificar rapidamente o valor mínimo, máximo e médio da área dos lotes em uma camada (<code>Statistics</code> em um campo). Calcular a soma da população e a população média para cada região administrativa de uma cidade (<code>Summary Statistics</code>, sumarizando 'Populacao' agrupado por 'Regiao_Admin'). Contar quantos segmentos de estrada existem para cada tipo de pavimentação ('Asfalto', 'Terra', 'Paralelepípedo') (<code>Frequency</code> no campo 'Tipo_Pav'). Calcular o erro médio de um modelo de previsão de preço de imóveis armazenado em uma tabela (<code>Statistics</code> no campo de erro absoluto).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="rl.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ed.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

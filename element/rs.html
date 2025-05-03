@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Resample (Raster) (RS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">RS</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Resample (Raster)</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Altera a resolução espacial (tamanho da célula ou pixel) de um conjunto de dados raster. O processo calcula novos valores de célula para a grade de saída com base nos valores das células do raster de entrada original, utilizando diferentes técnicas de interpolação para determinar esses novos valores. É necessário quando se deseja combinar ou analisar rasters com diferentes resoluções.
+            </p>
+
+            <h3>Funções Principais / Técnicas de Reamostragem</h3>
+            <ul>
+                <li><strong>Definição da Resolução de Saída:</strong> O usuário especifica o novo tamanho da célula desejado para o raster de saída. Pode ser maior (downsampling/agregacão) ou menor (upsampling/detalhamento) que a resolução original.</li>
+                <li><strong>Técnicas de Interpolação (Resampling Techniques):</strong> Determinam como o valor de cada nova célula de saída é calculado a partir das células de entrada vizinhas:
+                    <ul>
+                        <li><em>Nearest Neighbor (Vizinho Mais Próximo):</em> Atribui à célula de saída o valor da célula de entrada mais próxima do seu centro. É rápido e preserva os valores originais dos dados, sendo ideal para dados categóricos (ex: uso do solo), mas pode resultar em uma aparência "quadriculada".</li>
+                        <li><em>Bilinear Interpolation (Interpolação Bilinear):</em> Calcula o valor da célula de saída como uma média ponderada pela distância dos 4 centros de célula de entrada mais próximos. Produz uma aparência mais suave, adequada para dados contínuos (ex: elevação, temperatura), mas altera os valores originais.</li>
+                        <li><em>Cubic Convolution (Convolução Cúbica):</em> Calcula o valor da célula de saída a partir de uma vizinhança maior (16 centros de célula mais próximos) usando uma função cúbica. É mais complexo computacionalmente, produz resultados ainda mais suaves que o bilinear, sendo também adequado para dados contínuos, mas pode gerar valores fora do intervalo original.</li>
+                        <li><em>Majority (Maioria):</em> Similar ao Nearest Neighbor, mas usa o valor mais frequente na vizinhança. Adequado para dados categóricos ao fazer downsampling.</li>
+                        <li><em>Outras (ex: Average, Min, Max, Median):</em> Podem estar disponíveis para agregação ao fazer downsampling.</li>
+                    </ul>
+                </li>
+                 <li><strong>Alinhamento de Células (Snap Raster):</strong> Opção para garantir que as células do raster de saída se alinhem perfeitamente com as células de outro raster de referência.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Reduzir a resolução de um DEM de 10m para 30m para compatibilizá-lo com imagens Landsat (downsampling, talvez usando Average ou Bilinear). Aumentar a resolução de um raster de precipitação de baixa resolução para fins de visualização (upsampling, usando Bilinear ou Cubic, ciente da interpolação). Garantir que uma camada de uso do solo (categórica) tenha a mesma resolução de 30m que outras camadas em um modelo, usando Nearest Neighbor para preservar as classes. Reamostrar todas as camadas de entrada de um modelo de adequabilidade para uma resolução comum antes de combiná-las.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="md.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="pa.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

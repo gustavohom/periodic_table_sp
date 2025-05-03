@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Add XY Coordinates (XY)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Tables -->
+        <div class="detail-header">
+            <!-- Forçando texto escuro para melhor leitura sobre o amarelo -->
+            <div class="detail-symbol group-table-editing force-dark-text">XY</div> <!-- Categoria: Tables -->
+            <div class="detail-title">
+                <h2>Add XY Coordinates / Create Points from Table</h2>
+                <div class="category">Tables</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Cria uma camada de pontos georreferenciados a partir de uma tabela que contém colunas com coordenadas X (longitude, Leste) e Y (latitude, Norte). Esta é uma forma comum de importar dados coletados em campo (GPS), dados de planilhas ou bancos de dados externos que possuem informações de localização explícitas.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Identificação dos Campos XY:</strong> O usuário especifica quais colunas na tabela contêm as coordenadas X e Y.</li>
+                <li><strong>Definição do Sistema de Coordenadas (CRS):</strong> É crucial especificar o Sistema de Referência de Coordenadas (SRC / CRS) em que as coordenadas da tabela estão (ex: WGS84 Lat/Long, UTM Zona 23S). Se não for definido corretamente, os pontos aparecerão no lugar errado.</li>
+                <li><strong>Campo Z Opcional:</strong> Permite especificar uma coluna com valores de elevação (Z) para criar pontos 3D.</li>
+                <li><strong>Criação da Camada:</strong>
+                    <ul>
+                        <li><em>Make XY Event Layer (ou similar):</em> Cria uma camada temporária em memória a partir da tabela. Útil para visualização rápida, mas precisa ser salva permanentemente (exportada).</li>
+                        <li><em>XY Table To Point (ou similar):</em> Cria diretamente uma nova camada de pontos (feature class) persistente no disco ou geodatabase.</li>
+                    </ul>
+                </li>
+                <li><strong>Manutenção do Link (Opcional):</strong> Algumas ferramentas podem manter um link dinâmico com a tabela original, atualizando a camada de pontos se a tabela mudar (mais comum com Event Layers).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Mapear a localização de clientes a partir de uma planilha do Excel com colunas 'Latitude' e 'Longitude'. Criar uma camada de pontos de ocorrências de espécies a partir de dados de GPS coletados em campo e armazenados em um arquivo CSV. Visualizar a localização de poços de petróleo listados em um banco de dados com coordenadas UTM. Transformar uma tabela de endereços geocodificados (que já possuem X e Y) em uma camada de pontos espacialmente habilitada.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="tb.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="cg.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

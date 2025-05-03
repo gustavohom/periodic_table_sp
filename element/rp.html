@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Raster Processing (Clip/Split) (RP)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-raster-analysis"> <!-- Categoria: Raster Analysis -->
+        <div class="detail-header">
+             <!-- Fundo lilás claro, forçando texto escuro para contraste -->
+            <div class="detail-symbol group-raster-analysis force-dark-text">RP</div> <!-- Categoria: Raster Analysis -->
+            <div class="detail-title">
+                <h2>Raster Processing (Clip/Split)</h2>
+                <div class="category">Raster Analysis</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Ferramentas básicas para extrair ou dividir subconjuntos de um conjunto de dados raster. Permitem focar a análise ou o gerenciamento de dados em áreas geográficas menores ou específicas, similar às operações de extração em dados vetoriais (EX), mas aplicadas a grades de células.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Clip (Raster):</strong> Extrai uma porção retangular ou irregular de um raster de entrada com base em uma extensão definida (coordenadas X,Y mín/máx) ou na forma de uma camada de feições vetoriais (polígono).
+                    <ul>
+                        <li><em>Clip by Extent:</em> Define a área de corte por coordenadas ou usando a extensão de outra camada.</li>
+                        <li><em>Clip by Polygon Feature:</em> Usa um polígono (ou múltiplos polígonos) de uma camada vetorial como molde. As células fora do(s) polígono(s) são geralmente definidas como NoData no raster de saída. Opção para usar a geometria exata do polígono (pode criar células parciais nas bordas se não alinhadas) ou ajustar à extensão retangular do polígono.</li>
+                    </ul>
+                </li>
+                <li><strong>Split Raster:</strong> Divide um raster grande em múltiplos rasters menores (tiles ou azulejos) com base em critérios como:
+                    <ul>
+                        <li><em>Tamanho do Tile (Tile Size):</em> Define as dimensões (número de linhas/colunas ou unidades de mapa) de cada tile de saída.</li>
+                        <li><em>Número de Tiles:</em> Divide o raster em um número especificado de tiles.</li>
+                        <li><em>Por Polígonos:</em> Usa uma camada de polígonos de índice (como um Grid Index - GI) para definir a extensão e o nome de cada tile de saída.</li>
+                    </ul>
+                </li>
+                <li><strong>Extract by Mask:</strong> Similar ao Clip por polígono, extrai as células de um raster que caem dentro da área definida por um raster de máscara ou uma camada de feições. Células fora da máscara recebem valor NoData.</li>
+                <li><strong>Extract by Attributes:</strong> Cria um novo raster contendo apenas as células do raster de entrada cujos valores atendem a uma consulta SQL (baseada nos valores das células ou em atributos da tabela associada, se houver).</li>
+                 <li><strong>Extract by Points:</strong> Extrai os valores das células de um ou mais rasters nas localizações exatas definidas por uma camada de pontos. A saída é geralmente uma tabela ou uma camada de pontos com os valores extraídos como atributos.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Recortar um DEM nacional para a área de um município específico (<code>Clip</code> by Polygon). Extrair dados de imagem de satélite apenas para a área de uma bacia hidrográfica (<code>Extract by Mask</code>). Dividir um grande ortomosaico aéreo em tiles menores para facilitar o gerenciamento e a distribuição (<code>Split Raster</code>). Extrair apenas as células com valor de elevação acima de 1000 metros de um DEM (<code>Extract by Attributes</code> ou <code>Con</code> em Map Algebra). Obter os valores de temperatura de um raster climático para um conjunto de locais de estações meteorológicas (<code>Extract by Points</code>).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="cp.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="re.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

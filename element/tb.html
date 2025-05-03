@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Table Tools (TB)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-table-editing"> <!-- Categoria: Tables -->
+        <div class="detail-header">
+            <div class="detail-symbol group-table-editing">TB</div> <!-- Categoria: Tables -->
+            <div class="detail-title">
+                <h2>Table Tools / Management</h2>
+                <div class="category">Tables</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Conjunto de ferramentas e funcionalidades para criar, gerenciar e manipular tabelas de atributos associadas a camadas geográficas ou tabelas independentes dentro de um ambiente GIS. A gestão eficaz das tabelas é fundamental, pois elas armazenam as informações descritivas (não espaciais) das feições.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Gerenciamento de Campos (Fields):</strong>
+                    <ul>
+                        <li><em>Add Field:</em> Adiciona uma nova coluna (campo) à tabela, especificando nome, tipo de dado (texto, número inteiro/decimal, data), precisão, escala, etc.</li>
+                        <li><em>Delete Field:</em> Remove uma coluna existente da tabela.</li>
+                        <li><em>Calculate Field:</em> Preenche ou atualiza os valores de um campo usando expressões matemáticas, lógicas, de texto ou funções (Python, Arcade, SQL).</li>
+                        <li><em>Reorder/Rename/Hide Fields:</em> Altera a ordem de exibição, renomeia ou oculta campos na visualização da tabela.</li>
+                        <li><em>Alter Field Properties:</em> Modifica propriedades de campos existentes (nome, alias, tipo - se permitido).</li>
+                    </ul>
+                </li>
+                <li><strong>Domínios (Domains):</strong> Cria regras para restringir os valores permitidos em um campo, garantindo a consistência dos dados. Podem ser de Valor Codificado (lista de valores permitidos com descrições) ou de Intervalo (Range - valor mínimo e máximo).</li>
+                <li><strong>Subtipos (Subtypes):</strong> Permite categorizar feições dentro de uma mesma camada, definindo valores padrão e domínios diferentes para cada subtipo (ex: uma camada 'Estradas' com subtipos 'Rodovia', 'Municipal', 'Não Pavimentada').</li>
+                <li><strong>Indexação (Attribute Index):</strong> Cria índices em campos frequentemente usados em consultas ou joins para acelerar o desempenho dessas operações.</li>
+                <li><strong>Visualização e Seleção:</strong> Ferramentas para ordenar, filtrar e selecionar registros na tabela.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Adicionar um campo 'Data_Coleta' a uma camada de pontos de amostra. Calcular a densidade populacional em um campo 'Dens_Pop' a partir dos campos 'Populacao' e 'Area_km2'. Criar um domínio de valores codificados para o campo 'Condicao' de uma camada de hidrantes ('Bom', 'Regular', 'Ruim'). Definir subtipos para uma camada de dutos ('Gás', 'Óleo', 'Água') com diâmetros padrão diferentes para cada um. Criar um índice no campo 'ID_Lote' para acelerar joins com tabelas de proprietários. Selecionar todos os registros onde o campo 'Status' é igual a 'Ativo'.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="gs.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="xy.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

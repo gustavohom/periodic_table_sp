@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Web Service (WS)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-vector"> <!-- Categoria: Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-vector">WS</div> <!-- Categoria: Data Management -->
+            <div class="detail-title">
+                <h2>Web Services (Publish/Consume)</h2>
+                <div class="category">Data Management (Vector)</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Refere-se à capacidade de publicar camadas de dados geoespaciais (vetoriais ou raster) de um servidor GIS para serem acessadas através da internet por outros softwares GIS (desktop, web, móvel) ou aplicações, utilizando protocolos padronizados. Também envolve a capacidade de consumir (importar/conectar) dados de serviços web oferecidos por terceiros.
+            </p>
+
+            <h3>Funções Principais / Tipos de Serviço</h3>
+            <ul>
+                <li><strong>Publicação de Serviços (Server-Side):</strong> Usando software de servidor GIS (ex: ArcGIS Server, GeoServer, QGIS Server), o usuário configura e publica camadas como serviços web. Tipos comuns incluem:
+                    <ul>
+                        <li><em>Map Service (Serviço de Mapa - ex: WMS, ArcGIS Map Service):</em> Fornece imagens de mapa pré-renderizadas (tiles ou dinâmicas). O cliente recebe uma imagem, não os dados brutos.</li>
+                        <li><em>Feature Service (Serviço de Feição - ex: WFS, ArcGIS Feature Service):</em> Permite aos clientes acessar a geometria e os atributos das feições vetoriais. Possibilita consulta, visualização e, frequentemente, edição dos dados pelo cliente.</li>
+                        <li><em>Tile Service (Serviço de Tile/Cache - ex: WMTS, ArcGIS Tiled Map Service):</em> Fornece tiles de mapa pré-renderizados e armazenados em cache para performance rápida, ideal para mapas base.</li>
+                        <li><em>Geoprocessing Service (Serviço de Geoprocessamento):</em> Publica uma ferramenta ou modelo de análise GIS como um serviço que pode ser executado remotamente por clientes.</li>
+                        <li><em>Image Service (Serviço de Imagem):</em> Fornece acesso a dados raster, permitindo visualização, consulta de valores de pixel e processamento on-the-fly.</li>
+                    </ul>
+                </li>
+                <li><strong>Consumo de Serviços (Client-Side):</strong> Softwares GIS desktop (ArcGIS Pro, QGIS) e plataformas de mapeamento web (ArcGIS Online, Mapbox, Leaflet, OpenLayers) podem se conectar a esses serviços para exibir e interagir com os dados.</li>
+                <li><strong>Protocolos Padrão OGC (Open Geospatial Consortium):</strong> WMS (Web Map Service), WFS (Web Feature Service), WMTS (Web Map Tile Service), WCS (Web Coverage Service - para raster) garantem interoperabilidade entre diferentes softwares.</li>
+                 <li><strong>Formatos Relacionados:</strong> GeoRSS (feeds RSS com localização), KML (usado pelo Google Earth, pode ser servido via web).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Publicar uma camada de limites municipais como um WFS para que outras agências possam consumi-la em seus próprios sistemas GIS. Conectar-se a um WMS de imagens de satélite fornecido por uma agência espacial para usar como mapa base. Consumir um Feature Service de dados de tráfego em tempo real em um painel de controle operacional. Publicar um modelo de cálculo de área de serviço como um Geoprocessing Service para ser usado por uma aplicação web pública. Disponibilizar um cache de tiles de um mapa base personalizado para uso em aplicações móveis.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="pc.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="tin.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

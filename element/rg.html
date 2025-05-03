@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Generalization (Raster) (RG)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-data-management-raster"> <!-- Categoria: Raster Data Management -->
+        <div class="detail-header">
+            <div class="detail-symbol group-data-management-raster">RG</div> <!-- Categoria: Raster Data Management -->
+            <div class="detail-title">
+                <h2>Generalization (Raster)</h2>
+                <div class="category">Raster Data Management</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Conjunto de operações que modificam os valores das células em um raster para simplificar, suavizar ou limpar os dados, geralmente removendo pequenas regiões isoladas ou preenchendo pequenas lacunas. É frequentemente usado para pós-processar resultados de classificação de imagens ou outras análises raster, melhorando a homogeneidade das regiões ou eliminando "ruído".
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Majority Filter (Filtro de Maioria):</strong> Substitui o valor de cada célula pelo valor que ocorre com mais frequência em sua vizinhança definida (ex: 3x3 células). Suaviza regiões e remove células isoladas.</li>
+                <li><strong>Nibble:</strong> Substitui células de uma máscara raster (geralmente representando áreas a serem preenchidas, como NoData ou classes específicas) pelos valores das células vizinhas mais próximas no raster de dados original. Usado para preencher lacunas ou remover pequenas feições.</li>
+                <li><strong>Shrink (Encolher):</strong> Remove células das bordas externas de zonas (regiões de células com o mesmo valor), efetivamente encolhendo as zonas.</li>
+                <li><strong>Expand (Expandir):</strong> Adiciona células às bordas externas das zonas, expandindo-as para dentro de zonas vizinhas (ou NoData).</li>
+                 <li><strong>Boundary Clean (Limpeza de Fronteira):</strong> Suaviza as fronteiras entre zonas, expandindo e encolhendindo alternadamente para eliminar fronteiras irregulares.</li>
+                 <li><strong>Region Group (Agrupamento por Região):</strong> Atribui um identificador único a cada região conectada de células que possuem o mesmo valor. Útil para analisar ou selecionar regiões individuais após uma classificação ou outra operação.</li>
+                 <li><strong>Thin (Afinamento):</strong> Reduz feições lineares representadas em um raster (com valor 1, por exemplo) para uma única célula de largura, preservando a conectividade. Usado em análise de redes a partir de rasters ou reconhecimento de padrões.</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Limpar um mapa de uso do solo classificado removendo pequenos pixels isolados de uma classe dentro de uma região maior de outra classe (<code>Majority Filter</code>). Preencher pequenas áreas de sombra (classificadas como NoData) em uma imagem classificada usando os valores das classes vizinhas (<code>Nibble</code>). Remover pequenas ilhas de vegetação classificadas dentro de um corpo d'água (<code>Shrink</code> ou <code>Nibble</code>). Conectar pequenas lacunas em uma rede de estradas representada em um raster (<code>Expand</code> seguido de <code>Shrink</code>, ou <code>Boundary Clean</code>). Contar e analisar o tamanho de fragmentos florestais individuais após usar <code>Region Group</code> em um mapa de cobertura florestal.
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="al.html" class="nav-button">&laquo; Anterior</a>
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="md.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>

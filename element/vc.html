@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe: Vector Conversion (VC)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div class="detail-container border-analysis-conversion"> <!-- Categoria: Analysis/Conversion -->
+        <div class="detail-header">
+            <div class="detail-symbol group-analysis-conversion">VC</div> <!-- Categoria: Analysis/Conversion -->
+            <div class="detail-title">
+                <h2>Vector Conversion</h2>
+                <div class="category">Vector Analysis / Conversion</div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <h3>Descrição</h3>
+            <p>
+                Converte dados geográficos entre diferentes formatos de arquivo vetorial (pontos, linhas, polígonos) e também pode alterar o modelo de dados, transformando dados vetoriais em raster (rasterização) ou dados raster em vetoriais (vetorização). É essencial para garantir a compatibilidade entre diferentes softwares, bancos de dados ou para preparar dados para análises específicas de cada modelo.
+            </p>
+
+            <h3>Funções Principais / Ferramentas</h3>
+            <ul>
+                <li><strong>Conversão de Formato:</strong> Exportar ou converter feições entre formatos como Shapefile (.shp), Geodatabase (.gdb), GeoJSON, KML, CAD (.dwg, .dxf), etc. (Ex: Ferramenta <code>Export Features</code>, <code>Feature Class to Feature Class</code>).</li>
+                <li><strong>Rasterização:</strong> Converter feições vetoriais (pontos, linhas, polígonos) em uma grade de células raster. (Ex: Ferramentas <code>Feature to Raster</code>, <code>Polygon to Raster</code>).</li>
+                <li><strong>Vetorização:</strong> Converter dados raster (como imagens classificadas ou DEMs) em feições vetoriais (pontos, linhas ou polígonos). (Ex: Ferramentas <code>Raster to Polygon</code>, <code>Raster to Polyline</code>, <code>Raster to Point</code>, ferramentas de extração de contornos).</li>
+                <li><strong>Alteração de Tipo Geométrico:</strong> Converter entre tipos de geometria vetorial quando apropriado (Ex: Polígonos para seus centroides/pontos, Polilinhas para pontos inicial/final).</li>
+            </ul>
+
+            <h3>Exemplos Comuns</h3>
+            <p>
+                Converter um Shapefile de municípios para um formato Geodatabase para melhor performance. Criar um mapa raster de densidade populacional a partir de pontos de censo. Gerar polígonos de classes de uso do solo a partir de uma imagem de satélite classificada. Transformar linhas de contorno (curvas de nível) em um Modelo Digital de Elevação (DEM) raster através de interpolação (envolve conversão).
+            </p>
+        </div>
+
+        <div class="detail-navigation">
+            <a href="#" class="nav-button disabled">&laquo; Anterior</a> <!-- Primeiro elemento -->
+            <a href="../index.html"class="back-link">Voltar para Tabela</a>
+            <a href="ex.html" class="nav-button">Próximo &raquo;</a>
+        </div>
+    </div>
+</body>
+</html>
