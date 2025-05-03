@@ -13,7 +13,7 @@ Este projeto visa ser uma ferramenta visual e educacional para explorar a vasta 
 ## 🚀 Como Usar
 
 Como este é um projeto puramente front-end (HTML/CSS), não há necessidade de instalação complexa.
-Você pode acessar pela pagina: 
+Você pode acessar pela pagina: [https://gustavohom.github.io/periodic_table_sp/index.html](https://gustavohom.github.io/periodic_table_sp/index.html)
 
 ## ✨ Funcionalidades
 
